@@ -3,22 +3,6 @@ package examples
 import Koala.initKoala
 import Phaser.*
 
-fun main2(args: Array<String>) {
-    val game = initKoala(GameConfig(
-            width = gameProperties.screenWidth,
-            height = gameProperties.screenHeight,
-            parent = "gameDiv",
-            //state = E01LoadAnImage()
-            //state = E02ClickOnAnImage()
-            //state = E03MoveAnImage()
-            //state = E04ImageFollowInput()
-            //state = E05LoadAnAnimation()
-            //state = E06RenderText()
-            state = E07TweenAnImage()
-    ))
-}
-
-
 class E01LoadAnImage: State() {
     override fun preload() {
         //  You can fill the preloader with as many assets as your game requires
