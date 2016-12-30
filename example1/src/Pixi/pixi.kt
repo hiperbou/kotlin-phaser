@@ -376,12 +376,12 @@ external open class DisplayObjectContainer : DisplayObject() {
     /**
      * The width of the displayObjectContainer, setting this will actually modify the scale to achieve the value set
      */
-    public open var width: Number
+    public open var width: Double
 
     /**
      * The height of the displayObjectContainer, setting this will actually modify the scale to achieve the value set
      */
-    public open var height: Number
+    public open var height: Double
 }
 
 @JsName("PIXI.RoundedRectangle")

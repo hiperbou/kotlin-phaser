@@ -1,9 +1,15 @@
 import Koala.*
 import Koala.Sprite
 import Phaser.*
+import examples.runExample
 
 
 fun main(args: Array<String>) {
+	//runExample(5) //Test examples
+	gameMain()
+}
+
+fun gameMain() {
 	val game = initKoala(GameConfig(
 			width = gameProperties.screenWidth,
 			height = gameProperties.screenHeight,
@@ -12,14 +18,13 @@ fun main(args: Array<String>) {
 	))
 }
 
-
 object gameProperties {
 	val screenWidth = 640.0
 	val screenHeight = 480.0
 }
 
 object Assets {
-	val panda = Asset("panda", "assets/panda.png")
+	val panda = Asset("koala", "assets/panda.png")
 }
 
 class Panda(x:Double, y:Double) : Sprite(x, y, Assets.panda) {
@@ -44,12 +49,10 @@ class MainState:State() {
 	override fun preload() {
 		load.image(Assets.panda)
 
-		game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-		game.scale.pageAlignHorizontally = true;
-		game.scale.pageAlignVertically = true;
-
-		game.scale.refresh();
-
+		game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL
+		game.scale.pageAlignHorizontally = true
+		game.scale.pageAlignVertically = true
+		game.scale.refresh()
 	}
 
 	override fun create() {

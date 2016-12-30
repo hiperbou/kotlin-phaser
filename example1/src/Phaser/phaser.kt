@@ -141,8 +141,9 @@ import org.w3c.xhr.XMLHttpRequest
             open var paused: Boolean
             open var sprite: Phaser.Sprite
             open var updateIfVisible: Boolean
+            //open fun add(name: String, frames: Array<Number>? = null, frameRate: Number? = null, loop: Boolean? = null, useNumericIndex: Boolean? = null): Phaser.Animation
+            //open fun add(name: String, frames: Array<String>? = null, frameRate: Number? = null, loop: Boolean? = null, useNumericIndex: Boolean? = null): Phaser.Animation
             open fun add(name: String, frames: Array<Number>? = null, frameRate: Number? = null, loop: Boolean? = null, useNumericIndex: Boolean? = null): Phaser.Animation
-            open fun add(name: String, frames: Array<String>? = null, frameRate: Number? = null, loop: Boolean? = null, useNumericIndex: Boolean? = null): Phaser.Animation
             open fun copyFrameData(frameData: Phaser.FrameData, frame: String): Boolean
             open fun copyFrameData(frameData: Phaser.FrameData, frame: Number): Boolean
             open fun destroy(): Unit
@@ -1548,7 +1549,7 @@ import org.w3c.xhr.XMLHttpRequest
             open var key: dynamic /* String | Phaser.RenderTexture | Phaser.BitmapData | Phaser.Video | PIXI.Texture */
             open var fresh: Boolean
             open var game: Phaser.Game
-            override var height: Number
+            override var height: Double
             open var input: Phaser.InputHandler
             open var inputEnabled: Boolean
             open var inCamera: Boolean
@@ -1569,7 +1570,7 @@ import org.w3c.xhr.XMLHttpRequest
             open var top: Number
             open var type: Number
             open var world: Phaser.Point
-            override var width: Number
+            override var width: Double
             open var z: Number
             open fun alignIn(container: Phaser.Rectangle, position: Number? = null, offsetX: Number? = null, offsetY: Number? = null): Any
             open fun alignIn(container: Phaser.Sprite, position: Number? = null, offsetX: Number? = null, offsetY: Number? = null): Any
@@ -1605,8 +1606,8 @@ import org.w3c.xhr.XMLHttpRequest
             open var alive: Boolean
             open var bottom: Number
             open var cameraOffset: Phaser.Point
-            open var centerX: Number
-            open var centerY: Number
+            open var centerX: Double
+            open var centerY: Double
             open var classType: Any
             open var cursor: Any
             open var cursorIndex: Number
@@ -2690,7 +2691,7 @@ import org.w3c.xhr.XMLHttpRequest
                     open var frequency: Number
                     open var gravity: Number
                     open var group: Phaser.Group
-                    override var height: Number
+                    override var height: Double
                     override var left: Number
                     open var lifespan: Number
                     open var maxParticles: Number
@@ -2713,7 +2714,7 @@ import org.w3c.xhr.XMLHttpRequest
                     open var scaleData: Array<Any>
                     override var top: Number
                     override var type: Number
-                    override var width: Number
+                    override var width: Double
                     override var x: Double
                     override var y: Double
                     open fun at(`object`: Any): Phaser.Particles.Arcade.Emitter
@@ -2762,13 +2763,14 @@ import org.w3c.xhr.XMLHttpRequest
             open fun setBoundsToWorld(): Unit
             open fun startSystem(system: Number): Unit
             open fun update(): Unit
-            //companion object {
+            companion object {
                 var ARCADE: Number
                 var P2JS: Number
                 var NINJA: Number
                 var BOX2D: Number
                 var CHIPMUNK: Number
                 var MATTERJS: Number
+            }
                 interface `T$4` {
                     var up: Boolean? //
                     var down: Boolean? //
@@ -2797,7 +2799,7 @@ import org.w3c.xhr.XMLHttpRequest
                     open fun collide(object1: Any, object2: Any? = null, collideCallback: Function<Any>? = null, processCallback: Function<Any>? = null, callbackContext: Any? = null): Boolean
                     open fun computeVelocity(axis: Number, body: Phaser.Physics.Arcade.Body, velocity: Number, acceleration: Number, drag: Number, max: Number? = null): Number
                     open fun distanceBetween(source: Any, target: Any, world: Boolean? = null): Number
-                    open fun distanceToPointer(displayObject: Any, pointer: Phaser.Pointer? = null, world: Boolean? = null): Number
+                    open fun distanceToPointer(displayObject: Any, pointer: Phaser.Pointer? = null, world: Boolean? = null): Double
                     open fun distanceToXY(displayObject: Any, x: Number, y: Number, world: Boolean? = null): Number
                     open fun enable(`object`: Any, children: Boolean? = null): Unit
                     open fun enableBody(`object`: Any): Unit
@@ -3656,6 +3658,7 @@ import org.w3c.xhr.XMLHttpRequest
             open fun rperp(): Phaser.Point
             open fun rotate(x: Number, y: Number, angle: Number, asDegrees: Boolean? = null, distance: Number? = null): Phaser.Point
             override fun set(x: Number, y: Number?): Phaser.Point
+            open fun set(x: Number): Phaser.Point
             open fun setMagnitude(magnitude: Number): Phaser.Point
             open fun setTo(x: Number, y: Number? = null): Phaser.Point
             open fun subtract(x: Number, y: Number): Phaser.Point
@@ -4072,7 +4075,7 @@ import org.w3c.xhr.XMLHttpRequest
             open var active: Boolean
             open var boundDispatch: Function<Any>
             open var memorize: Boolean
-            open fun add(listener: Function<Any>, listenerContext: Any? = null, priority: Number? = null, vararg args: Any): Phaser.SignalBinding
+            open fun add(listener: ()->Unit, listenerContext: Any? = null, priority: Number? = null, vararg args: Any): Phaser.SignalBinding
             open fun addOnce(listener: Function<Any>, listenerContext: Any? = null, priority: Number? = null, vararg args: Any): Phaser.SignalBinding
             open fun dispatch(vararg params: Any): Unit
             open fun dispose(): Unit
@@ -5404,15 +5407,15 @@ import org.w3c.xhr.XMLHttpRequest
         external open class World(game: Phaser.Game) : Phaser.Group(game) {
             open var bounds: Phaser.Rectangle
             open var camera: Phaser.Camera
-            override var centerX: Number
-            override var centerY: Number
+            override var centerX: Double
+            override var centerY: Double
             override var game: Phaser.Game
-            override var height: Number
+            override var height: Double
             open var isPaused: Boolean
             open var randomX: Number
             open var randomY: Number
             open var stats: `T$15`
-            override var width: Number
+            override var width: Double
             open fun boot(): Unit
             open fun getObjectsUnderPointer(pointer: Phaser.Pointer, group: Phaser.Group, callback: Function<Any>? = null, callbackContext: Any? = null): Phaser.Sprite
             open fun resize(width: Number, height: Number): Unit

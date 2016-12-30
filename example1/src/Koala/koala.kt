@@ -5,7 +5,6 @@ import Phaser.Game
 import Phaser.GameConfig
 import kotlin.properties.Delegates
 
-
 var phaserGame:Phaser.Game by Delegates.notNull()
 
 open class Sprite(x:Double, y:Double, key: Asset) : Phaser.Sprite(phaserGame,x,y,key.name) {
