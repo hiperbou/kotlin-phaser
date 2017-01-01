@@ -103,7 +103,7 @@ import org.w3c.xhr.XMLHttpRequest
             open var onComplete: Phaser.Signal
             open var onLoop: Phaser.Signal
             open var onStart: Phaser.Signal
-            open var onUpdate: Phaser.Signal
+            open var onUpdate: Phaser.SignalAnimationFrame
             open var paused: Boolean
             open var reversed: Boolean
             open var speed: Number
@@ -143,7 +143,10 @@ import org.w3c.xhr.XMLHttpRequest
             open var updateIfVisible: Boolean
             //open fun add(name: String, frames: Array<Number>? = null, frameRate: Number? = null, loop: Boolean? = null, useNumericIndex: Boolean? = null): Phaser.Animation
             //open fun add(name: String, frames: Array<String>? = null, frameRate: Number? = null, loop: Boolean? = null, useNumericIndex: Boolean? = null): Phaser.Animation
-            open fun add(name: String, frames: Array<Number>? = null, frameRate: Number? = null, loop: Boolean? = null, useNumericIndex: Boolean? = null): Phaser.Animation
+            open fun add(name: String): Phaser.Animation
+            open fun add(name: String, frames: Array<Int>): Phaser.Animation
+            open fun add(name: String, frames: Array<Int>? = null, frameRate: Number? = null, loop: Boolean? = null, useNumericIndex: Boolean? = null): Phaser.Animation
+            open fun add(name: String, frames: Array<String>? = null, frameRate: Number? = null, loop: Boolean? = null, useNumericIndex: Boolean? = null): Phaser.Animation
             open fun copyFrameData(frameData: Phaser.FrameData, frame: String): Boolean
             open fun copyFrameData(frameData: Phaser.FrameData, frame: Number): Boolean
             open fun destroy(): Unit
@@ -959,90 +962,92 @@ import org.w3c.xhr.XMLHttpRequest
             open fun processButtonUp(value: Number): Unit
             open fun reset(): Unit
         }
-        /*@module
-        object Easing {
-            var Default: Function
+
+        @JsName("Phaser.Easing")
+        external open class Easing {
+            //companion object {
+            /*var Default: Function
             var Power0: Function
             var Power1: Function
             var power2: Function
             var power3: Function
-            var power4: Function
-            external open class Back {
-                companion object {
-                    fun In(k: Number): Number
-                    fun Out(k: Number): Number
-                    fun InOut(k: Number): Number
-                }
+            var power4: Function*/
+            object Back {
+                //companion object {
+                    fun In(k: Number): Number = noImpl
+                    fun Out(k: Number): Number = noImpl
+                    fun InOut(k: Number): Number = noImpl
+                //}
             }
-            external open class Bounce {
-                companion object {
-                    fun In(k: Number): Number
-                    fun Out(k: Number): Number
-                    fun InOut(k: Number): Number
-                }
+            object Bounce {
+                //companion object {
+                    fun In(k: Number): Number = noImpl
+                    fun Out(k: Number): Number = noImpl
+                    fun InOut(k: Number): Number = noImpl
+                //}
             }
-            external open class Circular {
-                companion object {
-                    fun In(k: Number): Number
-                    fun Out(k: Number): Number
-                    fun InOut(k: Number): Number
-                }
+            object Circular {
+                //companion object {
+                    fun In(k: Number): Number = noImpl
+                    fun Out(k: Number): Number = noImpl
+                    fun InOut(k: Number): Number = noImpl
+                //}
             }
-            external open class Cubic {
-                companion object {
-                    fun In(k: Number): Number
-                    fun Out(k: Number): Number
-                    fun InOut(k: Number): Number
-                }
+            object Cubic {
+                //companion object {
+                    fun In(k: Number): Number = noImpl
+                    fun Out(k: Number): Number = noImpl
+                    fun InOut(k: Number): Number = noImpl
+                //}
             }
-            external open class Elastic {
-                companion object {
-                    fun In(k: Number): Number
-                    fun Out(k: Number): Number
-                    fun InOut(k: Number): Number
-                }
+            object Elastic {
+                //companion object {
+                    fun In(k: Number): Number = noImpl
+                    fun Out(k: Number): Number = noImpl
+                    fun InOut(k: Number): Number = noImpl
+                //}
             }
-            external open class Exponential {
-                companion object {
-                    fun In(k: Number): Number
-                    fun Out(k: Number): Number
-                    fun InOut(k: Number): Number
-                }
+            object Exponential {
+                //companion object {
+                    fun In(k: Number): Number = noImpl
+                    fun Out(k: Number): Number = noImpl
+                    fun InOut(k: Number): Number = noImpl
+                //}
             }
-            external open class Linear {
-                companion object {
-                    fun None(k: Number): Number
-                }
+            object Linear {
+                //companion object {
+                    fun None(k: Number): Number = noImpl
+                //}
             }
-            external open class Quadratic {
-                companion object {
-                    fun In(k: Number): Number
-                    fun Out(k: Number): Number
-                    fun InOut(k: Number): Number
-                }
+            object Quadratic {
+                //companion object {
+                    fun In(k: Number): Number = noImpl
+                    fun Out(k: Number): Number = noImpl
+                    fun InOut(k: Number): Number = noImpl
+                //}
             }
-            external open class Quartic {
-                companion object {
-                    fun In(k: Number): Number
-                    fun Out(k: Number): Number
-                    fun InOut(k: Number): Number
-                }
+            object Quartic {
+                //companion object {
+                    fun In(k: Number): Number = noImpl
+                    fun Out(k: Number): Number = noImpl
+                    fun InOut(k: Number): Number = noImpl
+                //}
             }
-            external open class Quintic {
-                companion object {
-                    fun In(k: Number): Number
-                    fun Out(k: Number): Number
-                    fun InOut(k: Number): Number
-                }
+            object Quintic {
+                //companion object {
+                    fun In(k: Number): Number = noImpl
+                    fun Out(k: Number): Number = noImpl
+                    fun InOut(k: Number): Number = noImpl
+                //}
             }
-            external open class Sinusoidal {
-                companion object {
-                    fun In(k: Number): Number
-                    fun Out(k: Number): Number
-                    fun InOut(k: Number): Number
-                }
+            object Sinusoidal {
+                //companion object {
+                    fun In(k: Number): Number = noImpl
+                    fun Out(k: Number): Number = noImpl
+                    fun InOut(k: Number): Number = noImpl
+                //}
             }
-        }*/
+        }
 		@JsName("Phaser.Ellipse")
         external open class Ellipse(x: Number? = null, y: Number? = null, width: Number? = null, height: Number? = null) {
             open var bottom: Number
@@ -1321,7 +1326,7 @@ import org.w3c.xhr.XMLHttpRequest
             open var device: Phaser.Device
             open var forceSingleUpdate: Boolean
             open var fpsProblemNotifier: Phaser.Signal
-            open var height: Number
+            open var height: Double
             open var id: Number
             open var input: Phaser.Input
             open var isBooted: Boolean
@@ -1360,7 +1365,7 @@ import org.w3c.xhr.XMLHttpRequest
             open var tweens: Phaser.TweenManager
             open var currentUpdateID: Number
             open var updatesThisFrame: Number
-            open var width: Number
+            open var width: Double
             open var world: Phaser.World
             open fun boot(): Unit
             open fun destroy(): Unit
@@ -1664,23 +1669,25 @@ import org.w3c.xhr.XMLHttpRequest
             open fun alignTo(container: Phaser.Graphics, position: Number? = null, offsetX: Number? = null, offsetY: Number? = null): Phaser.Group
             open fun alignTo(container: Phaser.TileSprite, position: Number? = null, offsetX: Number? = null, offsetY: Number? = null): Phaser.Group
             open fun bringToTop(child: Any): Any
-            open fun callAll(method: String, context: Any, vararg parameters: Any): Unit
+            open fun callAll(method: String, context: Any?, vararg parameters: Any): Unit
             open fun callAllExists(callback: String, existsValue: Boolean, vararg parameters: Any): Unit
             open fun callbackFromArray(child: Any, callback: Function<Any>, length: Number): Unit
             open fun checkAll(key: Array<String>, value: Any, checkAlive: Boolean? = null, checkVisible: Boolean? = null, force: Boolean? = null): Boolean
             open fun checkProperty(child: Any, key: Array<String>, value: Any, force: Boolean? = null): Boolean
             open fun countDead(): Number
             open fun countLiving(): Number
-            open fun create(x: Number, y: Number, key: String? = null, frame: String? = null, exists: Boolean? = null, index: Number? = null): Any
-            open fun create(x: Number, y: Number, key: String? = null, frame: Number? = null, exists: Boolean? = null, index: Number? = null): Any
-            open fun create(x: Number, y: Number, key: Phaser.RenderTexture? = null, frame: String? = null, exists: Boolean? = null, index: Number? = null): Any
-            open fun create(x: Number, y: Number, key: Phaser.RenderTexture? = null, frame: Number? = null, exists: Boolean? = null, index: Number? = null): Any
-            open fun create(x: Number, y: Number, key: Phaser.BitmapData? = null, frame: String? = null, exists: Boolean? = null, index: Number? = null): Any
-            open fun create(x: Number, y: Number, key: Phaser.BitmapData? = null, frame: Number? = null, exists: Boolean? = null, index: Number? = null): Any
-            open fun create(x: Number, y: Number, key: Phaser.Video? = null, frame: String? = null, exists: Boolean? = null, index: Number? = null): Any
-            open fun create(x: Number, y: Number, key: Phaser.Video? = null, frame: Number? = null, exists: Boolean? = null, index: Number? = null): Any
-            open fun create(x: Number, y: Number, key: PIXI.Texture? = null, frame: String? = null, exists: Boolean? = null, index: Number? = null): Any
-            open fun create(x: Number, y: Number, key: PIXI.Texture? = null, frame: Number? = null, exists: Boolean? = null, index: Number? = null): Any
+            //open fun create(x: Number, y: Number, key: String? = null, frame: String? = null, exists: Boolean? = null, index: Number? = null): DisplayObject
+            open fun <T>create(x: Number, y: Number, key: String?): T
+            open fun <T>create(x: Number, y: Number, key: String? = null, frame: Number? = null, exists: Boolean? = null, index: Number? = null): T
+            open fun <T>create(x: Number, y: Number, key: String? = null, frame: String? = null, exists: Boolean? = null, index: Number? = null): T
+            open fun <T>create(x: Number, y: Number, key: Phaser.RenderTexture? = null, frame: String? = null, exists: Boolean? = null, index: Number? = null): T
+            open fun <T>create(x: Number, y: Number, key: Phaser.RenderTexture? = null, frame: Number? = null, exists: Boolean? = null, index: Number? = null): T
+            open fun <T>create(x: Number, y: Number, key: Phaser.BitmapData? = null, frame: String? = null, exists: Boolean? = null, index: Number? = null): T
+            open fun <T>create(x: Number, y: Number, key: Phaser.BitmapData? = null, frame: Number? = null, exists: Boolean? = null, index: Number? = null): T
+            open fun <T>create(x: Number, y: Number, key: Phaser.Video? = null, frame: String? = null, exists: Boolean? = null, index: Number? = null): T
+            open fun <T>create(x: Number, y: Number, key: Phaser.Video? = null, frame: Number? = null, exists: Boolean? = null, index: Number? = null): T
+            open fun <T>create(x: Number, y: Number, key: PIXI.Texture? = null, frame: String? = null, exists: Boolean? = null, index: Number? = null): T
+            open fun <T>create(x: Number, y: Number, key: PIXI.Texture? = null, frame: Number? = null, exists: Boolean? = null, index: Number? = null): T
             open fun createMultiple(quantity: Number, key: String, frame: Any? = null, exists: Boolean? = null): Array<Any>
             open fun createMultiple(quantity: Number, key: String, frame: Array<Any>? = null, exists: Boolean? = null): Array<Any>
             open fun createMultiple(quantity: Number, key: Array<String>, frame: Any? = null, exists: Boolean? = null): Array<Any>
@@ -4090,6 +4097,9 @@ import org.w3c.xhr.XMLHttpRequest
             override fun toString(): String
             open fun validateListener(listener: Function<Any>, fnName: String): Unit
         }
+        external open class SignalAnimationFrame:Signal() {
+            open fun add(listener: (Animation,Frame)->Unit, listenerContext: Any? = null, priority: Number? = null, vararg args: Any): Phaser.SignalBinding
+        }
 @JsName("Phaser.SignalBinding")
         external open class SignalBinding(signal: Phaser.Signal, listener: Function<Any>, isOnce: Boolean, listenerContext: Any? = null, priority: Number? = null, vararg args: Any) {
             open var active: Boolean
@@ -4326,7 +4336,8 @@ import org.w3c.xhr.XMLHttpRequest
             open fun drawPolygon(): Unit
             open fun heal(amount: Number): Phaser.Sprite
             open fun kill(): Phaser.Sprite
-            open fun loadTexture(key: String, frame: String, stopAnimation: Boolean): Unit
+            fun loadTexture(key: String, frame: Number): Unit
+            fun loadTexture(key: String, frame: Number, stopAnimation: Boolean?): Unit
             /*open fun loadTexture(key: String, frame: String?, stopAnimation: Boolean?): Unit
             open fun loadTexture(key: String, frame: Number?, stopAnimation: Boolean?): Unit
             open fun loadTexture(key: Phaser.RenderTexture, frame: String?, stopAnimation: Boolean?): Unit
@@ -4346,7 +4357,10 @@ import org.w3c.xhr.XMLHttpRequest
             open fun overlap(displayObject: Phaser.TileSprite): Boolean
             open fun overlap(displayObject: Phaser.Button): Boolean
             open fun overlap(displayObject: PIXI.DisplayObject): Boolean*/
-            open fun play(name: String, frameRate: Number?, loop: Boolean?, killOnComplete: Boolean?): Phaser.Animation
+            fun play(name: String): Phaser.Animation
+            fun play(name: String, frameRate: Number?): Phaser.Animation
+            fun play(name: String, frameRate: Number?, loop: Boolean?): Phaser.Animation
+            fun play(name: String, frameRate: Number?, loop: Boolean?, killOnComplete: Boolean?): Phaser.Animation
             open fun postUpdate(): Unit
             open fun preUpdate(): Unit
             open fun reset(x: Number, y: Number, health: Number?): Phaser.Sprite
@@ -5207,7 +5221,7 @@ import org.w3c.xhr.XMLHttpRequest
             open fun resume(): Unit
             open fun start(index: Number? = null): Phaser.Tween
             open fun stop(complete: Boolean? = null): Phaser.Tween
-            open fun to(properties: Any, duration: Number? = null, ease: Function<Any>? = null, autoStart: Boolean? = null, delay: Number? = null, repeat: Number? = null, yoyo: Boolean? = null): Phaser.Tween
+            open fun to(properties: Any, duration: Number? = null, ease: Function<Number>? = null, autoStart: Boolean? = null, delay: Number? = null, repeat: Number? = null, yoyo: Boolean? = null): Phaser.Tween
             open fun to(properties: Any, duration: Number? = null, ease: String? = null, autoStart: Boolean? = null, delay: Number? = null, repeat: Number? = null, yoyo: Boolean? = null): Phaser.Tween
             open fun update(time: Number): Boolean
             open fun updateTweenData(property: String, value: Number, index: Number? = null): Phaser.Tween
