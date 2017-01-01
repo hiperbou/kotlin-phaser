@@ -213,6 +213,7 @@ import org.w3c.xhr.XMLHttpRequest
         }
 
         external interface BitmapFont {
+
             var base: PIXI.BaseTexture
             var data: HTMLImageElement
             var font: Phaser.BMFont
@@ -384,7 +385,7 @@ import org.w3c.xhr.XMLHttpRequest
             open var physicsType: Number
             open var previousPosition: Phaser.Point
             open var previousRotation: Number
-            override var position: Phaser.Point
+            open var position: Phaser.Point
             open var renderOrderID: Number
             open var right: Number
             open var text: String
@@ -1328,7 +1329,7 @@ import org.w3c.xhr.XMLHttpRequest
             open var load: Phaser.Loader
             open var lockRender: Boolean
             open var make: Phaser.GameObjectCreator
-            open var math: Phaser.PhMath
+            open var math: Phaser.Math
             open var net: Phaser.Net
             open var onBlur: Phaser.Signal
             open var onFocus: Phaser.Signal
@@ -1562,7 +1563,7 @@ import org.w3c.xhr.XMLHttpRequest
             open var outOfBoundsKill: Boolean
             open var pendingDestroy: Boolean
             open var physicsType: Number
-            override var position: Phaser.Point
+            open var position: Phaser.Point
             open var previousPosition: Phaser.Point
             open var previousRotation: Number
             open var renderOrderID: Number
@@ -1631,10 +1632,10 @@ import org.w3c.xhr.XMLHttpRequest
             open var physicsBodyType: Number
             open var physicsType: Number
             open var physicsSortDirection: Number
-            override var position: Phaser.Point
+            open var position: Phaser.Point
             open var right: Number
             override var rotation: Number
-            override var scale: Phaser.Point
+            open var scale: Phaser.Point
             open var top: Number
             open var total: Number
             open var type: Number
@@ -1778,7 +1779,7 @@ import org.w3c.xhr.XMLHttpRequest
             }
         }
 @JsName("Phaser.Image")
-        external open class Image(game: Phaser.Game, x: Number, y: Number, key: Any, frame: Any? = null): PIXI.Sprite() {
+        external open class Image(game: Phaser.Game, x: Number, y: Number, key: Any, frame: Any? = null): PIXI.Sprite(null) {
             /*constructor(game: Phaser.Game, x: Number, y: Number, key: String, frame: String? = null)
             constructor(game: Phaser.Game, x: Number, y: Number, key: String, frame: Number? = null)
             constructor(game: Phaser.Game, x: Number, y: Number, key: Phaser.RenderTexture, frame: String? = null)
@@ -1789,7 +1790,7 @@ import org.w3c.xhr.XMLHttpRequest
             constructor(game: Phaser.Game, x: Number, y: Number, key: PIXI.Texture, frame: Number? = null)*/
             open var alive: Boolean
             open var angle: Number
-            override var anchor: Phaser.Point
+            open var anchor: Phaser.Point
             //open var anchor: Phaser.Point
             open var animations: Phaser.AnimationManager
             open var autoCull: Boolean
@@ -1825,12 +1826,12 @@ import org.w3c.xhr.XMLHttpRequest
             open var offsetX: Number
             open var offsetY: Number
             open var pendingDestroy: Boolean
-            override var position: Phaser.Point
+            open var position: Phaser.Point
             open var previousPosition: Phaser.Point
             open var previousRotation: Number
             open var renderOrderID: Number
             open var right: Number
-            override var scale: Phaser.Point
+            open var scale: Phaser.Point
             open var smoothed: Boolean
             open var top: Number
             open var type: Number
@@ -2507,7 +2508,7 @@ import org.w3c.xhr.XMLHttpRequest
             var cos: Array<Number>
         }
 @JsName("Phaser.Math")
-        external open class PhMath {
+        external open class Math {
             companion object {
                 fun angleBetween(x1: Number, y1: Number, x2: Number, y2: Number): Number
                 fun angleBetweenPoints(point1: Phaser.Point, point2: Phaser.Point): Number
@@ -3627,7 +3628,7 @@ import org.w3c.xhr.XMLHttpRequest
         }
 */
 @JsName("Phaser.Point")
-        external open class Point(x: Number? = null, y: Number? = null) : PIXI.Point() {
+        external open class Point(x: Number? = null, y: Number? = null) : PIXI.Point(x,y) {
             override var x: Number
             override var y: Number
             open var type: Number
@@ -3657,7 +3658,7 @@ import org.w3c.xhr.XMLHttpRequest
             open fun perp(): Phaser.Point
             open fun rperp(): Phaser.Point
             open fun rotate(x: Number, y: Number, angle: Number, asDegrees: Boolean? = null, distance: Number? = null): Phaser.Point
-            override fun set(x: Number, y: Number?): Phaser.Point
+            open fun set(x: Number, y: Number?): Phaser.Point
             open fun set(x: Number): Phaser.Point
             open fun setMagnitude(magnitude: Number): Phaser.Point
             open fun setTo(x: Number, y: Number? = null): Phaser.Point
@@ -3893,8 +3894,8 @@ import org.w3c.xhr.XMLHttpRequest
             }
         }
 @JsName("Phaser.RenderTexture")
-        external open class RenderTexture(game: Phaser.Game, width: Number? = null, height: Number? = null, key: String? = null, scaleMode: Number? = null, resolution: Number? = null) : PIXI.RenderTexture() {
-            override var crop: PIXI.Rectangle
+        external open class RenderTexture(game: Phaser.Game, width: Number? = null, height: Number? = null, key: String? = null, scaleMode: Number? = null, resolution: Number? = null) {
+            open var crop: PIXI.Rectangle
             open var game: Phaser.Game
             open var key: String
             open var type: Number
@@ -3959,17 +3960,18 @@ import org.w3c.xhr.XMLHttpRequest
             }
         }
 @JsName("Phaser.Rope")
-        external open class Rope : PIXI.Rope {
-            constructor(game: Phaser.Game, x: Number, y: Number, key: String, frame: String? = null, points: Array<Phaser.Point>? = null)
-            constructor(game: Phaser.Game, x: Number, y: Number, key: String, frame: Number? = null, points: Array<Phaser.Point>? = null)
-            constructor(game: Phaser.Game, x: Number, y: Number, key: Phaser.RenderTexture, frame: String? = null, points: Array<Phaser.Point>? = null)
-            constructor(game: Phaser.Game, x: Number, y: Number, key: Phaser.RenderTexture, frame: Number? = null, points: Array<Phaser.Point>? = null)
-            constructor(game: Phaser.Game, x: Number, y: Number, key: Phaser.BitmapData, frame: String? = null, points: Array<Phaser.Point>? = null)
-            constructor(game: Phaser.Game, x: Number, y: Number, key: Phaser.BitmapData, frame: Number? = null, points: Array<Phaser.Point>? = null)
-            constructor(game: Phaser.Game, x: Number, y: Number, key: PIXI.Texture, frame: String? = null, points: Array<Phaser.Point>? = null)
-            constructor(game: Phaser.Game, x: Number, y: Number, key: PIXI.Texture, frame: Number? = null, points: Array<Phaser.Point>? = null)
-            constructor(game: Phaser.Game, x: Number, y: Number, key: Phaser.Video, frame: String? = null, points: Array<Phaser.Point>? = null)
-            constructor(game: Phaser.Game, x: Number, y: Number, key: Phaser.Video, frame: Number? = null, points: Array<Phaser.Point>? = null)
+        external open class Rope():PIXI.Rope(null,null) {
+            constructor(game: Phaser.Game, x: Number, y: Number, key: String, frame: String? = null, points: Array<Phaser.Point>? = null):this()
+            constructor(game: Phaser.Game, x: Number, y: Number, key: String, frame: Number? = null, points: Array<Phaser.Point>? = null):this()
+            constructor(game: Phaser.Game, x: Number, y: Number, key: Phaser.RenderTexture, frame: String? = null, points: Array<Phaser.Point>? = null):this()
+            constructor(game: Phaser.Game, x: Number, y: Number, key: Phaser.RenderTexture, frame: Number? = null, points: Array<Phaser.Point>? = null):this()
+            constructor(game: Phaser.Game, x: Number, y: Number, key: Phaser.BitmapData, frame: String? = null, points: Array<Phaser.Point>? = null):this()
+            constructor(game: Phaser.Game, x: Number, y: Number, key: Phaser.BitmapData, frame: Number? = null, points: Array<Phaser.Point>? = null):this()
+            constructor(game: Phaser.Game, x: Number, y: Number, key: PIXI.Texture, frame: String? = null, points: Array<Phaser.Point>? = null):this()
+            constructor(game: Phaser.Game, x: Number, y: Number, key: PIXI.Texture, frame: Number? = null, points: Array<Phaser.Point>? = null):this()
+            constructor(game: Phaser.Game, x: Number, y: Number, key: Phaser.Video, frame: String? = null, points: Array<Phaser.Point>? = null):this()
+            constructor(game: Phaser.Game, x: Number, y: Number, key: Phaser.Video, frame: Number? = null, points: Array<Phaser.Point>? = null):this()
+
             open var angle: Number
             open var animations: Phaser.AnimationManager
             open var alive: Boolean
@@ -4010,8 +4012,8 @@ import org.w3c.xhr.XMLHttpRequest
             open fun overlap(displayObject: Phaser.Button): Boolean
             open fun overlap(displayObject: PIXI.DisplayObject): Boolean
             open var pendingDestroy: Boolean
-            override var points: Array<Phaser.Point>
-            override var position: Phaser.Point
+            open var points: Array<Phaser.Point>
+            open var position: Phaser.Point
             open var previousPosition: Phaser.Point
             open var previousRotation: Number
             open var right: Number
@@ -4026,8 +4028,8 @@ import org.w3c.xhr.XMLHttpRequest
             open var scaleMax: Phaser.Point
             open var updateAnimation: Function<Any>
             open var world: Phaser.Point
-            override var x: Number
-            override var y: Number
+            override var x: Double
+            override var y: Double
             open var z: Number
             open fun bringToTop(): Phaser.Rope
             //open fun checkTransform(wt: PIXI.Matrix): Unit
@@ -4060,7 +4062,7 @@ import org.w3c.xhr.XMLHttpRequest
             open fun update(): Unit
         }
 @JsName("Phaser.RoundedRectangle")
-        external open class RoundedRectangle : PIXI.RoundedRectangle() {
+        external open class RoundedRectangle : PIXI.RoundedRectangle(null,null,null,null,null) {
             override var x: Number
             override var y: Number
             override var width: Number
@@ -4228,7 +4230,7 @@ import org.w3c.xhr.XMLHttpRequest
             open fun update(): Unit
         }
 @JsName("Phaser.Sprite")
-        external open class Sprite(game: Phaser.Game, x: Number, y: Number, key: Any? = null, frame: Any? = null) : PIXI.Sprite() {
+        external open class Sprite(game: Phaser.Game, x: Number, y: Number, key: Any? = null, frame: Any? = null) : PIXI.Sprite(null) {
             /*constructor(game: Phaser.Game, x: Number, y: Number, key: String? = null, frame: String? = null)
             constructor(game: Phaser.Game, x: Number, y: Number, key: String? = null, frame: Number? = null)
             constructor(game: Phaser.Game, x: Number, y: Number, key: Phaser.RenderTexture? = null, frame: String? = null)
@@ -4238,7 +4240,7 @@ import org.w3c.xhr.XMLHttpRequest
             constructor(game: Phaser.Game, x: Number, y: Number, key: PIXI.Texture? = null, frame: String? = null)
             constructor(game: Phaser.Game, x: Number, y: Number, key: PIXI.Texture? = null, frame: Number? = null)*/
             open var alive: Boolean
-            override var anchor: Phaser.Point
+            open var anchor: Phaser.Point
             open var angle: Double
             open var animations: Phaser.AnimationManager
             open var autoCull: Boolean
@@ -4280,12 +4282,12 @@ import org.w3c.xhr.XMLHttpRequest
             open var pendingDestroy: Boolean
             open var previousPosition: Phaser.Point
             open var previousRotation: Number
-            override var position: Phaser.Point
+            open var position: Phaser.Point
             open var physicsEnabled: Boolean
             open var physicsType: Number
             open var renderOrderID: Number
             open var right: Number
-            override var scale: Phaser.Point
+            open var scale: Phaser.Point
             open var scaleMin: Phaser.Point
             open var scaleMax: Phaser.Point
             open var smoothed: Boolean
@@ -4961,15 +4963,15 @@ import org.w3c.xhr.XMLHttpRequest
             open fun setSpacing(margin: Number? = null, spacing: Number? = null): Unit
         }
 @JsName("Phaser.TileSprite")
-        external open class TileSprite : PIXI.TilingSprite {
-            constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: String? = null, frame: String? = null)
-            constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: String? = null, frame: Number? = null)
-            constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: Phaser.RenderTexture? = null, frame: String? = null)
-            constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: Phaser.RenderTexture? = null, frame: Number? = null)
-            constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: Phaser.BitmapData? = null, frame: String? = null)
-            constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: Phaser.BitmapData? = null, frame: Number? = null)
-            constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: PIXI.Texture? = null, frame: String? = null)
-            constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: PIXI.Texture? = null, frame: Number? = null)
+        external open class TileSprite() : PIXI.TilingSprite(null,null,null) {
+            constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: String? = null, frame: String? = null):this()
+            constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: String? = null, frame: Number? = null):this()
+            constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: Phaser.RenderTexture? = null, frame: String? = null):this()
+            constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: Phaser.RenderTexture? = null, frame: Number? = null):this()
+            constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: Phaser.BitmapData? = null, frame: String? = null):this()
+            constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: Phaser.BitmapData? = null, frame: Number? = null):this()
+            constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: PIXI.Texture? = null, frame: String? = null):this()
+            constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: PIXI.Texture? = null, frame: Number? = null):this()
             open var alive: Boolean
             open var angle: Number
             open var animations: Phaser.AnimationManager
@@ -5002,7 +5004,7 @@ import org.w3c.xhr.XMLHttpRequest
             open var outOfBoundsKill: Boolean
             open var pendingDestroy: Boolean
             open var physicsType: Number
-            override var position: Phaser.Point
+            open var position: Phaser.Point
             open var smoothed: Boolean
             open var previousPosition: Phaser.Point
             open var previousRoation: Number
@@ -5222,8 +5224,8 @@ import org.w3c.xhr.XMLHttpRequest
             open var game: Phaser.Game
             open var inReverse: Boolean
             open var interpolate: Boolean
-            open var interpolateFunctionContext: Phaser.PhMath
-            open var interpolationContext: Phaser.PhMath
+            open var interpolateFunctionContext: Phaser.Math
+            open var interpolationContext: Phaser.Math
             open var interpolationFunction: Function<Any>
             open var isRunning: Boolean
             open var isFrom: Boolean

@@ -3,10 +3,12 @@ import Koala.Sprite
 import Phaser.*
 import examples.runExample
 
+val Math = kotlin.js.Math
 
 fun main(args: Array<String>) {
 	//runExample(5) //Test examples
-	gameMain()
+	runExample(examples.basics.E08SpriteRotation())
+	//gameMain()
 }
 
 fun gameMain() {
@@ -64,6 +66,8 @@ class MainState:State() {
 		layer1 = game.add.group()
 		layer2 = game.add.group()
 		layer2.scale.set(2,2)
+
+
 
 		for (i in 1..10) {
 			layer1.addChild( Panda(Math.random() * gameProperties.screenWidth,
