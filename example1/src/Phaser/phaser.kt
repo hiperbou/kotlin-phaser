@@ -179,6 +179,7 @@ import org.w3c.xhr.XMLHttpRequest
             open fun get(marker: String): Phaser.Sound
             open fun play(marker: String, volume: Number? = null): Phaser.Sound
             open fun stop(marker: String): Phaser.Sound
+            open var allowMultiple:Boolean
         }
 @JsName("Phaser.ArraySet")
         external open class ArraySet(list: Array<Any>) {
@@ -393,8 +394,8 @@ import org.w3c.xhr.XMLHttpRequest
             open var right: Number
             open var text: String
             open var smoothed: Boolean
-            open var textWidth: Number
-            open var textHeight: Number
+            open var textWidth: Double
+            open var textHeight: Double
             open var tint: Number
             open var top: Number
             open var type: Number
@@ -1417,7 +1418,7 @@ import org.w3c.xhr.XMLHttpRequest
             open fun audioSprite(key: String): Phaser.AudioSprite
             open fun bitmapData(width: Number? = null, height: Number? = null, key: String? = null, addToCache: Boolean? = null): Phaser.BitmapData
             open fun bitmapText(x: Number, y: Number, font: String, text: String? = null, size: Number? = null, group: Phaser.Group? = null): Phaser.BitmapText
-            open fun button(x: Number? = null, y: Number? = null, key: String? = null, callback: Function<Any>? = null, callbackContext: Any? = null, overFrame: Any? = null, outFrame: Any? = null, downFrame: Any? = null, upFrame: Any? = null, group: Phaser.Group? = null): Phaser.Button
+            open fun button(x: Number? = null, y: Number? = null, key: String? = null, callback: (Button)->Unit? , callbackContext: Any? = null, overFrame: Any? = null, outFrame: Any? = null, downFrame: Any? = null, upFrame: Any? = null, group: Phaser.Group? = null): Phaser.Button
             open fun emitter(x: Number? = null, y: Number? = null, maxParticles: Number? = null): Phaser.Particles.Arcade.Emitter
             open fun existing(`object`: Any): Any
             //open fun filter(filter: String, vararg args: Any): Phaser.Filter
@@ -1639,7 +1640,7 @@ import org.w3c.xhr.XMLHttpRequest
             open var physicsSortDirection: Number
             open var position: Phaser.Point
             open var right: Number
-            override var rotation: Number
+            override var rotation: Double
             open var scale: Phaser.Point
             open var top: Number
             open var total: Number
@@ -1929,7 +1930,7 @@ import org.w3c.xhr.XMLHttpRequest
             open var moveCallbacks: (pointer: Phaser.Pointer, x: Number, y: Number) -> Array<Unit>
             //open var mspointer: Phaser.MSPointer
             open var multiInputOverride: Number
-            open var onDown: Phaser.Signal
+            open var onDown: Phaser.Signal1<Pointer>
             open var onHold: Phaser.Signal
             open var onTap: Phaser.Signal
             open var onUp: Phaser.Signal
@@ -2417,6 +2418,7 @@ import org.w3c.xhr.XMLHttpRequest
             open fun audio(key: String, urls: String, autoDecode: Boolean? = null): Phaser.Loader
             open fun audio(key: String, urls: Array<String>, autoDecode: Boolean? = null): Phaser.Loader
             open fun audio(key: String, urls: Any, autoDecode: Boolean? = null): Phaser.Loader
+            open fun audiosprite(key: String, url: String, jsonURL: String? = null, jsonData: String? = null, autoDecode: Boolean? = null): Phaser.Loader
             open fun audiosprite(key: String, urls: Array<String>, jsonURL: String? = null, jsonData: String? = null, autoDecode: Boolean? = null): Phaser.Loader
             open fun audiosprite(key: String, urls: Array<String>, jsonURL: String? = null, jsonData: Any? = null, autoDecode: Boolean? = null): Phaser.Loader
             open fun binary(key: String, url: String? = null, callback: Function<Any>? = null, callbackContext: Any? = null): Phaser.Loader
@@ -3741,10 +3743,10 @@ import org.w3c.xhr.XMLHttpRequest
             open var totalTouches: Number
             open var type: Number
             open var withinGame: Boolean
-            open var worldX: Number
-            open var worldY: Number
-            open var x: Number
-            open var y: Number
+            open var worldX: Double
+            open var worldY: Double
+            open var x: Double
+            open var y: Double
             open fun addClickTrampoline(name: String, callback: Function<Any>, callbackContext: Any, vararg callbackArgs: Any): Unit
             open fun justPressed(duration: Number? = null): Boolean
             open fun justReleased(duration: Number? = null): Boolean
@@ -4097,6 +4099,12 @@ import org.w3c.xhr.XMLHttpRequest
             override fun toString(): String
             open fun validateListener(listener: Function<Any>, fnName: String): Unit
         }
+        external open class Signal1<T>:Signal() {
+            open fun add(listener: (T)->Unit, listenerContext: Any? = null, priority: Number? = null, vararg args: Any): Phaser.SignalBinding
+        }
+        external open class SignalSound:Signal() {
+            open fun add(listener: (Sound)->Unit, listenerContext: Any? = null, priority: Number? = null, vararg args: Any): Phaser.SignalBinding
+        }
         external open class SignalAnimationFrame:Signal() {
             open fun add(listener: (Animation,Frame)->Unit, listenerContext: Any? = null, priority: Number? = null, vararg args: Any): Phaser.SignalBinding
         }
@@ -4170,26 +4178,26 @@ import org.w3c.xhr.XMLHttpRequest
             open var name: String
             open var onDecoded: Phaser.Signal
             open var onEndedHandler: () -> Unit
-            open var onFadeComplete: Phaser.Signal
-            open var onLoop: Phaser.Signal
-            open var onMarkerComplete: Phaser.Signal
-            open var onMute: Phaser.Signal
-            open var onPause: Phaser.Signal
-            open var onPlay: Phaser.Signal
-            open var onResume: Phaser.Signal
-            open var onStop: Phaser.Signal
+            open var onFadeComplete: Phaser.Signal1<Sound>
+            open var onLoop: Phaser.Signal1<Sound>
+            open var onMarkerComplete: Phaser.Signal1<Sound>
+            open var onMute: Phaser.Signal1<Sound>
+            open var onPause: Phaser.Signal1<Sound>
+            open var onPlay: Phaser.Signal1<Sound>
+            open var onResume: Phaser.Signal1<Sound>
+            open var onStop: Phaser.Signal1<Sound>
             open var override: Boolean
             open var paused: Boolean
             open var pausedPosition: Number
             open var pausedTime: Number
             open var pendingPlayback: Boolean
-            open var position: Number
+            open var position: Double
             open var startTime: Number
             open var stopTime: Number
             open var totalDuration: Number
             open var usingAudioTag: Boolean
             open var usingWebAudio: Boolean
-            open var volume: Number
+            open var volume: Double
             open fun addMarker(name: String, start: Number, duration: Number, volume: Number? = null, loop: Boolean? = null): Unit
             open fun destroy(): Unit
             open fun fadeIn(duration: Number? = null, loop: Boolean? = null, marker: String? = null): Unit
@@ -4199,6 +4207,7 @@ import org.w3c.xhr.XMLHttpRequest
             open fun pause(): Unit
             open fun play(marker: String? = null, position: Number? = null, volume: Number? = null, loop: Boolean? = null, forceRestart: Boolean? = null): Phaser.Sound
             open fun removeMarker(name: String): Unit
+            open fun restart(): Unit
             open fun restart(marker: String, position: Number, volume: Number? = null, loop: Boolean? = null): Unit
             open fun resume(): Unit
             open fun soundHasUnlocked(key: String): Unit

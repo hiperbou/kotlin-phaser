@@ -34,7 +34,7 @@ class DynamicAnimation: State() {
 	    var x = 0
 	    var y = -22
 	
-		for(i in 0..16)
+		for(i in 0..15)
 	    {
 	        bmd.draw(orb, x, y)
 	        x += 22
@@ -50,12 +50,12 @@ class DynamicAnimation: State() {
 	    game.cache.addSpriteSheet("dynamic", "", bmd.canvas, 22, 22, 16, 0, 0)
 	
 	    //  Let"s create a bunch of sprites all using the same animation data
-		for (i in 0..16)
+		for (i in 0..15)
 	    {
 	        var test = game.add.sprite(200, 100 + (i * 22), "dynamic")
 	        test.animations.add("float")
 	        // test.play("float", 20 + i, true) // uncomment this line and comment out the line below for some trippy fun :)
-	        test.play("float", 20, true)
+	        test.play("float", 20, true) //@todo This crashes!
 	    }
 	
 	}

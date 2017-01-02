@@ -337,7 +337,7 @@ external object PIXI {
         open var pivot: Point = noImpl
         //open var position: Point = noImpl
         open var renderable: Boolean = noImpl
-        open var rotation: Number = noImpl
+        open var rotation: Double = noImpl
         //open var scale: Point = noImpl
         open var stage: DisplayObjectContainer = noImpl
         open var visible: Boolean = noImpl

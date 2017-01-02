@@ -7,7 +7,9 @@ val Math = kotlin.js.Math
 
 fun main(args: Array<String>) {
 	//runExample(5) //Test examples
-	runExample(examples.basics.E08SpriteRotation())
+	//runExample(examples.basics.E08SpriteRotation())
+	//runExample(examples.animation.TwoFrameTest())
+	runExample(examples.audio.SoundComplete())
 	//gameMain()
 }
 
