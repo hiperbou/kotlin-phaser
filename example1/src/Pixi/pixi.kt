@@ -4,6 +4,7 @@ import Phaser.RenderTexture
 import org.khronos.webgl.*
 import org.w3c.dom.*
 import org.w3c.xhr.XMLHttpRequest
+import Phaser.Point
 
 @JsModule("PIXI")
 @JsNonModule
@@ -289,7 +290,9 @@ external object PIXI {
             fun tintWithOverlay(texture: Texture, color: Number, canvas: HTMLCanvasElement): Unit = noImpl
             fun tintWithPerPixel(texture: Texture, color: Number, canvas: HTMLCanvasElement): Unit = noImpl
             var canUseMultiply: Boolean = noImpl
-            var tintMethod: Any = noImpl
+            //var tintMethod: Any = noImpl
+            fun tintMethod(texture: Texture, color: Number, canvas: HTMLCanvasElement): Unit = noImpl
+
         }
     }
     open class Circle(x: Number, y: Number, radius: Number) : HitArea {
@@ -324,7 +327,7 @@ external object PIXI {
         open var scale: Point = noImpl
     }
     abstract class DisplayObject {
-        open var alpha: Number = noImpl
+        open var alpha: Double = noImpl
         open var buttonMode: Boolean = noImpl
         open var cacheAsBitmap: Boolean = noImpl
         open var defaultCursor: String = noImpl
@@ -335,10 +338,10 @@ external object PIXI {
         open var mask: Graphics = noImpl
         open var parent: DisplayObjectContainer = noImpl
         open var pivot: Point = noImpl
-        //open var position: Point = noImpl
+        open var position: Phaser.Point = noImpl
         open var renderable: Boolean = noImpl
         open var rotation: Double = noImpl
-        //open var scale: Point = noImpl
+        open var scale: Phaser.Point = noImpl
         open var stage: DisplayObjectContainer = noImpl
         open var visible: Boolean = noImpl
         open var worldAlpha: Number = noImpl
@@ -349,6 +352,7 @@ external object PIXI {
         open var worldVisible: Boolean = noImpl
         open var x: Double = noImpl
         open var y: Double = noImpl
+        open var z: Double = noImpl
         open fun click(e: InteractionData): Unit = noImpl
         open fun displayObjectUpdateTransform(parent: DisplayObjectContainer?): Unit = noImpl
         open fun generateTexture(resolution: Number? , scaleMode: Number? , renderer: Any?): RenderTexture = noImpl
@@ -373,6 +377,13 @@ external object PIXI {
         open fun touchstart(e: InteractionData): Unit = noImpl
         open fun touchmove(e: InteractionData): Unit = noImpl
         open fun updateTransform(parent: DisplayObjectContainer?): Unit = noImpl
+        //open fun alignTo(container: DisplayObject, position: Number?): Sprite
+        //open fun alignTo(container: DisplayObject, position: Number?, offsetX: Number?): Sprite
+        //open fun alignTo(container: DisplayObject, position: Number?, offsetX: Number?, offsetY: Number?): Sprite
+        @JsName("alignTo")
+        open fun alignToJs(container: Any, position: Number?, offsetX: Number?, offsetY: Number?): Sprite
+        open var userData:dynamic
+        open var id:Int
     }
 
     open class DisplayObjectContainer : DisplayObject() {
@@ -380,14 +391,18 @@ external object PIXI {
         open var height: Double = noImpl
         open var width: Double = noImpl
         open var ignoreChildInput: Boolean = noImpl
-        open fun addChild(child: DisplayObject): DisplayObject = noImpl
+        open fun <T:DisplayObject>addChild(child: T): T = noImpl
+        //open fun addChild(child: DisplayObject): DisplayObject = noImpl
         open fun addChildAt(child: DisplayObject, index: Number): DisplayObject = noImpl
         //open fun getBounds(): Rectangle
         //open fun getBounds(targetCoordinateSpace: DisplayObject): Rectangle
-        open fun getBounds(targetCoordinateSpace: Matrix): Rectangle
+        //open fun getBounds(): Phaser.Rectangle
+        //open fun getBounds(targetCoordinateSpace: Matrix): Phaser.Rectangle
+        @JsName("getBounds")
+        open fun getBoundsJs(targetCoordinateSpace: Any?): Phaser.Rectangle
         open fun getChildAt(index: Number): DisplayObject = noImpl
         open fun getChildIndex(child: DisplayObject): Number = noImpl
-        open fun getLocalBounds(): Rectangle = noImpl
+        open fun getLocalBounds(): Phaser.Rectangle = noImpl
         open fun removeChild(child: DisplayObject): DisplayObject = noImpl
         open fun removeChildAt(index: Number): DisplayObject = noImpl
         open fun removeChildren(beginIndex: Number?, endIndex: Number?): Array<DisplayObject> = noImpl
@@ -451,6 +466,7 @@ external object PIXI {
         override var worldAlpha: Number = noImpl
         open fun arc(cx: Number, cy: Number, radius: Number, startAngle: Number, endAngle: Number, anticlockwise: Boolean): Graphics = noImpl
         open fun arcTo(x1: Number, y1: Number, x2: Number, y2: Number, radius: Number): Graphics = noImpl
+        open fun beginFill(color: Number?): Graphics = noImpl
         open fun beginFill(color: Number?, alpha: Number?): Graphics = noImpl
         open fun bezierCurveTo(cpX: Number, cpY: Number, cpX2: Number, cpY2: Number, toX: Number, toY: Number): Graphics = noImpl
         open fun clear(): Graphics = noImpl
@@ -465,7 +481,10 @@ external object PIXI {
         open fun drawShape(shape: Ellipse): GraphicsData = noImpl
         open fun drawShape(shape: Polygon): GraphicsData = noImpl
         open fun endFill(): Graphics = noImpl
+        open fun generateTexture(): RenderTexture = noImpl
         open fun generateTexture(resolution: Number?, scaleMode: Number?, padding: Number?): RenderTexture = noImpl
+        open fun lineStyle(lineWidth: Number?): Graphics = noImpl
+        open fun lineStyle(lineWidth: Number?, color: Number?): Graphics = noImpl
         open fun lineStyle(lineWidth: Number?, color: Number?, alpha: Number?): Graphics = noImpl
         open fun lineTo(x: Number, y: Number): Graphics = noImpl
         open fun moveTo(x: Number, y: Number): Graphics = noImpl
@@ -636,12 +655,12 @@ external object PIXI {
         override fun destroy(): Unit = noImpl
         override fun init(): Unit = noImpl
     }
-    open class Point(x: Number?, y: Number?) {
-        open var x: Number = noImpl
-        open var y: Number = noImpl
+    /*open class Point(x: Number?, y: Number?) {
+        open var x: Double = noImpl
+        open var y: Double = noImpl
         open fun clone(): Point = noImpl
-        open fun set(x: Number, y: Number): Unit = noImpl
-    }
+        open fun set(x: Number, y: Number?): Unit = noImpl
+    }*/
     open class Polygon : HitArea {
         constructor(points: Array<Point>)
         constructor(points: Array<Number>)
@@ -710,7 +729,11 @@ external object PIXI {
         open var shader: IPixiShader = noImpl
         open var texture: Texture = noImpl
         open var tint: Number = noImpl
-        open fun setTexture(texture: Texture, destroyBase: Boolean?): Unit = noImpl
+        //open fun setTexture(texture: Any): Unit = noImpl
+        @JsName("setTexture")
+        fun setTextureJs(texture: Any, destroyBase: Boolean?): Unit = noImpl
+        //open fun setTexture(texture: Texture, destroyBase: Boolean?): Unit = noImpl
+        //open fun setTexture(texture: RenderTexture): Unit = noImpl
     }
     open class SpriteBatch(texture: Texture?) : DisplayObjectContainer() {
         open var ready: Boolean = noImpl
@@ -746,7 +769,7 @@ external object PIXI {
         open var texture: Texture = noImpl
         open var uvs: Array<Number> = noImpl
         open var vertices: Array<Number> = noImpl
-        override fun getBounds(matrix: Matrix): Rectangle
+        //override fun getBounds(matrix: Matrix): Phaser.Rectangle
         companion object {
             var DrawModes: `T$3` = noImpl
         }

@@ -1,16 +1,50 @@
 import Koala.*
 import Koala.Sprite
 import Phaser.*
-import examples.runExample
+import jump.jumpMain
+import web.ExamplesConfig
+import web.ExamplesWeb
+import runExample
 
 val Math = kotlin.js.Math
 
 fun main(args: Array<String>) {
-	//runExample(5) //Test examples
+	//runExample(3) //Test examples
 	//runExample(examples.basics.E08SpriteRotation())
 	//runExample(examples.animation.TwoFrameTest())
-	runExample(examples.audio.SoundComplete())
+	//runExample(examples.arcadephysics.LauncherFollowWorld())
+	//runExample(examples.audio.SoundComplete())
+	//runExample(examples.camera.BasicFollow())
+	//runExample(examples.debug.DebugSprite())
+	//runExample(examples.display.PixiRenderTexture())
+	//runExample(examples.filters.SpiralGalaxy())
+	//runExample(examples.filters.PixiFilter())
+	//runExample(examples.games.Breakout())
+	//runExample(examples.games.Invaders())
+	//runExample(examples.games.MatchingPairs())
+	//runExample(examples.games.Simon())
+	//runExample(examples.games.Starstruck())
+	//runExample(examples.games.SlidingPuzzle())
+	//runExample(examples.games.Tanks())
+	//runExample(examples.games.Gemmatch())
+	//runExample(examples.games.Yahtzee())
+	//runExample(examples.groups.SetAll())
+	//runExample(examples.input.WordInput())
+	//runExample(examples.loader.LoadVideo())
+	//runExample(examples.misc.PauseMenu())
+	//runExample(examples.p2physics.PostbroadphaseCallback())
+	//runExample(examples.particles.AutoScale())
+	//runExample(examples.tilemaps.TilemapRayCast())
+	//runExample(examples.tilesprites.TilingSpriteAtlas32x32())
+	//runExample(examples.tweens.GenerateData())
+	//runExample(examples.video.MultipleVideos())
+	//runExample(examples.buttons.RotatedButtons())
+	//runExample(examples.demoscene.Starfield())
+	//runExample(examples.sprites.RotateSpriteAroundPoint())
+	//runExample(examples.weapon.FireMany())
 	//gameMain()
+	//ExamplesWeb(ExamplesConfig())
+	jumpMain()
 }
 
 fun gameMain() {
@@ -18,18 +52,21 @@ fun gameMain() {
 			width = gameProperties.screenWidth,
 			height = gameProperties.screenHeight,
 			parent = "gameDiv",
+			renderer = Phaser.AUTO,
 			state = MainState()
 	))
 }
 
 object gameProperties {
-	val screenWidth = 640.0
-	val screenHeight = 480.0
+	val screenWidth = 800.0
+	val screenHeight = 600.0
 }
 
 object Assets {
 	val panda = Asset("koala", "assets/panda.png")
 }
+
+
 
 class Panda(x:Double, y:Double) : Sprite(x, y, Assets.panda) {
 	init{

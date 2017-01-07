@@ -7,6 +7,8 @@ import kotlin.properties.Delegates
 
 var phaserGame:Phaser.Game by Delegates.notNull()
 
+
+
 open class Sprite(x:Double, y:Double, key: Asset) : Phaser.Sprite(phaserGame,x,y,key.name) {
     init{
         //game.add.existing(this);
@@ -14,7 +16,11 @@ open class Sprite(x:Double, y:Double, key: Asset) : Phaser.Sprite(phaserGame,x,y
 }
 
 fun initKoala(config:Phaser.IGameConfig):Game {
-    phaserGame = Game(config)
+    //phaserGame = Game(config)
+    //width, height, renderer, parent, state, transparent, antialias, physicsConfig
+    phaserGame = Game(config.width, config.height, config.renderer,
+            config.parent, config.state, config.transparent,
+            config.antialias, config.physicsConfig)
     return phaserGame
 }
 

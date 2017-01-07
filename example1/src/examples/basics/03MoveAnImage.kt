@@ -28,7 +28,7 @@ class E03MoveAnImage: State() {
 	
 	    game.physics.enable(image, Phaser.Physics.ARCADE)
 	
-	    image.body.velocity.x=150
+	    image.body.velocity.x = 150.0
 	
 	}
 }

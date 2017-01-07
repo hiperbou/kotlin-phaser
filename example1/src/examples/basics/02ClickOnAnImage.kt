@@ -5,14 +5,12 @@ import Koala.initKoala
 import Phaser.*
 
 class E02ClickOnAnImage: State() {
-	
 	//var game = Phaser.Game(800, 600, Phaser.AUTO, "phaser-example", { preload: preload, create: create })
 	
 	lateinit var text:Text
 	var counter = 0
 	
 	override fun preload() {
-	
 	    //  You can fill the preloader with as many assets as your game requires
 	
 	    //  Here we are loading an image. The first parameter is the unique

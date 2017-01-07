@@ -27,7 +27,7 @@ class ChangeFrame: State() {
 	
 	}
 	
-	fun changeFrame() {
+	fun changeFrame(pointer:Pointer) {
 	
 	    greenJellyfish.frameName = "greenJellyfish0010"
 	

@@ -31,7 +31,7 @@ class AnimationEvents: State() {
 	    mummy.smoothed = false
 	    anim = mummy.animations.add("walk")
 	
-	    anim.onStart.add({
+	    anim.onStart.add({s,a->
 
 			game.add.text(32, 32, "Animation started", TextStyle(fill="white"))
 

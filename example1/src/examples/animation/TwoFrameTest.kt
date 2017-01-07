@@ -52,22 +52,22 @@ class TwoFrameTest: State() {
 	
 	    if (cursors.left.isDown)
 	    {
-	        player.body.velocity.x = -100
+	        player.body.velocity.x = -100.0
 	        player.play("left")
 	    }
 	    else if (cursors.right.isDown)
 	    {
-	        player.body.velocity.x = 100
+	        player.body.velocity.x = 100.0
 	        player.play("right")
 	    }
 	    else if (cursors.up.isDown)
 	    {
-	        player.body.velocity.y = -100
+	        player.body.velocity.y = -100.0
 	        player.play("up")
 	    }
 	    else if (cursors.down.isDown)
 	    {
-	        player.body.velocity.y = 100
+	        player.body.velocity.y = 100.0
 	        player.play("down")
 	    }
 	    else
