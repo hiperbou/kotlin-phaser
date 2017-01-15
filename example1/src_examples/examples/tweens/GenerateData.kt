@@ -36,8 +36,8 @@ class GenerateData: State() {
 	
 	    //  We have 3 interpolation methods available: linearInterpolation (the default), bezierInterpolation and catmullRomInterpolation.
 	
-	    // tween.interpolation(Phaser.Math.bezierInterpolation)
-	    // tween.interpolation(Phaser.Math.catmullRomInterpolation)
+	    // tween.interpolation(Phaser.getMath.bezierInterpolation)
+	    // tween.interpolation(Phaser.getMath.catmullRomInterpolation)
 	
 	    //  Generates the tween data at a rate of 60 frames per second.
 	    //  This is useful if you"ve got a lot of objects all using the same tween, just at different coordinates.

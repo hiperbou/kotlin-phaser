@@ -7,9 +7,8 @@ import kotlin.properties.Delegates
 
 var phaserGame:Phaser.Game by Delegates.notNull()
 
-
-
-open class Sprite(x:Double, y:Double, key: Asset) : Phaser.Sprite(phaserGame,x,y,key.name) {
+open class Sprite(x:Double, y:Double, key: String, frame:String?) : Phaser.Sprite(phaserGame,x,y,key,frame) {
+    constructor(x:Double, y:Double, key: String) : this(x,y,key,undefined)
     init{
         //game.add.existing(this);
     }

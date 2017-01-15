@@ -19,6 +19,7 @@ fun Phaser.Math.Companion.atan2(x: Double,y:Double): Double { return kotlin.js.M
 fun Phaser.Math.Companion.sqrt(value: Double): Double { return kotlin.js.Math.sqrt(value)}
 fun Phaser.Math.Companion.abs(value: Double): Double { return kotlin.js.Math.abs(value)}
 fun Phaser.Math.Companion.random(): Double { return kotlin.js.Math.random()}
+fun Phaser.Math.Companion.random(min: Int, max: Int): Int{ return (random()*(max-min)+min).toInt() }
 
 
 fun Phaser.Sprite.crop(rect: Phaser.Rectangle, copy: Boolean?=null) {

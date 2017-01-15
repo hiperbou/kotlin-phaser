@@ -22,7 +22,7 @@ class Sort: State() {
 	    for(i in 0..16-1)
 	    {
 	        //  This line tests integer sorting
-	        // locs.add((i * 32) + Math.random())
+	        // locs.add((i * 32) + getMath.random())
 	
 	        //  This one tests float sorting
 	        locs.add((i * 32) + Math.random())

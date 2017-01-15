@@ -47,7 +47,7 @@ class ExamplesWeb(val config: ExamplesConfig)
 
     private fun changeExample(exampleNum:Int)
     {
-        currentExample = Math.clamp(exampleNum, config.minExample, config.maxExample).toInt()
+        currentExample = Phaser.Math.clamp(exampleNum, config.minExample, config.maxExample).toInt()
         console.log("ChangeExample", currentExample)
         game.destroy()
         runCurrentGame()

@@ -2619,7 +2619,7 @@ external open class Math {
         fun angleBetweenPointsY(point1: Phaser.Point, point2: Phaser.Point): Double
         fun average(vararg numbers: Number): Double
         fun bernstein(n: Number, i: Number): Double
-        fun random(min: Number, max: Number): Double
+        //fun random(min: Number, max: Number): Double
         fun between(min: Number, max: Number): Double
         fun bezierInterpolation(v: Array<Number>, k: Number): Double
         fun catmullRom(p0: Number, p1: Number, p2: Number, p3: Number, t: Number): Double

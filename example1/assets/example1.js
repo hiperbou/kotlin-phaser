@@ -1213,7 +1213,7 @@ var example1 = function (_, Kotlin) {
     return Assets_instance;
   }
   function Panda(x, y) {
-    Sprite.call(this, x, y, Assets_getInstance().panda);
+    Sprite_init(x, y, Assets_getInstance().panda, this);
     this.anchor.set(0.5, 0.5);
   }
   Panda.prototype.update = function () {
@@ -1404,8 +1404,8 @@ var example1 = function (_, Kotlin) {
   function set_phaserGame(phaserGame_0) {
     phaserGame.setValue_w32e13$(this, new Kotlin.PropertyMetadata('phaserGame'), phaserGame_0);
   }
-  function Sprite(x, y, key) {
-    Phaser.Sprite.call(this, get_phaserGame(), x, y, key.name);
+  function Sprite(x, y, key, frame) {
+    Phaser.Sprite.call(this, get_phaserGame(), x, y, key.name, frame);
   }
   Sprite.$metadata$ = {
     type: Kotlin.TYPE.CLASS,
@@ -28324,7 +28324,7 @@ var example1 = function (_, Kotlin) {
   }
   function Assets_0() {
     Assets_instance_0 = this;
-    this.player = new Asset('player', '');
+    this.player = new Asset('jumpAtlas', '');
   }
   Assets_0.$metadata$ = {
     type: Kotlin.TYPE.OBJECT,
@@ -28340,7 +28340,7 @@ var example1 = function (_, Kotlin) {
     return Assets_instance_0;
   }
   function Player(jumpSound) {
-    Sprite.call(this, 392.0, 350.0, Assets_getInstance_0().player);
+    Sprite.call(this, 392.0, 350.0, Assets_getInstance_0().player, 'player');
     this.jumpSound = jumpSound;
     this.jumpSpeed = 12.0;
     this.incrY = 0.0;
@@ -28387,25 +28387,29 @@ var example1 = function (_, Kotlin) {
     this.numFrames = 3;
   }
   Jump.prototype.preload = function () {
-    this.game.load.bitmapFont('aa', 'assets/jump/font2.png', 'assets/jump/font2.fnt');
-    this.game.load.image('background', 'assets/jump/background.png');
-    this.game.load.image('player', 'assets/jump/player01.png');
-    this.game.load.image('rope1', 'assets/jump/rope01.png');
-    this.game.load.image('rope2', 'assets/jump/rope02.png');
-    this.game.load.image('rope3', 'assets/jump/rope03.png');
-    this.game.load.audio('music', 'assets/jump/music2.m4a');
-    this.game.load.audio('sound', 'assets/jump/sound.m4a');
+    this.game.load.pack('level', 'assets/jump/assets-pack.json', null, this);
+  };
+  function Jump$create$ObjectLiteral() {
+    this.angle = 35;
+  }
+  Jump$create$ObjectLiteral.$metadata$ = {
+    type: Kotlin.TYPE.CLASS,
+    classIndex: Kotlin.newClassIndex(),
+    baseClasses: []
   };
   Jump.prototype.create = function () {
-    this.game.add.sprite(0, 0, 'background');
+    this.lev = new level(this.game);
     var music = this.game.add.audio('music');
     var sound_0 = this.game.add.sound('sound');
     music.play();
-    this.ropeAnim = this.game.add.sprite(327, 426, 'rope1');
+    var sun = this.lev.fSun;
+    sun.angle = -35.0;
+    this.game.add.tween(sun).to(new Jump$create$ObjectLiteral(), 1000, Kotlin.getBoundCallableRefForMemberFunction(Phaser.Easing.Quadratic, 'Out'), true, null, -1).yoyo(true);
+    this.ropeAnim = this.lev.fRope1;
     this.player = new Player(sound_0);
-    this.game.add.existing(this.player);
-    this.scoreText = this.game.add.bitmapText(480, 170, 'aa', '0', 70);
-    this.hiScoreText = this.game.add.bitmapText(800, 0, 'aa', '0', 54);
+    this.lev.addChild(this.player);
+    this.scoreText = this.game.add.bitmapText(480, 170, 'font2', '0', 70);
+    this.hiScoreText = this.game.add.bitmapText(800, 0, 'font2', '0', 54);
     this.scoreText.anchor.set(0.5, 0.5);
     this.hiScoreText.anchor.set(0.0, 0.2);
     this.setScore_3p81yu$(this.score);
@@ -28462,7 +28466,7 @@ var example1 = function (_, Kotlin) {
     }
     this.lastResult = result;
     if (this.direction > 0 && Kotlin.equals(this.ropeOnBack, false)) {
-      this.game.world.swap(this.ropeAnim, this.player);
+      this.lev.swap(this.ropeAnim, this.player);
       this.ropeOnBack = true;
       if (this.player.jumping) {
         this.increaseScore();
@@ -28472,12 +28476,12 @@ var example1 = function (_, Kotlin) {
       }
     }
     if (this.direction < 0 && this.ropeOnBack) {
-      this.game.world.swap(this.ropeAnim, this.player);
+      this.lev.swap(this.ropeAnim, this.player);
       this.ropeOnBack = false;
     }
     this.currentAngle += this.incrAngle * this.ropeSpeed;
     var ropeFrame = (result + 1) / 2 * this.numFrames | 0;
-    this.ropeAnim.loadTexture(this.anim[ropeFrame]);
+    this.ropeAnim.frameName = this.anim[ropeFrame];
   };
   Jump.prototype.resetRopeSpeed = function () {
     this.ropeSpeed = 1.0;
@@ -28516,6 +28520,7 @@ var example1 = function (_, Kotlin) {
     get: get_phaserGame,
     set: set_phaserGame
   });
+  package$Koala.Sprite_init_dvtkad$ = Sprite_init;
   package$Koala.Sprite = Sprite;
   package$Koala.initKoala_lcgo3e$ = initKoala;
   var package$Phaser = _.Phaser || (_.Phaser = {});
@@ -29227,6 +29232,11 @@ var example1 = function (_, Kotlin) {
   package$jump.Jump = Jump;
   Math_0 = Math;
   phaserGame = properties_0.Delegates.notNull();
+  function Sprite_init(x, y, key, $this) {
+    $this = $this || Object.create(Sprite.prototype);
+    Sprite.call($this, x, y, key, undefined);
+    return $this;
+  }
   kPI2 = Math.PI * 2;
   kPI = Math.PI;
   Math_1 = Math;

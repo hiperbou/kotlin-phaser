@@ -50,7 +50,7 @@ class Springy: State() {
 	        var h = 480 - (i * 16)
 	
 	        var tx = 200 + Math.sin(sx) * i * 6
-	        // var tx = 32 + Math.sin(sx + (i * step * 2)) * 32
+	        // var tx = 32 + getMath.sin(sx + (i * step * 2)) * 32
 	        var ty = i * 2
 	
 	        // var x = i * 16
@@ -58,10 +58,10 @@ class Springy: State() {
 	        // var w = (i * 16) + 16
 	        // var h = 480 - (i * 2)
 	
-	        // var tx = 290 + Math.sin(sx + (i * step * 2)) * 15
+	        // var tx = 290 + getMath.sin(sx + (i * step * 2)) * 15
 	        // var ty = i * 2
 	
-	        // var tx = 290 + Math.sin(sx + (i * step * 2)) * 150
+	        // var tx = 290 + getMath.sin(sx + (i * step * 2)) * 150
 	
 	        var alpha = 1
 	        var blendMode = null

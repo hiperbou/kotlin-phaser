@@ -2,9 +2,6 @@ import Koala.*
 import Koala.Sprite
 import Phaser.*
 import jump.jumpMain
-import web.ExamplesConfig
-import web.ExamplesWeb
-import runExample
 
 val Math = kotlin.js.Math
 
@@ -43,8 +40,7 @@ fun main(args: Array<String>) {
 	//runExample(examples.sprites.RotateSpriteAroundPoint())
 	//runExample(examples.weapon.FireMany())
 	//gameMain()
-	//ExamplesWeb(ExamplesConfig())
-	jumpMain()
+	ExamplesWeb(ExamplesConfig())
 }
 
 fun gameMain() {
@@ -65,8 +61,6 @@ object gameProperties {
 object Assets {
 	val panda = Asset("koala", "assets/panda.png")
 }
-
-
 
 class Panda(x:Double, y:Double) : Sprite(x, y, Assets.panda) {
 	init{
