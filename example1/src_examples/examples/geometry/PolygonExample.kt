@@ -1,7 +1,7 @@
 
 package examples.geometry
 
-import Koala.initKoala
+
 import Phaser.*
 
 class PolygonExample: State() {

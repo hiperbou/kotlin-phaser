@@ -1,6 +1,6 @@
 package web
 
-import Koala.initKoala
+
 import Phaser.*
 
 
@@ -21,7 +21,7 @@ class ExamplesWeb(val config: ExamplesConfig)
     }
 
     private fun runExample(example:ExampleInfo): Game {
-        return initKoala(GameConfig(
+        return Game(GameConfig(
                 width = exampleDivProperties.screenWidth,
                 height = exampleDivProperties.screenHeight,
                 renderer = example.renderer,
@@ -54,7 +54,7 @@ class ExamplesWeb(val config: ExamplesConfig)
     }
 
     private fun startTopBar(): Game {
-        return initKoala(GameConfig(
+        return Game(GameConfig(
                 width = exampleDivProperties.screenWidth,
                 height = 70,
                 renderer = AUTO,

@@ -1,7 +1,7 @@
 
 package examples.debug
 
-import Koala.initKoala
+
 import Phaser.*
 
 class DebugInput: State() {

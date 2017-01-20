@@ -1,7 +1,7 @@
 
 package examples.video
 
-import Koala.initKoala
+
 import Phaser.*
 
 class PlayVideo: State() {

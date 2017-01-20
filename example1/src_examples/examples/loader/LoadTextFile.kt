@@ -1,7 +1,7 @@
 
 package examples.loader
 
-import Koala.initKoala
+
 import Phaser.*
 
 class LoadTextFile: State() {

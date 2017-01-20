@@ -1,7 +1,7 @@
 
 package examples.buttons
 
-import Koala.initKoala
+
 import Phaser.*
 
 class DisableButtonOnClick: State() {

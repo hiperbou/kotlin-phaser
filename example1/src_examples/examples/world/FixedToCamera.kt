@@ -1,7 +1,7 @@
 
 package examples.world
 
-import Koala.initKoala
+
 import Phaser.*
 
 class FixedToCamera: State() {

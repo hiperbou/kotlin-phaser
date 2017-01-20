@@ -1,7 +1,7 @@
 
 package examples.text
 
-import Koala.initKoala
+
 import Phaser.*
 
 class BitmaptextMaxWidth: State() {

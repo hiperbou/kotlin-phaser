@@ -1,7 +1,7 @@
 
 package examples.groups
 
-import Koala.initKoala
+
 import Phaser.*
 
 class Sort: State() {

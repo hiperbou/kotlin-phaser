@@ -1,7 +1,7 @@
 
 package examples.weapon
 
-import Koala.initKoala
+
 import Phaser.*
 
 class FireManyFromTrackedSprite: State() {

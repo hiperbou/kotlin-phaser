@@ -1,7 +1,7 @@
 
 package examples.p2physics
 
-import Koala.initKoala
+
 import Phaser.*
 import org.khronos.webgl.Float32Array
 

@@ -1,7 +1,7 @@
 
 package examples.display
 
-import Koala.initKoala
+
 import Phaser.*
 
 class SpritesheetFromGraphics: State() {

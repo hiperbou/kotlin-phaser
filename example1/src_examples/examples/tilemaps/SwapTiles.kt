@@ -1,7 +1,7 @@
 
 package examples.tilemaps
 
-import Koala.initKoala
+
 import Phaser.*
 
 class SwapTiles: State() {

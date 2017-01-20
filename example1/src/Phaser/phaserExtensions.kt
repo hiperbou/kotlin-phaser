@@ -164,6 +164,12 @@ open class GameState(game: Phaser.Game) {
     }
 }
 
+fun Game(config:Phaser.IGameConfig):Game {
+    return Game(config.width, config.height, config.renderer,
+            config.parent, config.state, config.transparent,
+            config.antialias, config.physicsConfig)
+}
+
 external interface PhaserState {
     fun add(state: GameStateType, clazz: (game: Phaser.Game) -> GameState)
     fun start(state: GameStateType)

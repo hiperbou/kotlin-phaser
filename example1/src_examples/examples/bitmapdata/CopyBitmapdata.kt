@@ -1,7 +1,7 @@
 
 package examples.bitmapdata
 
-import Koala.initKoala
+
 import Phaser.*
 
 class CopyBitmapdata: State() {

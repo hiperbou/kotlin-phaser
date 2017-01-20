@@ -1,7 +1,7 @@
 
 package examples.particles
 
-import Koala.initKoala
+
 import Phaser.*
 
 class WorldParticles: State() {

@@ -1,7 +1,7 @@
 
 package examples.tilesprites
 
-import Koala.initKoala
+
 import Phaser.*
 
 class CollidingWithTilingSprite: State() {

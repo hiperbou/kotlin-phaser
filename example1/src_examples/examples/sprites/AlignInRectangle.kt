@@ -1,7 +1,7 @@
 
 package examples.sprites
 
-import Koala.initKoala
+
 import Phaser.*
 
 class AlignInRectangle: State() {

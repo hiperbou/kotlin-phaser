@@ -1,7 +1,7 @@
 
 package examples.display
 
-import Koala.initKoala
+
 import Phaser.*
 
 //@todo this example requires using Phaser.CANVAS

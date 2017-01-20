@@ -1,7 +1,7 @@
 
 package examples.filters
 
-import Koala.initKoala
+
 import Phaser.*
 
 //@Todo: example not working in phaser examples

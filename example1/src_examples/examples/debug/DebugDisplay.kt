@@ -1,7 +1,7 @@
 
 package examples.debug
 
-import Koala.initKoala
+
 import Phaser.*
 
 //@todo This example does not run on phaser examples :S

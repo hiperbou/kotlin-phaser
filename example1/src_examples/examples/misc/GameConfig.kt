@@ -1,7 +1,7 @@
 
 package examples.misc
 
-import Koala.initKoala
+
 import Phaser.*
 
 class GameConfig: State() {

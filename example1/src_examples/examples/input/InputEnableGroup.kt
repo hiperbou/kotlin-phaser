@@ -1,7 +1,7 @@
 
 package examples.input
 
-import Koala.initKoala
+
 import Phaser.*
 
 class InputEnableGroup: State() {

@@ -1379,7 +1379,7 @@ external open class Game {
     constructor(width: Number? = null, height: String? = null, renderer: Number? = null, parent: Any? = null, state: Any? = null, transparent: Boolean? = null, antialias: Boolean? = null, physicsConfig: Any? = null)
     constructor(width: String? = null, height: Number? = null, renderer: Number? = null, parent: Any? = null, state: Any? = null, transparent: Boolean? = null, antialias: Boolean? = null, physicsConfig: Any? = null)
     constructor(width: String? = null, height: String? = null, renderer: Number? = null, parent: Any? = null, state: Any? = null, transparent: Boolean? = null, antialias: Boolean? = null, physicsConfig: Any? = null)
-    constructor(config: IGameConfig)
+    //constructor(config: IGameConfig)
     open var add: Phaser.GameObjectFactory
     open var antialias: Boolean
     open var cache: Phaser.Cache

@@ -1,7 +1,7 @@
 
 package examples.camera
 
-import Koala.initKoala
+
 import Phaser.*
 
 class CameraFade: State() {

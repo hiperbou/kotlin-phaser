@@ -1,7 +1,7 @@
 
 package examples.games
 
-import Koala.initKoala
+
 import Phaser.*
 
 import kotlin.collections.getOrElse

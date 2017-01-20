@@ -1,7 +1,7 @@
 
 package examples.arcadephysics
 
-import Koala.initKoala
+
 import Phaser.*
 
 class MoveToPointer: State() {

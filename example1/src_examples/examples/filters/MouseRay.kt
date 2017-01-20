@@ -1,7 +1,7 @@
 
 package examples.filters
 
-import Koala.initKoala
+
 import Phaser.*
 
 class MouseRay: State() {

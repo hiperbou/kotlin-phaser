@@ -1,7 +1,7 @@
 
 package examples.animation
 
-import Koala.initKoala
+
 import Phaser.*
 
 class ChangeTextureOnClick: State() {

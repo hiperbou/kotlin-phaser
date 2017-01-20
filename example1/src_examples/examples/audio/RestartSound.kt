@@ -1,7 +1,7 @@
 
 package examples.audio
 
-import Koala.initKoala
+
 import Phaser.*
 
 class RestartSound: State() {

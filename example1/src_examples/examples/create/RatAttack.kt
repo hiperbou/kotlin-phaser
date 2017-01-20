@@ -1,7 +1,7 @@
 
 package examples.create
 
-import Koala.initKoala
+
 import Phaser.*
 
 class RatAttack: State() {

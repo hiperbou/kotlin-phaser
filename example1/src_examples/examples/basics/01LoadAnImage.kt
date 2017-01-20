@@ -1,7 +1,7 @@
 
 package examples.basics
 
-import Koala.initKoala
+
 import Phaser.*
 
 class E01LoadAnImage: State() {

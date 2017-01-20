@@ -1,7 +1,7 @@
 
 package examples.tweens
 
-import Koala.initKoala
+
 import Phaser.*
 
 class TweenDelay: State() {

@@ -1,7 +1,7 @@
 
 package examples.p2physics
 
-import Koala.initKoala
+
 import Phaser.*
 
 class BodyDebug: State() {

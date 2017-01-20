@@ -1,7 +1,7 @@
 
 package examples.time
 
-import Koala.initKoala
+
 import Phaser.*
 
 class BasicLoopedEvent: State() {

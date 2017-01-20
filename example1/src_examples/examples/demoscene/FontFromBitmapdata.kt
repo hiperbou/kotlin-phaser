@@ -1,7 +1,7 @@
 
 package examples.demoscene
 
-import Koala.initKoala
+
 import Phaser.*
 
 class FontFromBitmapdata: State() {

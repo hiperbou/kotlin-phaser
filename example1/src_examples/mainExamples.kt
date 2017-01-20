@@ -1,4 +1,4 @@
-import Koala.initKoala
+
 import Phaser.AUTO
 import Phaser.Game
 import Phaser.GameConfig
@@ -14,7 +14,7 @@ object exampleProperties {
 }
 
 fun runExample(state: State): Game {
-    return initKoala(GameConfig(
+    return Game(GameConfig(
             width = exampleProperties.screenWidth,
             height = exampleProperties.screenHeight,
             renderer = AUTO,
