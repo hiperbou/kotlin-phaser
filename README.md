@@ -1,7 +1,7 @@
 # Kotlin Phaser
 
 Definitions, extensions and examples to use Phaser with Kotlin.
-Go to https://github.com/photonstorm/phaser-examples to see the examples online.
+Go to https://hiperbou.github.io/kotlin-phaser-examples/ to see the examples online.
 
 Phaser is a fun, free and fast 2D game framework for making HTML5 games for desktop and mobile web browsers, supporting Canvas and WebGL rendering. http://phaser.io
 
