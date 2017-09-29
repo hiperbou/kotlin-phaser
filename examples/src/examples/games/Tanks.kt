@@ -284,7 +284,7 @@ class Tanks: State() {
 	
 	    bullet.kill()
 
-	    var destroyed = enemies[parseInt(tank.name)].damage()
+	    var destroyed = enemies[tank.name.toInt()].damage()
 	
 	    if (destroyed)
 	    {

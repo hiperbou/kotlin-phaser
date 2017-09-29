@@ -3,10 +3,8 @@ import Phaser.AUTO
 import Phaser.Game
 import Phaser.GameConfig
 import Phaser.State
-import examples.basics.*
 import web.ExamplesConfig
 import web.ExamplesWeb
-import kotlin.browser.window
 
 object exampleProperties {
     val screenWidth = 800.0
@@ -26,9 +24,9 @@ fun runExample(state: State): Game {
 }
 
 fun main(args: Array<String>) {
-    //runExample(3) //Test examples
-    //runExample(examples.basics.E08SpriteRotation())
+    runExample(examples.basics.E08SpriteRotation())
     //runExample(examples.animation.TwoFrameTest())
+    //runExample(examples.animation.LoopedAnimation())
     //runExample(examples.arcadephysics.LauncherFollowWorld())
     //runExample(examples.audio.SoundComplete())
     //runExample(examples.camera.BasicFollow())
@@ -59,5 +57,5 @@ fun main(args: Array<String>) {
     //runExample(examples.demoscene.Starfield())
     //runExample(examples.sprites.RotateSpriteAroundPoint())
     //runExample(examples.weapon.FireMany())
-    ExamplesWeb(ExamplesConfig())
+    //ExamplesWeb(ExamplesConfig())
 }

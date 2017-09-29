@@ -21,12 +21,14 @@ fun Phaser.Math.Companion.abs(value: Double): Double { return kotlin.js.Math.abs
 fun Phaser.Math.Companion.random(): Double { return kotlin.js.Math.random()}
 fun Phaser.Math.Companion.random(min: Int, max: Int): Int{ return (random()*(max-min)+min).toInt() }
 
-
+@JsName("cropKt")
 fun Phaser.Sprite.crop(rect: Phaser.Rectangle, copy: Boolean?=null) {
-    crop(rect,copy)
+    cropJs(rect,copy)
 }
+
+@JsName("destroyKt")
 fun Phaser.Sprite.destroy(destroyChildren: Boolean?=null, unknown: Boolean?=null) {
-    destroy(destroyChildren,unknown)
+    destroyJs(destroyChildren,unknown)
 }
 
 @JsName("reviveKt")
