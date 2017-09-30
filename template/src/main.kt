@@ -1,5 +1,4 @@
 
-import Phaser.AUTO
 import Phaser.Game
 import Phaser.GameConfig
 import Phaser.State
@@ -22,5 +21,5 @@ fun runExample(state: State): Game {
 }
 
 fun main(args: Array<String>) {
-    runExample(com.hiperbou.enigma.LoopedAnimation())
+    runExample(com.hiperbou.enigma.TemplateExample())
 }
