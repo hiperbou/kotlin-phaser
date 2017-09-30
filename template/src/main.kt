@@ -21,5 +21,7 @@ fun runExample(state: State): Game {
 }
 
 fun main(args: Array<String>) {
-    runExample(com.hiperbou.enigma.TemplateExample())
+    runExample(TemplateExample())
 }
+
+

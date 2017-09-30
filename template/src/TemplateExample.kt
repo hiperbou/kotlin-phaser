@@ -1,7 +1,4 @@
 
-package com.hiperbou.enigma
-
-
 import Phaser.*
 
 class TemplateExample : State() {
