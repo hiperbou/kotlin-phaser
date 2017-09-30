@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="phaserKt" type="kotlin.js">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/phaserKt.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

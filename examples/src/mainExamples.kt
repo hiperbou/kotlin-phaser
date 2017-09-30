@@ -24,7 +24,7 @@ fun runExample(state: State): Game {
 }
 
 fun main(args: Array<String>) {
-    runExample(examples.basics.E08SpriteRotation())
+    //runExample(examples.basics.E08SpriteRotation())
     //runExample(examples.animation.TwoFrameTest())
     //runExample(examples.animation.LoopedAnimation())
     //runExample(examples.arcadephysics.LauncherFollowWorld())
@@ -57,5 +57,5 @@ fun main(args: Array<String>) {
     //runExample(examples.demoscene.Starfield())
     //runExample(examples.sprites.RotateSpriteAroundPoint())
     //runExample(examples.weapon.FireMany())
-    //ExamplesWeb(ExamplesConfig())
+    ExamplesWeb(ExamplesConfig())
 }

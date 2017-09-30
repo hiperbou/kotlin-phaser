@@ -5,7 +5,7 @@ Go to https://hiperbou.github.io/kotlin-phaser-examples/ to see the examples onl
 
 Phaser is a fun, free and fast 2D game framework for making HTML5 games for desktop and mobile web browsers, supporting Canvas and WebGL rendering. http://phaser.io
 
-Updated to Kotlin 1.1.50
+Updated to Kotlin 1.1.51
 
 Uses Phaser 2.6.2
 

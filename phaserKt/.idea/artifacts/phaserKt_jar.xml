@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="phaserKt:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/phaserKt_jar</output-path>
+    <root id="archive" name="phaserKt.jar">
+      <element id="module-output" name="phaserKt" />
+    </root>
+  </artifact>
+</component>
