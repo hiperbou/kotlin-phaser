@@ -24,8 +24,8 @@ class NoRotation: State() {
 	    emitter.maxParticleSpeed.setTo(300, 300)
 	
 	    //  By setting the min and max rotation to zero, you disable rotation on the particles fully
-	    emitter.minRotation = 0
-	    emitter.maxRotation = 0
+	    emitter.minRotation = 0.0
+	    emitter.maxRotation = 0.0
 	
 	    emitter.start(false, 4000, 15)
 	

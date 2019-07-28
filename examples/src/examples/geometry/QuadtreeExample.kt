@@ -15,7 +15,7 @@ class QuadtreeExample: State() {
 	var flaggedRect = mutableMapOf<Rectangle,Boolean> ()
 	var Rectangle.flagged:Boolean
 		get() {
-			return flaggedRect.getOrDefault(this,false)
+			return flaggedRect.getOrElse(this) { false }
 		}
 		set(value:Boolean) { flaggedRect.put(this, value) }
 

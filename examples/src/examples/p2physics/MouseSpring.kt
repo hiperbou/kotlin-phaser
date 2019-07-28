@@ -26,7 +26,7 @@ class MouseSpring: State() {
 	    game.stage.backgroundColor = "#304871"
 	
 	    game.physics.startSystem(Phaser.Physics.P2JS)
-	    game.physics.p2.gravity.y = 100
+	    game.physics.p2.gravity.y = 100.0
 	    game.physics.p2.restitution = 0.8
 	
 	    //  Create an object to pick-up

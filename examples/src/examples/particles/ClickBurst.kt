@@ -25,7 +25,7 @@ class ClickBurst: State() {
 	    emitter = game.add.emitter(0, 0, 100)
 	
 	    emitter.makeParticles("diamond")
-	    emitter.gravity = 200
+	    emitter.gravity = 200.0
 	
 	    game.input.onDown.add(this::particleBurst, this)
 	

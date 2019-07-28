@@ -39,7 +39,7 @@ class DrawGroup: State() {
 	    }
 	
 	    var bmpText = game.make.bitmapText(32, 64, "desyrel", "Bitmap Text in the Group", 64)
-	    bmpText.angle = 10
+	    bmpText.angle = 10.0
 	    group.add(bmpText)
 	
 	    //  A sprite with nested children

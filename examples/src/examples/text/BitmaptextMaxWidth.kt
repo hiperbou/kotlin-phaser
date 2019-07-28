@@ -36,7 +36,7 @@ class BitmaptextMaxWidth: State() {
 	    //  Any one line in the bitmap text won"t be longer than 400 pixels.
 	    //  The exception to this rule is if the text has no spaces.
 	    //  It line-wraps on spaces and word.size.
-	    bmpText.maxWidth = 400
+	    bmpText.maxWidth = 400.0
 	
 	    //  A visual marker to show where 400px width is
 	    var marker = game.add.graphics(432, 0)

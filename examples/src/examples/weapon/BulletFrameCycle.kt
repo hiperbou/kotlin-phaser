@@ -34,10 +34,10 @@ class BulletFrameCycle: State() {
 	    weapon.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS
 	
 	    //  The speed at which the bullet is fired
-	    weapon.bulletSpeed = 400
+	    weapon.bulletSpeed = 400.0
 	
 	    //  Speed-up the rate of fire, allowing them to shoot 1 bullet every 50ms
-	    weapon.fireRate = 50
+	    weapon.fireRate = 50.0
 	
 	    //  Wrap bullets around the world bounds to the opposite side
 	    // weapon.bulletWorldWrap = true

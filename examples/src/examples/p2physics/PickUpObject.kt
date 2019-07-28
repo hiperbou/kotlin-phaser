@@ -27,7 +27,7 @@ class PickUpObject: State() {
 	        
 	    //  Enable p2 physics
 	    game.physics.startSystem(Phaser.Physics.P2JS)
-	    game.physics.p2.gravity.y = 1000
+	    game.physics.p2.gravity.y = 1000.0
 	    
 	    tetris1 = game.add.sprite(300, 100, "tetrisblock1")
 	    tetris2 = game.add.sprite(375, 200, "tetrisblock2")

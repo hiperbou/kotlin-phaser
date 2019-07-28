@@ -19,15 +19,15 @@ class TextWithPhysics: State() {
 	
 	    text1 = game.add.text(20, 50, "Text Objects", object{ var  font= "62px Arial Black";  var  fill= "#c51b7d" })
 	    text1.stroke = "#de77ae"
-	    text1.strokeThickness = 16
+	    text1.strokeThickness = 16.0
 	    text1.setShadow(2, 2, "#333333", 2, true, false)
 	
 	    text2 = game.add.text(200, 300, "with physics", object{ var  font= "62px Arial Black";  var  fill= "#c51b7d" })
 	    text2.stroke = "#de77ae"
-	    text2.strokeThickness = 16
+	    text2.strokeThickness = 16.0
 	    text2.setShadow(2, 2, "#333333", 2, false, true)
 	
-	    game.physics.arcade.enable(arrayOf( text1, text2 ))
+	    game.physics.arcade.enable(arrayOf<Text>( text1, text2 ))
 	
 	    text1.body.velocity.setTo(200, 200)
 	    text1.body.collideWorldBounds = true

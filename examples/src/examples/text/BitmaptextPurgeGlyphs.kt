@@ -23,7 +23,7 @@ class BitmaptextPurgeGlyphs: State() {
 	
 	    bmpText = game.add.bitmapText(32, 32, "gem", text, 16)
 	
-	    bmpText.maxWidth = 400
+	    bmpText.maxWidth = 400.0
 	
 	    //  Click to remove text and purge glyphs
 	    game.input.onDown.add(this::chopText, this)

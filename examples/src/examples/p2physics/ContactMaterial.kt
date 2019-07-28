@@ -25,7 +25,7 @@ class ContactMaterial: State() {
 	    //  Enable p2 physics
 	    game.physics.startSystem(Phaser.Physics.P2JS)
 	
-	    game.physics.p2.gravity.y = 100
+	    game.physics.p2.gravity.y = 100.0
 	
 	    //  Add a sprite
 	    sprite = game.add.sprite(200, 200, "atari")

@@ -38,7 +38,7 @@ class AnimationEvents: State() {
 		}, this)
 	    anim.onLoop.add({
 
-			if (anim.loopCount === 1)
+			if (anim.loopCount == 1)
 			{
 				loopText = game.add.text(32, 64, "Animation looped", TextStyle(fill="white"))
 			}

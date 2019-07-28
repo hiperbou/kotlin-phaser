@@ -33,7 +33,7 @@ class Firestarter: State() {
 	
 	    emitter.makeParticles( arrayOf( "fire1", "fire2", "fire3", "smoke" ) )
 	
-	    emitter.gravity = 200
+	    emitter.gravity = 200.0
 	    emitter.setAlpha(1, 0, 3000)
 	    emitter.setScale(0.8, 0, 0.8, 0, 3000)
 	

@@ -53,7 +53,7 @@ class TilemapGravity: State() {
 	    game.physics.p2.convertTilemap(map, layer)
 	
 	    game.physics.p2.restitution = 0.5
-	    game.physics.p2.gravity.y = 300
+	    game.physics.p2.gravity.y = 300.0
 	
 	    player = game.add.sprite(100, 200, "dude")
 	    player.animations.add("left", arrayOf(0, 1, 2, 3), 10, true)

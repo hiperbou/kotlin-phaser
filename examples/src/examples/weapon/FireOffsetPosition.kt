@@ -32,10 +32,10 @@ class FireOffsetPosition: State() {
 	    weapon.bulletLifespan = 2000
 	
 	    //  Because our bullet is drawn facing up, we need to offset its rotation:
-	    weapon.bulletAngleOffset = 90
+	    weapon.bulletAngleOffset = 90.0
 	
 	    //  The speed at which the bullet is fired
-	    weapon.bulletSpeed = 400
+	    weapon.bulletSpeed = 400.0
 	
 	    sprite = add.sprite(320, 500, "ship")
 	
@@ -45,7 +45,7 @@ class FireOffsetPosition: State() {
 	    weapon.trackSprite(sprite, 14, 0)
 	
 	    //  One "set" of bullets, every second
-	    weapon.fireRate = 250
+	    weapon.fireRate = 250.0
 	
 	    //  Tell the Weapon plugin it can fire more than once per game loop
 	    weapon.multiFire = true

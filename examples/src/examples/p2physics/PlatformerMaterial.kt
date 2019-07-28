@@ -32,7 +32,7 @@ class PlatformerMaterial: State() {
 	    //  Enable p2 physics
 	    game.physics.startSystem(Phaser.Physics.P2JS)
 	
-	    game.physics.p2.gravity.y = 350
+	    game.physics.p2.gravity.y = 350.0
 	    game.physics.p2.world.defaultContactMaterial.friction = 0.3
 	    game.physics.p2.world.setGlobalStiffness(1e5)
 	

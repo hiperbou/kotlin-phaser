@@ -27,9 +27,9 @@ class Collision: State() {
 	
 	    emitter.minParticleSpeed.setTo(-200, -300)
 	    emitter.maxParticleSpeed.setTo(200, -400)
-	    emitter.gravity = 150
+	    emitter.gravity = 150.0
 	    emitter.bounce.setTo(0.5, 0.5)
-	    emitter.angularDrag = 30
+	    emitter.angularDrag = 30.0
 	
 	    emitter.start(false, 8000, 400)
 	

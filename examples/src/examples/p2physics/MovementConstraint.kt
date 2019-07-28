@@ -27,7 +27,7 @@ class MovementConstraint: State() {
 	
 		//	Enable p2 physics
 		game.physics.startSystem(Phaser.Physics.P2JS)
-	    game.physics.p2.gravity.y = 200
+	    game.physics.p2.gravity.y = 200.0
 	
 	    //  Add 2 sprites which we"ll join with a spring
 	

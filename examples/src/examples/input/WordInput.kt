@@ -14,7 +14,7 @@ class WordInput: State() {
 	override fun create() {
 	   
 	    //  Here we"ll create a simple array where each letter of the word to enter represents one element:
-	    for(i in 0..word.size-1)
+	    for(i in 0..word.length-1)
 	    {
 	        correct.put(word[i],false)
 	    }
@@ -40,7 +40,7 @@ class WordInput: State() {
 	    var x = 64.0
 	
 	    //  Loop through each letter of the word being entered and check them against the key that was pressed
-	    for(i in 0..word.size-1)
+	    for(i in 0..word.length-1)
 	    {
 	        var letter = word[i]
 	

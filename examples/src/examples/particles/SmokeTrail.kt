@@ -34,12 +34,12 @@ class SmokeTrail: State() {
 	    emitter.setRotation(0, 0)
 	    emitter.setAlpha(0.1, 1, 3000)
 	    emitter.setScale(0.4, 2, 0.4, 2, 6000, Phaser.Easing.Quintic::Out)
-	    emitter.gravity = -100
+	    emitter.gravity = -100.0
 	
 	    emitter.start(false, 4000, 20)
 	
-	    emitter.emitX = 64
-	    emitter.emitY = 500
+	    emitter.emitX = 64.0
+	    emitter.emitY = 500.0
 	
 	    game.add.tween(emitter).to( object{ var  emitX= 800-64 }, 1000, Phaser.Easing.Sinusoidal::InOut, true, 0, Int.MAX_VALUE, true)
 	    game.add.tween(emitter).to( object{ var  emitY= 200 }, 4000, Phaser.Easing.Sinusoidal::InOut, true, 0, Int.MAX_VALUE, true)

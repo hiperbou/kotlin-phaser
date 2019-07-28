@@ -33,8 +33,8 @@ class Rain: State() {
 		emitter.setYSpeed(300, 500)
 		emitter.setXSpeed(-5, 5)
 	
-		emitter.minRotation = 0
-		emitter.maxRotation = 0
+		emitter.minRotation = 0.0
+		emitter.maxRotation = 0.0
 	
 		emitter.start(false, 1600, 5, 0)
 	

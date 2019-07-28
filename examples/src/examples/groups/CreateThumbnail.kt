@@ -91,7 +91,7 @@ class CreateThumbnail: State() {
 	    emitter.maxParticleSpeed.setTo(300, 100)
 	    emitter.minParticleScale = 0.1
 	    emitter.maxParticleScale = 0.5
-	    emitter.gravity = 250
+	    emitter.gravity = 250.0
 	    emitter.flow(2000, 500, 5, -1)
 	
 	    //  Two BitmapText objects

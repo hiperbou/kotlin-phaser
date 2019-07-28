@@ -32,11 +32,11 @@ class TweenedEmitter: State() {
 	    emitter.setRotation(0, 0)
 	    emitter.setAlpha(0.1, 1, 2000)
 	    emitter.setScale(0.1, 2, 0.1, 2, 4000)
-	    emitter.gravity = 100
+	    emitter.gravity = 100.0
 	
 	    emitter.start(false, 5000, 50)
 	
-	    emitter.emitX = 200
+	    emitter.emitX = 200.0
 	
 	    //game.add.tween(emitter).to( object{ var  emitX= 700 }, 2000, Phaser.Easing.Sinusoidal::InOut, true, 0, Int.MAX_VALUE, true)
 	    game.add.tween(emitter).to( object{ var  emitX= 600 }, 2000, Phaser.Easing.Back::InOut, true, 0, Int.MAX_VALUE, true)

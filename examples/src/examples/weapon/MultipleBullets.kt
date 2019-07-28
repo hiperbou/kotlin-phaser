@@ -29,10 +29,10 @@ class MultipleBullets: State() {
 	    weapon.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS
 	
 	    //  Because our bullet is drawn facing up, we need to offset its rotation:
-	    weapon.bulletAngleOffset = 90
+	    weapon.bulletAngleOffset = 90.0
 	
 	    //  The speed at which the bullets are fired
-	    weapon.bulletSpeed = 400
+	    weapon.bulletSpeed = 400.0
 	
 	    sprite = add.sprite(320, 500, "ship")
 	
@@ -62,14 +62,14 @@ class MultipleBullets: State() {
 	
 	    if (fireButton.isDown)
 	    {
-	        weapon.fireRate = 0
+	        weapon.fireRate = 0.0
 	        weapon.fire(object{ var  x= x;  var  y= y })
 	        weapon.fire(object{ var  x= x + 10;  var  y= y })
 	        weapon.fire(object{ var  x= x + 20;  var  y= y })
 	        weapon.fire(object{ var  x= x + 30;  var  y= y })
 	    }
 	    
-	    weapon.fireRate = 200
+	    weapon.fireRate = 200.0
 	
 	}
 	

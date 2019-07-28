@@ -22,7 +22,7 @@ class ZeroGravity: State() {
 	
 	    emitter.minParticleSpeed.setTo(-400, -400)
 	    emitter.maxParticleSpeed.setTo(400, 400)
-	    emitter.gravity = 0
+	    emitter.gravity = 0.0
 	    emitter.start(false, 4000, 15)
 	
 	}

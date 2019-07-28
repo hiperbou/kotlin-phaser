@@ -31,13 +31,13 @@ class FireMany: State() {
 	    weapon.bulletLifespan = 2000
 	
 	    //  Because our bullet is drawn facing up, we need to offset its rotation:
-	    weapon.bulletAngleOffset = 90
+	    weapon.bulletAngleOffset = 90.0
 	
 	    //  The speed at which the bullet is fired
-	    weapon.bulletSpeed = 400
+	    weapon.bulletSpeed = 400.0
 	
 	    //  One "set" of bullets, every second
-	    weapon.fireRate = 250
+	    weapon.fireRate = 250.0
 	
 	    bulletPositions = arrayOf<Any>(
 	        object{ var  x= 100;  var  y= 600 },

@@ -25,8 +25,8 @@ class Blur: State() {
 		var blurX = game.add.filter<Filter.BlurX>("BlurX")
 		var blurY = game.add.filter<Filter.BlurY>("BlurY")
 	
-	    blurX.blur = 100
-	    blurY.blur = 1
+	    blurX.blur = 100.0
+	    blurY.blur = 1.0
 	
 		logo.filters = arrayOf(blurX, blurY)
 	

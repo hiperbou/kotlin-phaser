@@ -18,7 +18,7 @@ class CleanText: State() {
 	
 	    var dirtyString = "The Desyrel™ font doesn\"t have\na trademark character\nor a €Euro sign.\nString.size: "
 	
-	    var text1 = game.add.bitmapText(100, 64, "desyrel", dirtyString + (dirtyString.size), 32)
+	    var text1 = game.add.bitmapText(100, 64, "desyrel", dirtyString + (dirtyString.length), 32)
 	
 	    //  Clean the string. This will remove all characters the font data doesn"t support
 	    //var cleanString = text1.cleanText(dirtyString)

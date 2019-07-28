@@ -36,9 +36,9 @@ class VerticalMap: State() {
 	    emitter = game.add.emitter(0, 0, 200)
 	
 	    emitter.makeParticles("chunk")
-	    emitter.minRotation = 0
-	    emitter.maxRotation = 0
-	    emitter.gravity = 150
+	    emitter.minRotation = 0.0
+	    emitter.maxRotation = 0.0
+	    emitter.gravity = 150.0
 	    emitter.bounce.setTo(0.5, 0.5)
 	
 	    sprite = game.add.sprite(240, 0, "phaser")

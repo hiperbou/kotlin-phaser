@@ -27,7 +27,7 @@ class TextStrokeWithColor: State() {
 	
 	    //	Stroke color and thickness
 	    text.stroke = "#000000"
-	    text.strokeThickness = 8
+	    text.strokeThickness = 8.0
 	    text.fill = "#43d637"
 	
 	    //  And now we"ll color in some of the letters

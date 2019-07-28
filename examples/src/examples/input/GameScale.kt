@@ -11,8 +11,8 @@ class GameScale: State() {
 	override fun preload() {
 	
 	    //  This sets a limit on the up-scale
-	    game.scale.maxWidth = 800
-	    game.scale.maxHeight = 600
+	    game.scale.maxWidth = 800.0
+	    game.scale.maxHeight = 600.0
 	
 	    //  Then we tell Phaser that we want it to scale up to whatever the browser can handle, but to do it proportionally
 	    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL

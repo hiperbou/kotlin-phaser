@@ -21,7 +21,7 @@ class PhysicsGroup: State() {
 	
 	    game.stage.backgroundColor = "#124184"
 	
-	    game.physics.p2.gravity.y = 100
+	    game.physics.p2.gravity.y = 100.0
 	    game.physics.p2.restitution = 1.0
 	
 	    var group = game.add.physicsGroup(Phaser.Physics.P2JS)

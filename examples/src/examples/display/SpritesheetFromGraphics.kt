@@ -43,7 +43,7 @@ class SpritesheetFromGraphics: State() {
 	
 	    digitsData.forEach({ line->
 	
-	        for(i in 0..line.size-1)
+	        for(i in 0..line.length-1)
 	        {
 	            if (line[i] != ' ')
 	            {

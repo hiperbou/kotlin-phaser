@@ -43,9 +43,9 @@ class KernOfDuty: State() {
 	
 	fun updateLine() {
 	
-	    if (line.size < content[index].size)
+	    if (line.length < content[index].length)
 	    {
-	        line = content[index].substring(0, line.size + 1)
+	        line = content[index].substring(0, line.length + 1)
 	        // text.text = line
 	        text.setText(line)
 	    }
@@ -64,7 +64,7 @@ class KernOfDuty: State() {
 	    if (index < content.size)
 	    {
 	        line = ""
-	        game.time.events.repeat(80, content[index].size + 1, this::updateLine, this)
+	        game.time.events.repeat(80, content[index].length + 1, this::updateLine, this)
 	    }
 	
 	}

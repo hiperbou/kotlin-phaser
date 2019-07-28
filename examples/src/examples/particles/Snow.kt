@@ -33,30 +33,30 @@ class Snow: State() {
 	    back_emitter.maxParticleScale = 0.6
 	    back_emitter.minParticleScale = 0.2
 	    back_emitter.setYSpeed(20, 100)
-	    back_emitter.gravity = 0
+	    back_emitter.gravity = 0.0
 	    back_emitter.width = game.world.width * 1.5
-	    back_emitter.minRotation = 0
-	    back_emitter.maxRotation = 40
+	    back_emitter.minRotation = 0.0
+	    back_emitter.maxRotation = 40.0
 	
 	    mid_emitter = game.add.emitter(game.world.centerX, -32, 250)
 	    mid_emitter.makeParticles("snowflakes", arrayOf(0, 1, 2, 3, 4, 5))
 	    mid_emitter.maxParticleScale = 1.2
 	    mid_emitter.minParticleScale = 0.8
 	    mid_emitter.setYSpeed(50, 150)
-	    mid_emitter.gravity = 0
+	    mid_emitter.gravity = 0.0
 	    mid_emitter.width = game.world.width * 1.5
-	    mid_emitter.minRotation = 0
-	    mid_emitter.maxRotation = 40
+	    mid_emitter.minRotation = 0.0
+	    mid_emitter.maxRotation = 40.0
 	
 	    front_emitter = game.add.emitter(game.world.centerX, -32, 50)
 	    front_emitter.makeParticles("snowflakes_large", arrayOf(0, 1, 2, 3, 4, 5))
-	    front_emitter.maxParticleScale = 1
+	    front_emitter.maxParticleScale = 1.0
 	    front_emitter.minParticleScale = 0.5
 	    front_emitter.setYSpeed(100, 200)
-	    front_emitter.gravity = 0
+	    front_emitter.gravity = 0.0
 	    front_emitter.width = game.world.width * 1.5
-	    front_emitter.minRotation = 0
-	    front_emitter.maxRotation = 40
+	    front_emitter.minRotation = 0.0
+	    front_emitter.maxRotation = 40.0
 	
 	    changeWindDirection()
 	

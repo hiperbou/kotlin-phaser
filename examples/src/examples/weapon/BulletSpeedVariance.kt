@@ -29,16 +29,16 @@ class BulletSpeedVariance: State() {
 	    weapon.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS
 	
 	    //  Because our bullet is drawn facing up, we need to offset its rotation:
-	    weapon.bulletAngleOffset = 90
+	    weapon.bulletAngleOffset = 90.0
 	
 	    //  The speed at which the bullet is fired
-	    weapon.bulletSpeed = 400
+	    weapon.bulletSpeed = 400.0
 	
 	    //  Speed-up the rate of fire, allowing them to shoot 1 bullet every 60ms
-	    weapon.fireRate = 60
+	    weapon.fireRate = 60.0
 	
 	    //  Add a variance to the bullet speed by +- this value
-	    weapon.bulletSpeedVariance = 200
+	    weapon.bulletSpeedVariance = 200.0
 	
 	    sprite = add.sprite(320, 500, "ship")
 	

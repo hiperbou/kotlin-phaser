@@ -29,10 +29,10 @@ class Asteroids: State() {
 	    weapon.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS
 	
 	    //  The speed at which the bullet is fired
-	    weapon.bulletSpeed = 600
+	    weapon.bulletSpeed = 600.0
 	
 	    //  Speed-up the rate of fire, allowing them to shoot 1 bullet every 60ms
-	    weapon.fireRate = 100
+	    weapon.fireRate = 100.0
 	
 	    sprite = add.sprite(400, 300, "ship")
 	

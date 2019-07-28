@@ -33,7 +33,7 @@ class Glass: State() {
 	    emitter.particleBringToTop = true
 	    emitter.setAlpha(0.1, 1, 500)
 	    emitter.setScale(-2, 2, 1, 1, 3000, Phaser.Easing.Sinusoidal::InOut, true)
-	    emitter.gravity = 300
+	    emitter.gravity = 300.0
 	
 	    emitter.start(false, 5000, 700, 50)
 	

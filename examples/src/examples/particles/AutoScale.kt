@@ -35,11 +35,11 @@ class AutoScale: State() {
 	    emitter.setRotation(0, 0)
 	    emitter.setAlpha(0.1, 1, 3000)
 	    emitter.setScale(0.1, 1, 0.1, 1, 6000, Phaser.Easing.Quintic::Out)
-	    emitter.gravity = -200
+	    emitter.gravity = -200.0
 	
 	    emitter.start(false, 5000, 10)
 	
-	    emitter.emitX = 0
+	    emitter.emitX = 0.0
 	
 	    game.add.tween(emitter).to( object{ var  emitX= 800 }, 2000, Phaser.Easing.Linear::None, true, 0, Int.MAX_VALUE, true)
 	

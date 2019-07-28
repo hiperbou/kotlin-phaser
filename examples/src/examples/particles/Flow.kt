@@ -29,7 +29,7 @@ class Flow: State() {
 	    emitter.maxParticleSpeed.setTo(300, 100)
 	    emitter.minParticleScale = 0.1
 	    emitter.maxParticleScale = 0.5
-	    emitter.gravity = 250
+	    emitter.gravity = 250.0
 	
 	    //  This will emit a quantity of 5 particles every 500ms. Each particle will live for 2000ms.
 	    //  The -1 means "run forever"

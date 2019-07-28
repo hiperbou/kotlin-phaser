@@ -30,10 +30,10 @@ class AsteroidsBulletWrap: State() {
 	    weapon.bulletLifespan = 2000
 	
 	    //  The speed at which the bullet is fired
-	    weapon.bulletSpeed = 600
+	    weapon.bulletSpeed = 600.0
 	
 	    //  Speed-up the rate of fire, allowing them to shoot 1 bullet every 60ms
-	    weapon.fireRate = 100
+	    weapon.fireRate = 100.0
 	
 	    //  Wrap bullets around the world bounds to the opposite side
 	    weapon.bulletWorldWrap = true
