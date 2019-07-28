@@ -6,19 +6,19 @@ val WEBGL:Number = 2// WebGL Renderer.
 val HEADLESS:Number = 3//Headless renderer (not visual output)
 val WEBGL_MULTI:Number = 4//WebGL Renderer with MultiTexture support enabled.
 */
-val kPI2 = kotlin.js.Math.PI*2
-val kPI = kotlin.js.Math.PI
+val kPI2 = kotlin.math.PI*2
+val kPI = kotlin.math.PI
 
-fun Phaser.Math.Companion.sin(value:Double):Double { return kotlin.js.Math.sin(value) }
-fun Phaser.Math.Companion.cos(value:Double):Double { return kotlin.js.Math.cos(value) }
+fun Phaser.Math.Companion.sin(value:Double):Double { return kotlin.math.sin(value) }
+fun Phaser.Math.Companion.cos(value:Double):Double { return kotlin.math.cos(value) }
 val Phaser.Math.Companion.PI2:Double get() { return kPI2 }
 val Phaser.Math.Companion.PI: Double get() { return kPI }
-fun Phaser.Math.Companion.round(value: Number): Int { return kotlin.js.Math.round(value)}
-fun Phaser.Math.Companion.floor(value: Number): Int { return kotlin.js.Math.floor(value)}
-fun Phaser.Math.Companion.atan2(x: Double,y:Double): Double { return kotlin.js.Math.atan2(x,y)}
-fun Phaser.Math.Companion.sqrt(value: Double): Double { return kotlin.js.Math.sqrt(value)}
-fun Phaser.Math.Companion.abs(value: Double): Double { return kotlin.js.Math.abs(value)}
-fun Phaser.Math.Companion.random(): Double { return kotlin.js.Math.random()}
+fun Phaser.Math.Companion.round(value: Number): Int { return kotlin.math.round(value.toDouble()).toInt()}
+fun Phaser.Math.Companion.floor(value: Number): Int { return kotlin.math.round(value.toDouble()).toInt()}
+fun Phaser.Math.Companion.atan2(x: Double,y:Double): Double { return kotlin.math.atan2(x,y)}
+fun Phaser.Math.Companion.sqrt(value: Double): Double { return kotlin.math.sqrt(value)}
+fun Phaser.Math.Companion.abs(value: Double): Double { return kotlin.math.abs(value)}
+fun Phaser.Math.Companion.random(): Double { return kotlin.random.Random.nextDouble()}
 fun Phaser.Math.Companion.random(min: Int, max: Int): Int{ return (random()*(max-min)+min).toInt() }
 
 @JsName("cropKt")

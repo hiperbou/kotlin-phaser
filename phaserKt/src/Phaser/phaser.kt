@@ -2939,12 +2939,12 @@ external open class Particles(game: Phaser.Game) {
             open var particleSendToBack: Boolean
             open var particleClass: Any
             open var particleDrag: Phaser.Point
-            override var physicsType: Double
+            override var physicsType: Number
             override var position: Phaser.Point
             override var right: Double
             open var scaleData: Array<Any>
             override var top: Double
-            override var type: Double
+            override var type: Number
             override var width: Double
             override var x: Double
             override var y: Double
@@ -4800,7 +4800,7 @@ external open class Sprite(game: Phaser.Game, x: Number, y: Number, key: Any? = 
 
 
 external open class SpriteBatch(game: Phaser.Game, parent: PIXI.DisplayObjectContainer, name: String? = definedExternally, addedToStage: Boolean? = definedExternally) : Phaser.Group {
-    override var type: Double
+    override var type: Number
 }
 
 
