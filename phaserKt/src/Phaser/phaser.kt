@@ -157,17 +157,17 @@ external open class Animation {
     constructor(game: Phaser.Game, parent: Phaser.Sprite, name: String, frameData: Phaser.FrameData, frames: Array<String>, frameRate: Number? = definedExternally, loop: Boolean? = definedExternally)
 
     open var currentFrame: Phaser.Frame
-    open var delay: Number
+    open var delay: Double
     open var enableUpdate: Boolean
-    open var frame: Number
-    open var frameTotal: Number
+    open var frame: Double
+    open var frameTotal: Double
     open var game: Phaser.Game
     open var isFinished: Boolean
     open var isPaused: Boolean
     open var isPlaying: Boolean
     open var killOnComplete: Boolean
     open var loop: Boolean
-    open var loopCount: Number
+    open var loopCount: Double
     open var name: String
     open var onComplete: Phaser.Signal
     open var onLoop: Phaser.Signal
@@ -175,7 +175,7 @@ external open class Animation {
     open var onUpdate: Phaser.SignalAnimationFrame
     open var paused: Boolean
     open var reversed: Boolean
-    open var speed: Number
+    open var speed: Double
     open fun complete(): Unit
     open fun destroy(): Unit
     open fun next(quantity: Number? = definedExternally): Unit
@@ -203,7 +203,7 @@ external open class Animation {
 external open class AnimationManager(sprite: Phaser.Sprite) {
     open var currentAnim: Phaser.Animation
     open var currentFrame: Phaser.Frame
-    open var frame: Number
+    open var frame: Double
     open var frameData: Phaser.FrameData
     open var frameName: String
     open var frameTotal: Int
@@ -264,9 +264,9 @@ external open class AudioSprite(game: Phaser.Game, key: String) {
 
 
 external open class ArraySet(list: Array<Any>) {
-    open var position: Number
+    open var position: Double
     open var list: Array<Any>
-    open var total: Number
+    open var total: Double
     open var first: Any
     open var next: Any
     open fun add(item: Any): Any
@@ -311,29 +311,29 @@ external interface BitmapFont {
 external interface BMFont {
     var chars: Array<Phaser.BMFontChar>
     var font: String
-    var lineHeight: Number
-    var size: Number
+    var lineHeight: Double
+    var size: Double
 }
 
 
 external interface BMFontChar {
-    var x: Number
-    var y: Number
-    var width: Number
-    var height: Number
-    var xOffset: Number
-    var yOffset: Number
-    var xAdvance: Number
+    var x: Double
+    var y: Double
+    var width: Double
+    var height: Double
+    var xOffset: Double
+    var yOffset: Double
+    var xAdvance: Double
     var kerning: Array<Number>
     var texture: PIXI.BaseTexture
 }
 
 external interface `T$0` {
-    var r: Number
-    var g: Number
-    var b: Number
-    var x: Number
-    var y: Number
+    var r: Double
+    var g: Double
+    var b: Double
+    var x: Double
+    var y: Double
 }
 
 
@@ -356,7 +356,7 @@ external open class BitmapData(game: Phaser.Game, key: String, width: Number? = 
     open var smoothProperty: String
     open var texture: PIXI.Texture
     open var textureFrame: Phaser.Frame
-    open var type: Number
+    open var type: Double
     open var width: Double
     open fun add(`object`: Any): Phaser.BitmapData
     open fun addToWorld(x: Number? = definedExternally, y: Number? = definedExternally, anchorX: Number? = definedExternally, anchorY: Number? = definedExternally, scaleX: Number? = definedExternally, scaleY: Number? = definedExternally): Phaser.Image
@@ -435,7 +435,7 @@ external open class BitmapData(game: Phaser.Game, key: String, width: Number? = 
 }
 
 external interface `T$1` {
-    var width: Number
+    var width: Double
     var text: String
     var end: Boolean
     var chars: Array<String>
@@ -447,10 +447,10 @@ external open class BitmapText(game: Phaser.Game, x: Number, y: Number, font: St
     open var alive: Boolean
     open var anchor: Phaser.Point
     open var animations: Phaser.AnimationManager
-    open var angle: Number
+    open var angle: Double
     open var autoCull: Boolean
     open var body: dynamic /* Phaser.Physics.Arcade.Body | Phaser.Physics.P2.Body | Phaser.Physics.Ninja.Body | Any */
-    open var bottom: Number
+    open var bottom: Double
     open var cameraOffset: Phaser.Point
     open var checkWorldBounds: Boolean
     open var data: Any
@@ -469,27 +469,27 @@ external open class BitmapText(game: Phaser.Game, x: Number, y: Number, font: St
     open var inCamera: Boolean
     open var inWorld: Boolean
     open var key: dynamic /* String | Phaser.RenderTexture | Phaser.BitmapData | Phaser.Video | PIXI.Texture */
-    open var left: Number
+    open var left: Double
     open var name: String
     open var components: Any
-    open var lifespan: Number
-    open var maxWidth: Number
-    open var offsetX: Number
-    open var offsetY: Number
+    open var lifespan: Double
+    open var maxWidth: Double
+    open var offsetX: Double
+    open var offsetY: Double
     open var outOfBoundsKill: Boolean
     open var pendingDestroy: Boolean
     open var physicsType: Number
     open var previousPosition: Phaser.Point
-    open var previousRotation: Number
+    open var previousRotation: Double
     override var position: Phaser.Point
     open var renderOrderID: Number
-    open var right: Number
+    open var right: Double
     open var text: String
     open var smoothed: Boolean
     open var textWidth: Double
     open var textHeight: Double
     open var tint: Number
-    open var top: Number
+    open var top: Double
     open var type: Number
     open var world: Phaser.Point
     override var x: Double
@@ -752,12 +752,12 @@ external open class Camera(game: Phaser.Game, id: Number, x: Number, y: Number, 
     open var id: Number
     open var fx: Phaser.Graphics
     open var game: Phaser.Game
-    open var height: Number
+    open var height: Double
     open var lerp: Phaser.Point
     open var position: Phaser.Point
     open var roundPx: Boolean
     open var scale: Phaser.Point
-    open var shakeIntensity: Number
+    open var shakeIntensity: Double
     open var onFadeComplete: Phaser.Signal
     open var onFlashComplete: Phaser.Signal
     open var onShakeComplete: Phaser.Signal
@@ -765,7 +765,7 @@ external open class Camera(game: Phaser.Game, id: Number, x: Number, y: Number, 
     open var totalInView: Number
     open var view: Phaser.Rectangle
     open var visible: Boolean
-    open var width: Number
+    open var width: Double
     open var world: Phaser.World
     open var x: Double
     open var y: Double
@@ -817,16 +817,16 @@ external open class Canvas {
 
 
 external open class Circle(x: Number? = definedExternally, y: Number? = definedExternally, diameter: Number? = definedExternally) {
-    open var area: Number
-    open var bottom: Number
-    open var diameter: Number
+    open var area: Double
+    open var bottom: Double
+    open var diameter: Double
     open var empty: Boolean
-    open var left: Number
-    open var radius: Number
-    open var right: Number
-    open var top: Number
-    open var x: Number
-    open var y: Number
+    open var left: Double
+    open var radius: Double
+    open var right: Double
+    open var top: Double
+    open var x: Double
+    open var y: Double
     open fun circumference(): Number
     open fun circumferencePoint(angle: Number, asDegrees: Boolean? = definedExternally, out: Phaser.Point? = definedExternally): Phaser.Point
     open fun clone(output: Phaser.Circle): Phaser.Circle
@@ -1189,16 +1189,16 @@ external open class Easing {
 
 
 external open class Ellipse(x: Number? = definedExternally, y: Number? = definedExternally, width: Number? = definedExternally, height: Number? = definedExternally) {
-    open var bottom: Number
+    open var bottom: Double
     open var empty: Boolean
-    open var height: Number
-    open var left: Number
-    open var right: Number
-    open var top: Number
-    open var type: Number
-    open var width: Number
-    open var x: Number
-    open var y: Number
+    open var height: Double
+    open var left: Double
+    open var right: Double
+    open var top: Double
+    open var type: Double
+    open var width: Double
+    open var x: Double
+    open var y: Double
     open fun clone(output: Phaser.Ellipse): Phaser.Ellipse
     open fun contains(x: Number, y: Number): Boolean
     open fun copyFrom(source: Any): Phaser.Ellipse
@@ -1245,13 +1245,13 @@ external open class Filter() : PIXI.AbstractFilter {
 
     override var dirty: Boolean
     open var game: Phaser.Game
-    open var height: Number
+    open var height: Double
     override var fragmentSrc: dynamic /* String | Array<String> */
     override var padding: Number
     open var prevPoint: Phaser.Point
     open var type: Number
     override var uniforms: Any
-    open var width: Number
+    open var width: Double
     open fun addToWorld(x: Number? = definedExternally, y: Number? = definedExternally, width: Number? = definedExternally, height: Number? = definedExternally, anchorX: Number? = definedExternally, anchorY: Number? = definedExternally): Phaser.Image
     override fun apply(frameBuffer: WebGLFramebuffer): Unit
     open fun destroy(): Unit
@@ -1261,15 +1261,15 @@ external open class Filter() : PIXI.AbstractFilter {
     open fun update(pointer: Phaser.Pointer? = definedExternally): Unit
     //companion object {
     open class BinarySerpents(game: Phaser.Game, width: Number, height: Number, march: Number? = definedExternally, maxDistance: Number? = definedExternally) : Phaser.Filter {
-        open var fog: Number
+        open var fog: Double
     }
 
     open class BlurX : Phaser.Filter {
-        open var blur: Number
+        open var blur: Double
     }
 
     open class BlurY : Phaser.Filter {
-        open var blur: Number
+        open var blur: Double
     }
 
     open class CausticLight(game: Phaser.Game, width: Number, height: Number, divisor: Number? = definedExternally) : Phaser.Filter {
@@ -1277,33 +1277,33 @@ external open class Filter() : PIXI.AbstractFilter {
     }
 
     open class CheckerWave(game: Phaser.Game, width: Number, height: Number) : Phaser.Filter {
-        open var alpha: Number
-        open var cameraX: Number
-        open var cameraY: Number
-        open var cameraZ: Number
+        open var alpha: Double
+        open var cameraX: Double
+        open var cameraY: Double
+        open var cameraZ: Double
         open fun init(width: Number, height: Number): Unit
         open fun setColor1(red: Number, green: Number, blue: Number): Unit
         open fun setColor2(red: Number, green: Number, blue: Number): Unit
     }
 
     open class ColorBars(game: Phaser.Game, width: Number, height: Number) : Phaser.Filter {
-        open var alpha: Number
+        open var alpha: Double
         open fun init(width: Number, height: Number): Unit
     }
 
     open class Fire(width: Number, height: Number, alpha: Number? = definedExternally, shift: Number? = definedExternally) : Phaser.Filter {
-        open var alpha: Number
-        open var shift: Number
-        open var speed: Number
+        open var alpha: Double
+        open var shift: Double
+        open var speed: Double
         open fun init(width: Number, height: Number, alpha: Number? = definedExternally, shift: Number? = definedExternally): Unit
     }
 
     open class Gray : Phaser.Filter {
-        open var gray: Number
+        open var gray: Double
     }
 
     open class HueRotate(game: Phaser.Game, width: Number, height: Number, texture: Any) : Phaser.Filter {
-        open var alpha: Number
+        open var alpha: Double
         open fun init(width: Number, height: Number, texture: Any): Unit
     }
 
@@ -1312,34 +1312,34 @@ external open class Filter() : PIXI.AbstractFilter {
     }
 
     open class LightBeam(game: Phaser.Game, width: Number, height: Number) : Phaser.Filter {
-        open var alpha: Number
-        open var blue: Number
-        open var green: Number
-        open var red: Number
-        open var thickness: Number
-        open var speed: Number
+        open var alpha: Double
+        open var blue: Double
+        open var green: Double
+        open var red: Double
+        open var thickness: Double
+        open var speed: Double
         open fun init(width: Number, height: Number): Unit
     }
 
     open class Marble(game: Phaser.Game, width: Number, height: Number, speed: Number? = definedExternally, intensity: Number? = definedExternally) : Phaser.Filter {
-        open var alpha: Number
-        open var intensity: Number
-        open var speed: Number
+        open var alpha: Double
+        open var intensity: Double
+        open var speed: Double
         open fun init(width: Number, height: Number, speed: Number? = definedExternally, intensity: Number? = definedExternally): Unit
     }
 
     open class Pixelate : Phaser.Filter {
-        open var size: Number
-        open var sizeX: Number
-        open var sizeY: Number
+        open var size: Double
+        open var sizeX: Double
+        open var sizeY: Double
     }
 
     open class Plasma(game: Phaser.Game, width: Number, height: Number, alpha: Number? = definedExternally, size: Number? = definedExternally) : Phaser.Filter {
-        open var alpha: Number
-        open var blueShift: Number
-        open var greenShift: Number
-        open var redShift: Number
-        open var size: Number
+        open var alpha: Double
+        open var blueShift: Double
+        open var greenShift: Double
+        open var redShift: Double
+        open var size: Double
         open fun init(width: Number, height: Number, alpha: Number? = definedExternally, size: Number? = definedExternally): Unit
     }
 
@@ -1348,8 +1348,8 @@ external open class Filter() : PIXI.AbstractFilter {
     }
 
     open class Tunnel(game: Phaser.Game, width: Number, height: Number, texture: Any) : Phaser.Filter {
-        open var alpha: Number
-        open var origin: Number
+        open var alpha: Double
+        open var origin: Double
         open fun init(width: Number, height: Number, texture: Any): Unit
     }
     //}
@@ -1359,16 +1359,16 @@ external open class Filter() : PIXI.AbstractFilter {
 external open class FlexGrid(manager: Phaser.ScaleManager, width: Number, height: Number) {
     open var game: Phaser.Game
     open var manager: Phaser.ScaleManager
-    open var width: Number
-    open var height: Number
+    open var width: Double
+    open var height: Double
     open var boundsCustom: Phaser.Rectangle
     open var boundsFluid: Phaser.Rectangle
     open var boundsFull: Phaser.Rectangle
     open var boundsNone: Phaser.Rectangle
-    open var customWidth: Number
-    open var customHeight: Number
-    open var customOffsetX: Number
-    open var customOffsetY: Number
+    open var customWidth: Double
+    open var customHeight: Double
+    open var customOffsetX: Double
+    open var customOffsetY: Double
     open var positionCustom: Phaser.Point
     open var positionFluid: Phaser.Point
     open var positionFull: Phaser.Point
@@ -1378,9 +1378,9 @@ external open class FlexGrid(manager: Phaser.ScaleManager, width: Number, height
     open var scaleFluidInversed: Phaser.Point
     open var scaleFull: Phaser.Point
     open var scaleNone: Phaser.Point
-    open var ratioH: Number
-    open var ratioV: Number
-    open var multiplier: Number
+    open var ratioH: Double
+    open var ratioV: Double
+    open var multiplier: Double
     //open fun createCustomLayer(width: Number, height: Number, children: Array<PIXI.DisplayObject>? = definedExternally, addToWorld: Boolean? = definedExternally): Phaser.FlexLayer
     //open fun createFluidLayer(children: Array<PIXI.DisplayObject>): Phaser.FlexLayer
     //open fun createFullLayer(children: Array<PIXI.DisplayObject>): Phaser.FlexLayer
@@ -1414,26 +1414,26 @@ external open class FlexLayer(manager: Phaser.ScaleManager, position: Phaser.Poi
 }*/
 
 external open class Frame(index: Number, x: Number, y: Number, width: Number, height: Number, name: String) {
-    open var bottom: Number
-    open var centerX: Number
-    open var centerY: Number
-    open var distance: Number
-    open var height: Number
+    open var bottom: Double
+    open var centerX: Double
+    open var centerY: Double
+    open var distance: Double
+    open var height: Double
     open var index: Number
     open var name: String
-    open var right: Number
+    open var right: Double
     open var rotated: Boolean
-    open var sourceSizeH: Number
-    open var sourceSizeW: Number
-    open var spriteSourceSizeH: Number
-    open var spriteSourceSizeW: Number
-    open var spriteSourceSizeX: Number
-    open var spriteSourceSizeY: Number
+    open var sourceSizeH: Double
+    open var sourceSizeW: Double
+    open var spriteSourceSizeH: Double
+    open var spriteSourceSizeW: Double
+    open var spriteSourceSizeX: Double
+    open var spriteSourceSizeY: Double
     open var trimmed: Boolean
     open var uuid: String
-    open var width: Number
-    open var x: Number
-    open var y: Number
+    open var width: Double
+    open var x: Double
+    open var y: Double
     open fun clone(): Phaser.Frame
     open fun getRect(out: Phaser.Rectangle? = definedExternally): Phaser.Rectangle
     open fun setTrim(trimmed: Boolean, actualWidth: Number, actualHeight: Number, destX: Number, destY: Number, destWidth: Number, destHeight: Number): Unit
@@ -1703,12 +1703,12 @@ external open class Gamepad(game: Phaser.Game) {
 
 
 external open class Graphics(game: Phaser.Game, x: Number? = definedExternally, y: Number? = definedExternally) : PIXI.Graphics {
-    open var angle: Number
+    open var angle: Double
     open var alive: Boolean
     open var animations: Phaser.AnimationManager
     open var autoCull: Boolean
     open var body: dynamic /* Phaser.Physics.Arcade.Body | Phaser.Physics.P2.Body | Phaser.Physics.Ninja.Body | Any */
-    open var bottom: Number
+    open var bottom: Double
     open var cameraOffset: Phaser.Point
     open var checkWorldBounds: Boolean
     open var components: Any
@@ -1726,24 +1726,24 @@ external open class Graphics(game: Phaser.Game, x: Number? = definedExternally, 
     open var inputEnabled: Boolean
     open var inCamera: Boolean
     open var inWorld: Boolean
-    open var left: Number
+    open var left: Double
     open var name: String
-    open var lifespan: Number
-    open var offsetX: Number
-    open var offsetY: Number
+    open var lifespan: Double
+    open var offsetX: Double
+    open var offsetY: Double
     open var outOfBoundsKill: Boolean
     open var pendingDestroy: Boolean
-    open var physicsType: Number
+    open var physicsType: Double
     override open var position: Phaser.Point
     open var previousPosition: Phaser.Point
-    open var previousRotation: Number
+    open var previousRotation: Double
     open var renderOrderID: Number
-    open var right: Number
-    open var top: Number
-    open var type: Number
+    open var right: Double
+    open var top: Double
+    open var type: Double
     open var world: Phaser.Point
     override var width: Double
-    //open var z: Number
+    //open var z: Double
     open fun alignIn(container: Phaser.Rectangle, position: Number? = definedExternally, offsetX: Number? = definedExternally, offsetY: Number? = definedExternally): Any
 
     open fun alignIn(container: Phaser.Sprite, position: Number? = definedExternally, offsetX: Number? = definedExternally, offsetY: Number? = definedExternally): Any
@@ -1776,9 +1776,9 @@ external open class Graphics(game: Phaser.Game, x: Number? = definedExternally, 
 
 external open class Group(game: Phaser.Game, parent: PIXI.DisplayObjectContainer? = definedExternally, name: String? = definedExternally, addToStage: Boolean? = definedExternally, enableBody: Boolean? = definedExternally, physicsBodyType: Number? = definedExternally) : PIXI.DisplayObjectContainer {
     override var alpha: Double
-    open var angle: Number
+    open var angle: Double
     open var alive: Boolean
-    open var bottom: Number
+    open var bottom: Double
     open var cameraOffset: Phaser.Point
     open var centerX: Double
     open var centerY: Double
@@ -1793,7 +1793,7 @@ external open class Group(game: Phaser.Game, parent: PIXI.DisplayObjectContainer
     open var hash: Array<PIXI.DisplayObject>
     open var ignoreDestroy: Boolean
     open var inputEnableChildren: Boolean
-    open var left: Number
+    open var left: Double
     open var length: Number
     open var name: String
     open var onChildInputDown: Phaser.Signal2<Sprite, Pointer>
@@ -1806,14 +1806,14 @@ external open class Group(game: Phaser.Game, parent: PIXI.DisplayObjectContainer
     open var physicsType: Number
     open var physicsSortDirection: Number
     override open var position: Phaser.Point
-    open var right: Number
+    open var right: Double
     override var rotation: Double
     override open var scale: Phaser.Point
-    open var top: Number
+    open var top: Double
     open var total: Int
     open var type: Number
     override var visible: Boolean
-    //open var z: Number
+    //open var z: Double
     open fun add(child: Any, silent: Boolean? = definedExternally, index: Number? = definedExternally): Any
 
     open fun addAll(property: String, amount: Number): Unit
@@ -1985,18 +1985,18 @@ external open class Image(game: Phaser.Game, x: Number, y: Number, key: Any, fra
     //open var anchor: Phaser.Point
     open var animations: Phaser.AnimationManager
     open var autoCull: Boolean
-    open var bottom: Number
+    open var bottom: Double
     open var cameraOffset: Phaser.Point
-    open var centerX: Number
-    open var centerY: Number
+    open var centerX: Double
+    open var centerY: Double
     open var components: Any
     open var cropRect: Phaser.Rectangle
     open var customRender: Boolean
     open var data: Any
     open var debug: Boolean
-    open var deltaX: Number
-    open var deltaY: Number
-    open var deltaZ: Number
+    open var deltaX: Double
+    open var deltaY: Double
+    open var deltaZ: Double
     open var destroyPhase: Boolean
     open var events: Phaser.Events
     override var exists: Boolean
@@ -2011,23 +2011,23 @@ external open class Image(game: Phaser.Game, x: Number, y: Number, key: Any, fra
     open var inputEnabled: Boolean
     open var inWorld: Boolean
     open var key: dynamic /* String | Phaser.RenderTexture | Phaser.BitmapData | Phaser.Video | PIXI.Texture */
-    open var lifespan: Number
-    open var left: Number
+    open var lifespan: Double
+    open var left: Double
     open var name: String
-    open var offsetX: Number
-    open var offsetY: Number
+    open var offsetX: Double
+    open var offsetY: Double
     open var pendingDestroy: Boolean
     override open var position: Phaser.Point
     open var previousPosition: Phaser.Point
-    open var previousRotation: Number
+    open var previousRotation: Double
     open var renderOrderID: Number
-    open var right: Number
+    open var right: Double
     override open var scale: Phaser.Point
     open var smoothed: Boolean
-    open var top: Number
+    open var top: Double
     open var type: Number
     open var world: Phaser.Point
-    //open var z: Number
+    //open var z: Double
     open fun alignIn(container: Phaser.Rectangle, position: Number? = definedExternally, offsetX: Number? = definedExternally, offsetY: Number? = definedExternally): Any
 
     open fun alignIn(container: Phaser.Sprite, position: Number? = definedExternally, offsetX: Number? = definedExternally, offsetY: Number? = definedExternally): Any
@@ -2083,13 +2083,13 @@ external open class Image(game: Phaser.Game, x: Number, y: Number, key: Any, fra
 external open class ImageCollection(name: String, firstgid: Number, width: Number? = definedExternally, height: Number? = definedExternally, margin: Number? = definedExternally, spacing: Number? = definedExternally, properties: Any? = definedExternally) {
     open var name: String
     open var firstgid: Number
-    open var imageWidth: Number
-    open var imageHeight: Number
-    open var imageMargin: Number
-    open var imageSpacing: Number
+    open var imageWidth: Double
+    open var imageHeight: Double
+    open var imageMargin: Double
+    open var imageSpacing: Double
     open var properties: Any
     open var images: Array<Any>
-    open var total: Number
+    open var total: Double
     open fun addImage(gid: Number, image: String): Unit
     open fun containsImageIndex(imageIndex: Number): Boolean
 }
@@ -2099,15 +2099,15 @@ external open class Input(game: Phaser.Game) {
     open var activePointer: Phaser.Pointer
     open var circle: Phaser.Circle
     open var enabled: Boolean
-    open var doubleTapRate: Number
+    open var doubleTapRate: Double
     open var game: Phaser.Game
     open var gamepad: Phaser.Gamepad
     open var hitCanvas: HTMLCanvasElement
     open var hitContext: CanvasRenderingContext2D
-    open var holdRate: Number
+    open var holdRate: Double
     open var interactiveItems: Phaser.ArraySet
-    open var justPressedRate: Number
-    open var justReleasedRate: Number
+    open var justPressedRate: Double
+    open var justReleasedRate: Double
     open var keyboard: Phaser.Keyboard
     open var maxPointers: Number
     open var minPriorityID: Number
@@ -2131,21 +2131,21 @@ external open class Input(game: Phaser.Game) {
     open var pointer9: Phaser.Pointer
     open var pointer10: Phaser.Pointer
     open var pollLocked: Boolean
-    open var pollRate: Number
+    open var pollRate: Double
     open var position: Phaser.Point
     open var pointer: Array<Phaser.Pointer>
-    open var recordLimit: Number
+    open var recordLimit: Double
     open var recordPointerHistory: Boolean
-    open var recordRate: Number
+    open var recordRate: Double
     open var resetLocked: Boolean
     open var scale: Phaser.Point
     open var speed: Phaser.Point
-    open var tapRate: Number
-    open var totalActivePointers: Number
-    open var totalInactivePointers: Number
+    open var tapRate: Double
+    open var totalActivePointers: Double
+    open var totalInactivePointers: Double
     open var touch: Phaser.Touch
-    open var worldX: Number
-    open var worldY: Number
+    open var worldX: Double
+    open var worldY: Double
     open var x: Double
     open var y: Double
     open fun addPointer(): Phaser.Pointer
@@ -2171,10 +2171,10 @@ external open class Input(game: Phaser.Game) {
     open fun updatePointer(event: Any): Phaser.Pointer
 
     companion object {
-        var MAX_POINTERS: Number
-        var MOUSE_OVERRIDES_TOUCH: Number
-        var MOUSE_TOUCH_COMBINE: Number
-        var TOUCH_OVERRIDES_MOUSE: Number
+        var MAX_POINTERS: Double
+        var MOUSE_OVERRIDES_TOUCH: Double
+        var MOUSE_TOUCH_COMBINE: Double
+        var TOUCH_OVERRIDES_MOUSE: Double
     }
 }
 
@@ -2186,31 +2186,31 @@ external open class InputHandler(sprite: Phaser.Sprite) {
     open var boundsSprite: Phaser.Sprite
     open var bringToTop: Boolean
     open var downPoint: Phaser.Point
-    open var dragDistanceThreshold: Number
+    open var dragDistanceThreshold: Double
     open var dragOffset: Phaser.Point
     open var dragFromCenter: Boolean
     open var draggable: Boolean
     open var dragStartPoint: Phaser.Point
     open var dragStopBlocksInputUp: Boolean
-    open var dragTimeThreshold: Number
+    open var dragTimeThreshold: Double
     open var enabled: Boolean
     open var game: Phaser.Game
     open fun globalToLocalX(x: Number): Number
     open fun globalToLocalY(y: Number): Number
     open var isDragged: Boolean
-    open var pixelPerfectAlpha: Number
+    open var pixelPerfectAlpha: Double
     open var pixelPerfectClick: Boolean
     open var pixelPerfectOver: Boolean
-    open var priorityID: Number
+    open var priorityID: Double
     open var scaleLayer: Boolean
     open var snapOffset: Phaser.Point
-    open var snapOffsetX: Number
-    open var snapOffsetY: Number
+    open var snapOffsetX: Double
+    open var snapOffsetY: Double
     open var snapOnDrag: Boolean
     open var snapOnRelease: Boolean
     open var snapPoint: Phaser.Point
-    open var snapX: Number
-    open var snapY: Number
+    open var snapX: Double
+    open var snapY: Double
     open var sprite: Phaser.Sprite
     open var useHandCursor: Boolean
     open fun checkBoundsRect(): Unit
@@ -2256,7 +2256,7 @@ external open class InputHandler(sprite: Phaser.Sprite) {
 external open class Key(game: Phaser.Game, keycode: Number) {
     open var altKey: Boolean
     open var ctrlKey: Boolean
-    open var duration: Number
+    open var duration: Double
     open var enabled: Boolean
     open var event: Any
     open var game: Phaser.Game
@@ -2266,15 +2266,15 @@ external open class Key(game: Phaser.Game, keycode: Number) {
     open var justDown: Boolean
     open var _justUp: Boolean
     open var justUp: Boolean
-    open var keyCode: Number
+    open var keyCode: Double
     open var onDown: Phaser.Signal
     open var onHoldCallback: Function<Any>
     open var onHoldContext: Any
     open var onUp: Phaser.Signal
-    open var repeats: Number
+    open var repeats: Double
     open var shiftKey: Boolean
-    open var timeDown: Number
-    open var timeUp: Number
+    open var timeDown: Double
+    open var timeUp: Double
     open fun downDuration(duration: Number? = definedExternally): Boolean
     open fun processKeyDown(event: KeyboardEvent): Unit
     open fun processKeyUp(event: KeyboardEvent): Unit
@@ -2316,216 +2316,216 @@ external open class Keyboard(game: Phaser.Game) {
     open fun upDuration(keycode: Number, duration: Number? = definedExternally): Boolean
 
     companion object {
-        var A: Number
-        var B: Number
-        var C: Number
-        var D: Number
-        var E: Number
-        var F: Number
-        var G: Number
-        var H: Number
-        var I: Number
-        var J: Number
-        var K: Number
-        var L: Number
-        var M: Number
-        var N: Number
-        var O: Number
-        var P: Number
-        var Q: Number
-        var R: Number
-        var S: Number
-        var T: Number
-        var U: Number
-        var V: Number
-        var W: Number
-        var X: Number
-        var Y: Number
-        var Z: Number
-        var ZERO: Number
-        var ONE: Number
-        var TWO: Number
-        var THREE: Number
-        var FOUR: Number
-        var FIVE: Number
-        var SIX: Number
-        var SEVEN: Number
-        var EIGHT: Number
-        var NINE: Number
-        var NUMPAD_0: Number
-        var NUMPAD_1: Number
-        var NUMPAD_2: Number
-        var NUMPAD_3: Number
-        var NUMPAD_4: Number
-        var NUMPAD_5: Number
-        var NUMPAD_6: Number
-        var NUMPAD_7: Number
-        var NUMPAD_8: Number
-        var NUMPAD_9: Number
-        var NUMPAD_MULTIPLY: Number
-        var NUMPAD_ADD: Number
-        var NUMPAD_ENTER: Number
-        var NUMPAD_SUBTRACT: Number
-        var NUMPAD_DECIMAL: Number
-        var NUMPAD_DIVIDE: Number
-        var F1: Number
-        var F2: Number
-        var F3: Number
-        var F4: Number
-        var F5: Number
-        var F6: Number
-        var F7: Number
-        var F8: Number
-        var F9: Number
-        var F10: Number
-        var F11: Number
-        var F12: Number
-        var F13: Number
-        var F14: Number
-        var F15: Number
-        var COLON: Number
-        var EQUALS: Number
-        var COMMA: Number
-        var UNDERSCORE: Number
-        var PERIOD: Number
-        var QUESTION_MARK: Number
-        var TILDE: Number
-        var OPEN_BRACKET: Number
-        var BACKWARD_SLASH: Number
-        var CLOSED_BRACKET: Number
-        var QUOTES: Number
-        var BACKSPACE: Number
-        var TAB: Number
-        var CLEAR: Number
-        var ENTER: Number
-        var SHIFT: Number
-        var CONTROL: Number
-        var ALT: Number
-        var CAPS_LOCK: Number
-        var ESC: Number
-        var SPACEBAR: Number
-        var PAGE_UP: Number
-        var PAGE_DOWN: Number
-        var END: Number
-        var HOME: Number
-        var LEFT: Number
-        var UP: Number
-        var RIGHT: Number
-        var DOWN: Number
-        var INSERT: Number
-        var DELETE: Number
-        var HELP: Number
-        var NUM_LOCK: Number
-        var PLUS: Number
-        var MINUS: Number
+        var A: Double
+        var B: Double
+        var C: Double
+        var D: Double
+        var E: Double
+        var F: Double
+        var G: Double
+        var H: Double
+        var I: Double
+        var J: Double
+        var K: Double
+        var L: Double
+        var M: Double
+        var N: Double
+        var O: Double
+        var P: Double
+        var Q: Double
+        var R: Double
+        var S: Double
+        var T: Double
+        var U: Double
+        var V: Double
+        var W: Double
+        var X: Double
+        var Y: Double
+        var Z: Double
+        var ZERO: Double
+        var ONE: Double
+        var TWO: Double
+        var THREE: Double
+        var FOUR: Double
+        var FIVE: Double
+        var SIX: Double
+        var SEVEN: Double
+        var EIGHT: Double
+        var NINE: Double
+        var NUMPAD_0: Double
+        var NUMPAD_1: Double
+        var NUMPAD_2: Double
+        var NUMPAD_3: Double
+        var NUMPAD_4: Double
+        var NUMPAD_5: Double
+        var NUMPAD_6: Double
+        var NUMPAD_7: Double
+        var NUMPAD_8: Double
+        var NUMPAD_9: Double
+        var NUMPAD_MULTIPLY: Double
+        var NUMPAD_ADD: Double
+        var NUMPAD_ENTER: Double
+        var NUMPAD_SUBTRACT: Double
+        var NUMPAD_DECIMAL: Double
+        var NUMPAD_DIVIDE: Double
+        var F1: Double
+        var F2: Double
+        var F3: Double
+        var F4: Double
+        var F5: Double
+        var F6: Double
+        var F7: Double
+        var F8: Double
+        var F9: Double
+        var F10: Double
+        var F11: Double
+        var F12: Double
+        var F13: Double
+        var F14: Double
+        var F15: Double
+        var COLON: Double
+        var EQUALS: Double
+        var COMMA: Double
+        var UNDERSCORE: Double
+        var PERIOD: Double
+        var QUESTION_MARK: Double
+        var TILDE: Double
+        var OPEN_BRACKET: Double
+        var BACKWARD_SLASH: Double
+        var CLOSED_BRACKET: Double
+        var QUOTES: Double
+        var BACKSPACE: Double
+        var TAB: Double
+        var CLEAR: Double
+        var ENTER: Double
+        var SHIFT: Double
+        var CONTROL: Double
+        var ALT: Double
+        var CAPS_LOCK: Double
+        var ESC: Double
+        var SPACEBAR: Double
+        var PAGE_UP: Double
+        var PAGE_DOWN: Double
+        var END: Double
+        var HOME: Double
+        var LEFT: Double
+        var UP: Double
+        var RIGHT: Double
+        var DOWN: Double
+        var INSERT: Double
+        var DELETE: Double
+        var HELP: Double
+        var NUM_LOCK: Double
+        var PLUS: Double
+        var MINUS: Double
     }
 }
 
 
 external open class KeyCode {
     companion object {
-        var A: Number
-        var B: Number
-        var C: Number
-        var D: Number
-        var E: Number
-        var F: Number
-        var G: Number
-        var H: Number
-        var I: Number
-        var J: Number
-        var K: Number
-        var L: Number
-        var M: Number
-        var N: Number
-        var O: Number
-        var P: Number
-        var Q: Number
-        var R: Number
-        var S: Number
-        var T: Number
-        var U: Number
-        var V: Number
-        var W: Number
-        var X: Number
-        var Y: Number
-        var Z: Number
-        var ZERO: Number
-        var ONE: Number
-        var TWO: Number
-        var THREE: Number
-        var FOUR: Number
-        var FIVE: Number
-        var SIX: Number
-        var SEVEN: Number
-        var EIGHT: Number
-        var NINE: Number
-        var NUMPAD_0: Number
-        var NUMPAD_1: Number
-        var NUMPAD_2: Number
-        var NUMPAD_3: Number
-        var NUMPAD_4: Number
-        var NUMPAD_5: Number
-        var NUMPAD_6: Number
-        var NUMPAD_7: Number
-        var NUMPAD_8: Number
-        var NUMPAD_9: Number
-        var NUMPAD_MULTIPLY: Number
-        var NUMPAD_ADD: Number
-        var NUMPAD_ENTER: Number
-        var NUMPAD_SUBTRACT: Number
-        var NUMPAD_DECIMAL: Number
-        var NUMPAD_DIVIDE: Number
-        var F1: Number
-        var F2: Number
-        var F3: Number
-        var F4: Number
-        var F5: Number
-        var F6: Number
-        var F7: Number
-        var F8: Number
-        var F9: Number
-        var F10: Number
-        var F11: Number
-        var F12: Number
-        var F13: Number
-        var F14: Number
-        var F15: Number
-        var COLON: Number
-        var EQUALS: Number
-        var COMMA: Number
-        var UNDERSCORE: Number
-        var PERIOD: Number
-        var QUESTION_MARK: Number
-        var TILDE: Number
-        var OPEN_BRACKET: Number
-        var BACKWARD_SLASH: Number
-        var CLOSED_BRACKET: Number
-        var QUOTES: Number
-        var BACKSPACE: Number
-        var TAB: Number
-        var CLEAR: Number
-        var ENTER: Number
-        var SHIFT: Number
-        var CONTROL: Number
-        var ALT: Number
-        var CAPS_LOCK: Number
-        var ESC: Number
-        var SPACEBAR: Number
-        var PAGE_UP: Number
-        var PAGE_DOWN: Number
-        var END: Number
-        var HOME: Number
-        var LEFT: Number
-        var UP: Number
-        var RIGHT: Number
-        var DOWN: Number
-        var INSERT: Number
-        var DELETE: Number
-        var HELP: Number
-        var NUM_LOCK: Number
-        var PLUS: Number
-        var MINUS: Number
+        var A: Double
+        var B: Double
+        var C: Double
+        var D: Double
+        var E: Double
+        var F: Double
+        var G: Double
+        var H: Double
+        var I: Double
+        var J: Double
+        var K: Double
+        var L: Double
+        var M: Double
+        var N: Double
+        var O: Double
+        var P: Double
+        var Q: Double
+        var R: Double
+        var S: Double
+        var T: Double
+        var U: Double
+        var V: Double
+        var W: Double
+        var X: Double
+        var Y: Double
+        var Z: Double
+        var ZERO: Double
+        var ONE: Double
+        var TWO: Double
+        var THREE: Double
+        var FOUR: Double
+        var FIVE: Double
+        var SIX: Double
+        var SEVEN: Double
+        var EIGHT: Double
+        var NINE: Double
+        var NUMPAD_0: Double
+        var NUMPAD_1: Double
+        var NUMPAD_2: Double
+        var NUMPAD_3: Double
+        var NUMPAD_4: Double
+        var NUMPAD_5: Double
+        var NUMPAD_6: Double
+        var NUMPAD_7: Double
+        var NUMPAD_8: Double
+        var NUMPAD_9: Double
+        var NUMPAD_MULTIPLY: Double
+        var NUMPAD_ADD: Double
+        var NUMPAD_ENTER: Double
+        var NUMPAD_SUBTRACT: Double
+        var NUMPAD_DECIMAL: Double
+        var NUMPAD_DIVIDE: Double
+        var F1: Double
+        var F2: Double
+        var F3: Double
+        var F4: Double
+        var F5: Double
+        var F6: Double
+        var F7: Double
+        var F8: Double
+        var F9: Double
+        var F10: Double
+        var F11: Double
+        var F12: Double
+        var F13: Double
+        var F14: Double
+        var F15: Double
+        var COLON: Double
+        var EQUALS: Double
+        var COMMA: Double
+        var UNDERSCORE: Double
+        var PERIOD: Double
+        var QUESTION_MARK: Double
+        var TILDE: Double
+        var OPEN_BRACKET: Double
+        var BACKWARD_SLASH: Double
+        var CLOSED_BRACKET: Double
+        var QUOTES: Double
+        var BACKSPACE: Double
+        var TAB: Double
+        var CLEAR: Double
+        var ENTER: Double
+        var SHIFT: Double
+        var CONTROL: Double
+        var ALT: Double
+        var CAPS_LOCK: Double
+        var ESC: Double
+        var SPACEBAR: Double
+        var PAGE_UP: Double
+        var PAGE_DOWN: Double
+        var END: Double
+        var HOME: Double
+        var LEFT: Double
+        var UP: Double
+        var RIGHT: Double
+        var DOWN: Double
+        var INSERT: Double
+        var DELETE: Double
+        var HELP: Double
+        var NUM_LOCK: Double
+        var PLUS: Double
+        var MINUS: Double
     }
 }
 
@@ -2577,7 +2577,7 @@ external open class LinkedList {
     open var last: Any
     open var next: Any
     open var prev: Any
-    open var total: Number
+    open var total: Double
     open fun add(item: Any): Any
     open fun callAll(callback: Function<Any>): Unit
     open fun remove(item: Any): Unit
@@ -2594,7 +2594,7 @@ external open class Loader(game: Phaser.Game) {
     open var hasLoaded: Boolean
     open var headers: Any
     open var isLoading: Boolean
-    open var maxParallelDownloads: Number
+    open var maxParallelDownloads: Double
     open var onFileStart: Phaser.Signal
     open var onFileComplete: Phaser.Signal5<Int, String, Boolean, Int, Int>
     open var onFileError: Phaser.Signal
@@ -2603,8 +2603,8 @@ external open class Loader(game: Phaser.Game) {
     open var onPackComplete: Phaser.Signal
     open var path: String
     open var preloadSprite: Any
-    open var progress: Number
-    open var progressFloat: Number
+    open var progress: Double
+    open var progressFloat: Double
     open var resetLocked: Boolean
     open var useXDomainRequest: Boolean
     open fun asyncComplete(file: Any, errorMessage: String? = definedExternally): Unit
@@ -2675,12 +2675,12 @@ external open class Loader(game: Phaser.Game) {
     open fun xmlLoadComplete(file: Any, xhr: XMLHttpRequest): Unit
 
     companion object {
-        var PHYSICS_LIME_CORONA_JSON: Number
-        var PHYSICS_PHASER_JSON: Number
-        var TEXTURE_ATLAS_JSON_ARRAY: Number
-        var TEXTURE_ATLAS_JSON_HASH: Number
-        var TEXTURE_ATLAS_XML_STARLING: Number
-        var TEXTURE_ATLAS_JSON_PYXEL: Number
+        var PHYSICS_LIME_CORONA_JSON: Double
+        var PHYSICS_PHASER_JSON: Double
+        var TEXTURE_ATLAS_JSON_ARRAY: Double
+        var TEXTURE_ATLAS_JSON_HASH: Double
+        var TEXTURE_ATLAS_XML_STARLING: Double
+        var TEXTURE_ATLAS_JSON_PYXEL: Double
     }
 }
 
@@ -2695,13 +2695,13 @@ external open class LoaderParser {
 
 /*
 external open class Matrix(a: Number? = definedExternally, b: Number? = definedExternally, c: Number? = definedExternally, d: Number? = definedExternally, tx: Number? = definedExternally, ty: Number? = definedExternally) : PIXI.Matrix {
-    override var a: Number
-    override var b: Number
-    override var c: Number
-    override var d: Number
-    override var tx: Number
-    override var ty: Number
-    open var type: Number
+    override var a: Double
+    override var b: Double
+    override var c: Double
+    override var d: Double
+    override var tx: Double
+    override var ty: Double
+    open var type: Double
     open fun apply(pos: Phaser.Point, newPos: Phaser.Point? = definedExternally): Phaser.Point
     open fun applyInverse(pos: Phaser.Point, newPos: Phaser.Point? = definedExternally): Phaser.Point
     open fun clone(output: Phaser.Matrix? = definedExternally): Phaser.Matrix
@@ -2801,15 +2801,15 @@ external open class Math {
 external interface WheelEventProxy {
     fun bindEvent(event: Any): WheelEventProxy
     var type: String
-    var deltaMode: Number
-    var deltaX: Number
-    var deltaY: Number
-    var deltaZ: Number
+    var deltaMode: Double
+    var deltaX: Double
+    var deltaY: Double
+    var deltaZ: Double
 }
 
 
 external open class Mouse(game: Phaser.Game) {
-    open var button: Number
+    open var button: Double
     open var callbackContext: Any
     open var capture: Boolean
     open var enabled: Boolean
@@ -2831,7 +2831,7 @@ external open class Mouse(game: Phaser.Game) {
     open var _wheelEvent: WheelEventProxy
     open var pointerLock: Phaser.Signal
     open var stopOnGameOut: Boolean
-    open var wheelDelta: Number
+    open var wheelDelta: Double
     open fun onMouseDown(event: MouseEvent): Unit
     open fun onMouseMove(event: MouseEvent): Unit
     open fun onMouseOut(event: MouseEvent): Unit
@@ -2846,20 +2846,20 @@ external open class Mouse(game: Phaser.Game) {
     open fun stop(): Unit
 
     companion object {
-        var NO_BUTTON: Number
-        var LEFT_BUTTON: Number
-        var MIDDLE_BUTTON: Number
-        var RIGHT_BUTTON: Number
-        var BACK_BUTTON: Number
-        var FORWARD_BUTTON: Number
-        var WHEEL_DOWN: Number
-        var WHEEL_UP: Number
+        var NO_BUTTON: Double
+        var LEFT_BUTTON: Double
+        var MIDDLE_BUTTON: Double
+        var RIGHT_BUTTON: Double
+        var BACK_BUTTON: Double
+        var FORWARD_BUTTON: Double
+        var WHEEL_DOWN: Double
+        var WHEEL_UP: Double
     }
 }
 
 /*
 external open class MSPointer(game: Phaser.Game) {
-    open var button: Number
+    open var button: Double
     open var capture: Boolean
     open var callbackContext: Any
     open var event: MSPointerEvent
@@ -2902,7 +2902,7 @@ external open class Particle(game: Phaser.Game, x: Number, y: Number, key: Any? 
 external open class Particles(game: Phaser.Game) {
     open var emitters: Any
     open var game: Phaser.Game
-    open var ID: Number
+    open var ID: Double
     open fun add(emitter: Phaser.Particles.Arcade.Emitter): Phaser.Particles.Arcade.Emitter
     open fun remove(emitter: Phaser.Particles.Arcade.Emitter): Unit
     open fun update(): Unit
@@ -2912,26 +2912,26 @@ external open class Particles(game: Phaser.Game) {
             open var alphaData: Array<Any>
             open var autoAlpha: Boolean
             open var autoScale: Boolean
-            override var angle: Number
-            open var angularDrag: Number
-            override var bottom: Number
+            override var angle: Double
+            open var angularDrag: Double
+            override var bottom: Double
             open var bounce: Phaser.Point
-            open var emitX: Number
-            open var emitY: Number
+            open var emitX: Double
+            open var emitY: Double
             override var exists: Boolean
-            open var frequency: Number
-            open var gravity: Number
+            open var frequency: Double
+            open var gravity: Double
             open var group: Phaser.Group
             override var height: Double
-            override var left: Number
-            open var lifespan: Number
-            open var maxParticles: Number
-            open var maxParticleScale: Number
+            override var left: Double
+            open var lifespan: Double
+            open var maxParticles: Double
+            open var maxParticleScale: Double
             open var maxParticleSpeed: Phaser.Point
-            open var maxRotation: Number
-            open var minParticleScale: Number
+            open var maxRotation: Double
+            open var minParticleScale: Double
             open var minParticleSpeed: Phaser.Point
-            open var minRotation: Number
+            open var minRotation: Double
             override var name: String
             open var on: Boolean
             open var particleAnchor: Phaser.Point
@@ -2939,12 +2939,12 @@ external open class Particles(game: Phaser.Game) {
             open var particleSendToBack: Boolean
             open var particleClass: Any
             open var particleDrag: Phaser.Point
-            override var physicsType: Number
+            override var physicsType: Double
             override var position: Phaser.Point
-            override var right: Number
+            override var right: Double
             open var scaleData: Array<Any>
-            override var top: Number
-            override var type: Number
+            override var top: Double
+            override var type: Double
             override var width: Double
             override var x: Double
             override var y: Double
@@ -3008,12 +3008,12 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
     open fun update(): Unit
 
     companion object {
-        var ARCADE: Number
-        var P2JS: Number
-        var NINJA: Number
-        var BOX2D: Number
-        var CHIPMUNK: Number
-        var MATTERJS: Number
+        var ARCADE: Double
+        var P2JS: Double
+        var NINJA: Double
+        var BOX2D: Double
+        var CHIPMUNK: Double
+        var MATTERJS: Double
     }
 
     interface `T$4` {
@@ -3032,10 +3032,10 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
         open var game: Phaser.Game
         open var gravity: Phaser.Point
         open var quadTree: Phaser.QuadTree
-        open var maxObjects: Number
-        open var maxLevels: Number
+        open var maxObjects: Double
+        open var maxLevels: Double
         open var skipQuadTree: Boolean
-        open var sortDirection: Number
+        open var sortDirection: Double
         open fun accelerationFromRotation(rotation: Number, speed: Number? = definedExternally, point: Phaser.Point? = definedExternally): Phaser.Point
         open fun accelerateToObject(displayObject: Any, destination: Any, speed: Number? = definedExternally, xSpeedMax: Number? = definedExternally, ySpeedMax: Number? = definedExternally): Number
         open fun accelerateToPointer(displayObject: Any, pointer: Phaser.Pointer? = definedExternally, speed: Number? = definedExternally, xSpeedMax: Number? = definedExternally, ySpeedMax: Number? = definedExternally): Number
@@ -3082,25 +3082,25 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
         open fun velocityFromRotation(rotation: Number, speed: Number? = definedExternally, point: Phaser.Point? = definedExternally): Phaser.Point
 
         companion object {
-            var SORT_NONE: Number
-            var LEFT_RIGHT: Number
-            var RIGHT_LEFT: Number
-            var TOP_BOTTOM: Number
-            var BOTTOM_TOP: Number
-            var OVERLAP_BIAS: Number
-            var TILE_BIAS: Number
+            var SORT_NONE: Double
+            var LEFT_RIGHT: Double
+            var RIGHT_LEFT: Double
+            var TOP_BOTTOM: Double
+            var BOTTOM_TOP: Double
+            var OVERLAP_BIAS: Double
+            var TILE_BIAS: Double
         }
 
         open class Body(sprite: Phaser.Sprite) {
             open var acceleration: Phaser.Point
             open var allowGravity: Boolean
             open var allowRotation: Boolean
-            open var angle: Number
-            open var angularAcceleration: Number
-            open var angularDrag: Number
-            open var angularVelocity: Number
+            open var angle: Double
+            open var angularAcceleration: Double
+            open var angularDrag: Double
+            open var angularVelocity: Double
             open var blocked: FaceChoices
-            open var bottom: Number
+            open var bottom: Double
             open var bounce: Phaser.Point
             open var center: Phaser.Point
             open var checkCollision: FaceChoices
@@ -3112,18 +3112,18 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
             open var drag: Phaser.Point
             open var embedded: Boolean
             open var enable: Boolean
-            open var facing: Number
+            open var facing: Double
             open var friction: Phaser.Point
             open var game: Phaser.Game
             open var gravity: Phaser.Point
-            open var halfWidth: Number
-            open var halfHeight: Number
-            open var height: Number
+            open var halfWidth: Double
+            open var halfHeight: Double
+            open var height: Double
             open var immovable: Boolean
             open var isCircle: Boolean
             open var isMoving: Boolean
-            open var mass: Number
-            open var maxAngular: Number
+            open var mass: Double
+            open var maxAngular: Double
             open var maxVelocity: Phaser.Point
             open var moves: Boolean
             open var movementCallback: Any
@@ -3134,27 +3134,27 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
             open var onMoveComplete: Phaser.Signal
             open var onOverlap: Phaser.Signal
             open var onWorldBounds: Phaser.Signal
-            open var overlapX: Number
-            open var overlapY: Number
-            open var phase: Number
+            open var overlapX: Double
+            open var overlapY: Double
+            open var phase: Double
             open var position: Phaser.Point
-            open var preRotation: Number
+            open var preRotation: Double
             open var prev: Phaser.Point
-            open var radius: Number
-            open var right: Number
-            open var rotation: Number
+            open var radius: Double
+            open var right: Double
+            open var rotation: Double
             open var skipQuadTree: Boolean
-            open var sourceWidth: Number
-            open var sourceHeight: Number
-            open var speed: Number
+            open var sourceWidth: Double
+            open var sourceHeight: Double
+            open var speed: Double
             open var sprite: Phaser.Sprite
             open var stopVelocityOnCollide: Boolean
             open var syncBounds: Boolean
             open var tilePadding: Phaser.Point
             open var touching: FaceChoices
-            open var type: Number
+            open var type: Double
             open var wasTouching: FaceChoices
-            open var width: Number
+            open var width: Double
             open var worldBounce: Phaser.Point
             open var velocity: Phaser.Point
             open var x: Double
@@ -3195,10 +3195,10 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
 
     /*open class Ninja(game: Phaser.Game) {
         open var game: Phaser.Game
-        open var gravity: Number
+        open var gravity: Double
         open var bounds: Phaser.Rectangle
-        open var maxObjects: Number
-        open var maxLevels: Number
+        open var maxObjects: Double
+        open var maxLevels: Double
         open var quadTree: Phaser.QuadTree
         open var time: Phaser.Time
         open fun clearTilemapLayerBodies(map: Phaser.Tilemap, layer: Any): Unit
@@ -3216,33 +3216,33 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
         //companion object {
         open class Body(system: Phaser.Physics.Ninja, sprite: Phaser.Sprite, type: Number? = definedExternally, id: Number? = definedExternally, radius: Number? = definedExternally, x: Number? = definedExternally, y: Number? = definedExternally, width: Number? = definedExternally, height: Number? = definedExternally) {
             open var aabb: Phaser.Physics.Ninja.AABB
-            open var angle: Number
-            open var bottom: Number
-            open var bounce: Number
+            open var angle: Double
+            open var bottom: Double
+            open var bounce: Double
             open var checkCollision: Phaser.Physics.Arcade.FaceChoices
             open var circle: Phaser.Physics.Ninja.Circle
             open var collideWorldBounds: Boolean
-            open var drag: Number
-            open var facing: Number
-            open var friction: Number
+            open var drag: Double
+            open var facing: Double
+            open var friction: Double
             open var game: Phaser.Game
-            open var gravityScale: Number
-            open var height: Number
+            open var gravityScale: Double
+            open var height: Double
             open var immovable: Boolean
-            open var maxSpeed: Number
-            open var right: Number
+            open var maxSpeed: Double
+            open var right: Double
             open var sprite: Phaser.Sprite
             open var system: Phaser.Physics.Ninja
             open var tile: Phaser.Physics.Ninja.Tile
             open var touching: Phaser.Physics.Arcade.FaceChoices
-            open var type: Number
+            open var type: Double
             open var shape: Any
-            open var speed: Number
+            open var speed: Double
             open var velocity: Phaser.Point
             open var wasTouching: Phaser.Physics.Arcade.FaceChoices
-            open var width: Number
-            open var x: Number
-            open var y: Number
+            open var width: Double
+            open var x: Double
+            open var y: Double
             open fun deltaAbsX(): Number
             open fun deltaAbsY(): Number
             open fun deltaX(): Number
@@ -3264,14 +3264,14 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
         open class AABB(body: Phaser.Physics.Ninja.Body, x: Number, y: Number, width: Number, height: Number) {
             open var aabbTileProjections: Any
             open var body: Phaser.Physics.Ninja.Body
-            open var height: Number
+            open var height: Double
             open var oldPos: Phaser.Point
             open var pos: Phaser.Point
             open var system: Phaser.Physics.Ninja
-            open var width: Number
+            open var width: Double
             open var velocity: Phaser.Point
-            open var xw: Number
-            open var yw: Number
+            open var xw: Double
+            open var yw: Double
             open fun collideWorldBounds(): Unit
             open fun collideAABBVsAABB(aabb: Phaser.Physics.Ninja.AABB): Boolean
             open fun collideAABBVsTile(tile: Phaser.Physics.Ninja.Tile): Boolean
@@ -3285,9 +3285,9 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
             open fun reverse(): Unit
 
             companion object {
-                var COL_NONE: Number
-                var COL_AXIS: Number
-                var COL_OTHER: Number
+                var COL_NONE: Double
+                var COL_AXIS: Double
+                var COL_OTHER: Double
             }
         }
 
@@ -3298,21 +3298,21 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
                 fun set(index: Number, value: (x: Number, y: Number, oH: Number, oV: Number, obj: Phaser.Physics.Ninja.Circle, t: Phaser.Physics.Ninja.Tile) -> Number)
             }*/
         open class Circle(body: Phaser.Physics.Ninja.Body, x: Number, y: Number, radius: Number) {
-            open var COL_NONE: Number
-            open var COL_AXIS: Number
-            open var COL_OTHER: Number
+            open var COL_NONE: Double
+            open var COL_AXIS: Double
+            open var COL_OTHER: Double
             open var body: Phaser.Physics.Ninja.Body
             //open var circleTileProjections: `T$5`
             open var oldPos: Phaser.Point
-            open var height: Number
+            open var height: Double
             open var pos: Phaser.Point
-            open var radius: Number
+            open var radius: Double
             open var system: Phaser.Physics.Ninja
-            open var type: Number
+            open var type: Double
             open var velocity: Phaser.Point
-            open var width: Number
-            open var xw: Number
-            open var yw: Number
+            open var width: Double
+            open var xw: Double
+            open var yw: Double
             open fun collideCircleVsTile(tile: Phaser.Physics.Ninja.Tile): Boolean
             open fun collideWorldBounds(): Unit
             open fun destroy(): Unit
@@ -3339,22 +3339,22 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
 
         open class Tile(body: Phaser.Physics.Ninja.Body, x: Number, y: Number, width: Number, height: Number, type: Number? = definedExternally) {
             open var body: Phaser.Physics.Ninja.Body
-            open var bottom: Number
+            open var bottom: Double
             open var flipped: Boolean
-            open var height: Number
-            open var id: Number
+            open var height: Double
+            open var id: Double
             open var oldpos: Phaser.Point
             open var pos: Phaser.Point
-            open var right: Number
-            open var rotation: Number
+            open var right: Double
+            open var rotation: Double
             open var system: Phaser.Physics.Ninja
             open var type: Phaser.Physics.Ninja.TileType
             open var velocity: Phaser.Point
-            open var width: Number
-            open var xw: Number
-            open var yw: Number
-            open var x: Number
-            open var y: Number
+            open var width: Double
+            open var xw: Double
+            open var yw: Double
+            open var x: Double
+            open var y: Double
             open fun clear(): Unit
             open fun collideWorldBounds(): Unit
             open fun destroy(): Unit
@@ -3385,8 +3385,8 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
         open var contactMaterial: Phaser.Physics.P2.ContactMaterial
         open var emitImpactEvent: Boolean
         open var everythingCollisionGroup: Phaser.Physics.P2.CollisionGroup
-        open var frameRate: Number
-        open var friction: Number
+        open var frameRate: Double
+        open var friction: Double
         open var game: Phaser.Game
         open var gravity: Phaser.Physics.P2.InversePointProxy
         open var materials: Array<Phaser.Physics.P2.Material>
@@ -3406,7 +3406,7 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
         open var restitution: Double
         open var solveConstraints: Boolean
         open var time: Any
-        open var total: Number
+        open var total: Double
         open var useElapsedTime: Boolean
         open var walls: `T$6`
         open var world: p2.World
@@ -3479,13 +3479,13 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
         open class Body(game: Phaser.Game, sprite: Phaser.Sprite? = definedExternally, x: Number? = definedExternally, y: Number? = definedExternally, mass: Number? = definedExternally) : p2.Body {
             open var parent: Body
             //open var allowSleep: Boolean
-            //open var angle: Number
-            //open var angularDamping: Number
-            //open var angularForce: Number
-            //open var angularVelocity: Number
+            //open var angle: Double
+            //open var angularDamping: Double
+            //open var angularForce: Double
+            //open var angularVelocity: Double
             open var collidesWith: Array<Phaser.Physics.P2.CollisionGroup>
             open var collideWorldBounds: Boolean
-            //open var damping: Number
+            //open var damping: Double
             open var data: Phaser.Physics.P2.Body
             open var debug: Boolean
             open var debugBody: Phaser.Physics.P2.BodyDebug
@@ -3495,23 +3495,23 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
             open var kinematic: Boolean
             open var game: Phaser.Game
             open var gravity: Phaser.Point
-            //open var id: Number
-            //open var inertia: Number
-            //open var mass: Number
-            open var motionState: Number
+            //open var id: Double
+            //open var inertia: Double
+            //open var mass: Double
+            open var motionState: Double
             open var offset: Phaser.Point
             open var onBeginContact: Phaser.Signal
             open var onEndContact: Phaser.Signal
-            open var rotation: Number
+            open var rotation: Double
             open var removeNextStep: Boolean
             open var sprite: Phaser.Sprite
-            //open var sleepSpeedLimit: Number
+            //open var sleepSpeedLimit: Double
             open var static: Boolean
-            //open var type: Number
+            //open var type: Double
             //open var velocity: Phaser.Physics.P2.InversePointProxy
             //open var world: Phaser.Physics.P2
-            open var x: Number
-            open var y: Number
+            open var x: Double
+            open var y: Double
             open fun addToWorld(): Unit
             open fun addCapsule(length: Number, radius: Number, offsetX: Number? = definedExternally, offsetY: Number? = definedExternally, rotation: Number? = definedExternally): p2.Capsule
             open fun addCircle(radius: Number, offsetX: Number? = definedExternally, offsetY: Number? = definedExternally, rotation: Number? = definedExternally): p2.Circle
@@ -3573,29 +3573,29 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
             open fun updateCollisionMask(shape: p2.Shape? = definedExternally): Unit
 
             companion object {
-                var DYNAMIC: Number
-                var STATIC: Number
-                var KINEMATIC: Number
+                var DYNAMIC: Double
+                var STATIC: Double
+                var KINEMATIC: Double
             }
         }
 
         interface `T$8` {
-            var pixelsPerLengthUnit: Number?//
+            var pixelsPerLengthUnit: Double?//
             var debugPolygons: Boolean?//
-            var lineWidth: Number? //
-            var alpha: Number? //
+            var lineWidth: Double? //
+            var alpha: Double? //
         }
 
         open class BodyDebug(game: Phaser.Game, body: Phaser.Physics.P2.Body, settings: `T$8`) : Phaser.Group {
             open var body: Phaser.Physics.P2.Body
             open var canvas: Phaser.Graphics
-            open var ppu: Number
+            open var ppu: Double
             open fun updateSpriteTransform(): Unit
             open fun draw(): Unit
         }
 
         open class CollisionGroup(bitmask: Number) {
-            open var mask: Number
+            open var mask: Double
         }
 
         open class ContactMaterial : p2.ContactMaterial
@@ -3623,10 +3623,10 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
         }
 
         open class InversePointProxy(world: Phaser.Physics.P2, destination: Any) {
-            open var x: Number
-            open var y: Number
-            open var mx: Number
-            open var my: Number
+            open var x: Double
+            open var y: Double
+            open var mx: Double
+            open var my: Double
         }
 
         open class LockConstraint(world: Phaser.Physics.P2, bodyA: Phaser.Physics.P2.Body, bodyB: Phaser.Physics.P2.Body, offset: Array<Number>? = definedExternally, angle: Number? = definedExternally, maxForce: Number? = definedExternally) /*: p2.LockConstraint*/ {
@@ -3639,10 +3639,10 @@ external open class Physics(game: Phaser.Game, config: Any? = definedExternally)
         }
 
         open class PointProxy(world: Phaser.Physics.P2, destination: Any) {
-            open var x: Number
-            open var y: Number
-            open var mx: Number
-            open var my: Number
+            open var x: Double
+            open var y: Double
+            open var mx: Double
+            open var my: Double
         }
 
         open class PrismaticConstraint(world: Phaser.Physics.P2, bodyA: Phaser.Physics.P2.Body? = definedExternally, bodyB: Phaser.Physics.P2.Body? = definedExternally, lockRotation: Boolean? = definedExternally, anchorA: Array<Number>? = definedExternally, anchorB: Array<Number>? = definedExternally, axis: Array<Number>? = definedExternally, maxForce: Number? = definedExternally)/* : p2.PrismaticConstraint*/ {
@@ -3674,7 +3674,7 @@ external open class Video(game: Phaser.Game, key: String? = definedExternally, u
     open var baseTexture: PIXI.BaseTexture
     open var texture: PIXI.Texture
     open var textureFrame: Phaser.Frame
-    open var type: Number
+    open var type: Double
     open var disableTextureUpload: Boolean
     open var dirty: Boolean
     open var currentTime: Double
@@ -3686,15 +3686,15 @@ external open class Video(game: Phaser.Game, key: String? = definedExternally, u
     open var playbackRate: Boolean
     open var playing: Boolean
     open var loop: Boolean
-    open var width: Number
-    open var height: Number
+    open var width: Double
+    open var height: Double
     open var videoStream: Any
     open var isStreaming: Boolean
     open var snapshot: Phaser.BitmapData
-    open var timeout: Number
-    open var retryLimit: Number
-    open var retry: Number
-    open var retryInterval: Number
+    open var timeout: Double
+    open var retryLimit: Double
+    open var retry: Double
+    open var retryInterval: Double
     open var onAccess: Phaser.Signal1<Video>
     open var onError: Phaser.Signal2<Video, Any>
     open var onPlay: Phaser.Signal
@@ -3747,7 +3747,7 @@ external open class Plugin() : IStateCycle {
     override fun update(): Unit
     //companion object {
     open class SaveCPU : Phaser.Plugin {
-        open var renderOnFPS: Number
+        open var renderOnFPS: Double
         open var renderOnPointerChange: Boolean
         open fun forceRender(): Unit
     }
@@ -3760,19 +3760,19 @@ external open class Plugin() : IStateCycle {
         open fun setAStarMap(map: Phaser.Tilemap, layerName: String, tilesetName: String): Phaser.Plugin.AStar
         //companion object {
         var VERSION: String
-        var COST_ORTHAGONAL: Number
-        var COST_DIAGAONAL: Number
+        var COST_ORTHAGONAL: Double
+        var COST_DIAGAONAL: Double
         var DISTANCE_MANHATTEN: String
         var DISTANCE_EUCLIDIAN: String
 
         open class AStarNode(x: Number, y: Number, isWalkable: Boolean) {
-            open var x: Number
-            open var y: Number
-            open var g: Number
-            open var h: Number
-            open var f: Number
+            open var x: Double
+            open var y: Double
+            open var g: Double
+            open var h: Double
+            open var f: Double
             open var parent: Phaser.Plugin.AStar.AStarNode
-            open var travelCost: Number
+            open var travelCost: Double
             open var walkable: Boolean
         }
 
@@ -3793,25 +3793,25 @@ external open class Plugin() : IStateCycle {
     }
 
     open class CSS3Filters(parent: PIXI.DisplayObject) : Phaser.Plugin {
-        open var blur: Number
-        open var brightness: Number
-        open var contrast: Number
-        open var grayscale: Number
-        open var hueRotate: Number
-        open var invert: Number
-        open var opacity: Number
-        open var saturate: Number
-        open var sepia: Number
+        open var blur: Double
+        open var brightness: Double
+        open var contrast: Double
+        open var grayscale: Double
+        open var hueRotate: Double
+        open var invert: Double
+        open var opacity: Double
+        open var saturate: Double
+        open var sepia: Double
     }
 
     open class TilemapWalker(game: Phaser.Game, map: Phaser.Tilemap, layer: Any? = definedExternally, x: Number? = definedExternally, y: Number? = definedExternally) : Phaser.Plugin {
         open var collides: Boolean
         override var game: Phaser.Game
         open var history: Boolean
-        open var facing: Number
+        open var facing: Double
         open var map: Phaser.Tilemap
         open var location: Phaser.Point
-        open var locationLayer: Number
+        open var locationLayer: Double
         open fun checkTile(x: Number, y: Number): Boolean
         open fun getTileFromLocation(x: Number, y: Number): Phaser.Tile
         open fun getTiles(width: Number, height: Number, center: Boolean? = definedExternally): Array<Any>
@@ -3840,23 +3840,23 @@ external open class Plugin() : IStateCycle {
     }
 
     open class VirtualJoystick(game: Phaser.Game, parent: Any?) : Phaser.Plugin {
-        open var angle: Number
+        open var angle: Double
         open var base: Phaser.Sprite
         open var baseBMD: Phaser.BitmapData
         open var baseCircle: Phaser.Circle
-        open var deltaX: Number
-        open var deltaY: Number
-        open var distance: Number
-        open var force: Number
+        open var deltaX: Double
+        open var deltaY: Double
+        open var distance: Double
+        open var force: Double
         open var isDragging: Boolean
-        open var limit: Number
+        open var limit: Double
         open var limitPoint: Phaser.Point
         open var location: Phaser.Point
         open var nub: Phaser.Sprite
         open var nubBMD: Phaser.BitmapData
-        open var speed: Number
-        open var x: Number
-        open var y: Number
+        open var speed: Double
+        open var x: Double
+        open var y: Double
         open fun init(x: Number, y: Number, diameter: Number? = definedExternally, limit: Number? = definedExternally): Unit
         open fun move(pointer: Phaser.Pointer, x: Number, y: Number): Unit
         override fun render(): Unit
@@ -3890,10 +3890,10 @@ external open class Plugin() : IStateCycle {
         //companion object {
         open class Trail(game: Phaser.Game, trailLength: Number? = definedExternally, color: Number? = definedExternally) {
             open var target: Phaser.Sprite
-            open var trailLength: Number
-            open var trailWidth: Number
+            open var trailLength: Double
+            open var trailWidth: Double
             open var trailScaling: Boolean
-            open var trailColor: Number
+            open var trailColor: Double
             open fun update(): Unit
             open fun addSegment(x: Number, y: Number): Unit
             open fun redrawSegments(offsetX: Number, offsetY: Number): Unit
@@ -3931,7 +3931,7 @@ external open class PluginManager(game: Phaser.Game) : IStateCycle {
 external open class Point(x: Number? = definedExternally, y: Number? = definedExternally) {
     open var x: Double
     open var y: Double
-    open var type: Number
+    open var type: Double
     open fun add(x: Number, y: Number): Phaser.Point
     open fun angle(a: Phaser.Point, asDegrees: Boolean? = definedExternally): Number
     open fun angleSq(a: Phaser.Point): Number
@@ -3996,8 +3996,8 @@ external open class Pointer(game: Phaser.Game, id: Number, pointerMode: Number? 
     open var backButton: Phaser.DeviceButton
     open var button: Any
     open var circle: Phaser.Circle
-    open var clientX: Number
-    open var clientY: Number
+    open var clientX: Double
+    open var clientY: Double
     open var dirty: Boolean
     open var duration: Double
     open var eraserButton: Phaser.DeviceButton
@@ -4006,36 +4006,36 @@ external open class Pointer(game: Phaser.Game, id: Number, pointerMode: Number? 
     open var forwardButton: Phaser.DeviceButton
     open var game: Phaser.Game
     open var justReleasePreventsOver: dynamic /* Boolean | Number */
-    open var id: Number
-    open var identifier: Number
+    open var id: Double
+    open var identifier: Double
     open var interactiveCandidates: Array<Phaser.InputHandler>
     open var isDown: Boolean
     open var isMouse: Boolean
     open var isUp: Boolean
     open var leftButton: Phaser.DeviceButton
     open var middleButton: Phaser.DeviceButton
-    open var movementX: Number
-    open var movementY: Number
-    open var msSinceLastClick: Number
-    open var pageX: Number
-    open var pageY: Number
-    open var pointerId: Number
-    open var pointerMode: Number
+    open var movementX: Double
+    open var movementY: Double
+    open var msSinceLastClick: Double
+    open var pageX: Double
+    open var pageY: Double
+    open var pointerId: Double
+    open var pointerMode: Double
     open var position: Phaser.Point
     open var positionDown: Phaser.Point
     open var positionUp: Phaser.Point
-    open var previousTapTime: Number
-    open var rawMovementX: Number
-    open var rawMovementY: Number
+    open var previousTapTime: Double
+    open var rawMovementX: Double
+    open var rawMovementY: Double
     open var rightButton: Phaser.DeviceButton
-    open var screenX: Number
-    open var screenY: Number
+    open var screenX: Double
+    open var screenY: Double
     open var target: Any
     open var targetObject: Any
-    open var timeDown: Number
-    open var timeUp: Number
-    open var totalTouches: Number
-    open var type: Number
+    open var timeDown: Double
+    open var timeUp: Double
+    open var totalTouches: Double
+    open var type: Double
     open var withinGame: Boolean
     open var worldX: Double
     open var worldY: Double
@@ -4056,13 +4056,13 @@ external open class Pointer(game: Phaser.Game, id: Number, pointerMode: Number? 
     open fun updateButtons(event: MouseEvent): Unit
 
     companion object {
-        var NO_BUTTON: Number
-        var LEFT_BUTTON: Number
-        var RIGHT_BUTTON: Number
-        var MIDDLE_BUTTON: Number
-        var BACK_BUTTON: Number
-        var FORWARD_BUTTON: Number
-        var ERASER_BUTTON: Number
+        var NO_BUTTON: Double
+        var LEFT_BUTTON: Double
+        var RIGHT_BUTTON: Double
+        var MIDDLE_BUTTON: Double
+        var BACK_BUTTON: Double
+        var FORWARD_BUTTON: Double
+        var ERASER_BUTTON: Double
     }
 }
 
@@ -4073,10 +4073,10 @@ external open class Polygon() {
     constructor(vararg points: Phaser.Point) 
     constructor(vararg points: Number) 
 
-    open var area: Number
+    open var area: Double
     open var flattened: Boolean
     open var points: dynamic /* Array<Number> | Array<Phaser.Point> */
-    open var type: Number
+    open var type: Double
     open fun clone(output: Phaser.Polygon): Phaser.Polygon
     open fun contains(x: Number, y: Number): Boolean
     open fun flatten(): Phaser.Polygon
@@ -4088,22 +4088,22 @@ external open class Polygon() {
 }
 
 external interface `T$9` {
-    var x: Number
-    var y: Number
-    var width: Number
-    var height: Number
-    var subWidth: Number
-    var subHeight: Number
-    var right: Number
-    var bottom: Number
+    var x: Double
+    var y: Double
+    var width: Double
+    var height: Double
+    var subWidth: Double
+    var subHeight: Double
+    var right: Double
+    var bottom: Double
 }
 
 
 external open class QuadTree(x: Number, y: Number, width: Number, height: Number, maxObject: Number? = definedExternally, maxLevels: Number? = definedExternally, level: Number? = definedExternally) {
     open var bounds: `T$9`
-    open var level: Number
-    open var maxObjects: Number
-    open var maxLevels: Number
+    open var level: Double
+    open var maxObjects: Double
+    open var maxLevels: Double
     open var objects: Array<Any>
     open var nodes: Array<Any>
     open fun clear(): Unit
@@ -4150,15 +4150,15 @@ external open class Rectangle(x: Number = definedExternally, y: Number = defined
     open var halfWidth: Double
     open var height: Double
     open var left: Double
-    open var perimeter: Number
-    open var randomX: Number
-    open var randomY: Number
+    open var perimeter: Double
+    open var randomX: Double
+    open var randomY: Double
     open var right: Double
     open var top: Double
     open var topLeft: Phaser.Point
     open var topRight: Phaser.Point
-    open var type: Number
-    open var volume: Number
+    open var type: Double
+    open var volume: Double
     open var width: Double
     override var x: Double
     override var y: Double
@@ -4218,7 +4218,7 @@ external open class RenderTexture(game: Phaser.Game, width: Number? = definedExt
     open var crop: PIXI.Rectangle
     open var game: Phaser.Game
     open var key: String
-    open var type: Number
+    open var type: Double
     //open fun render(displayObject: PIXI.DisplayObject, matrix: Phaser.Matrix? = definedExternally, clear: Boolean? = definedExternally): Unit
     open fun renderXY(displayObject: PIXI.DisplayObject): Unit
 
@@ -4228,7 +4228,7 @@ external open class RenderTexture(game: Phaser.Game, width: Number? = definedExt
     //override var frame: Rectangle = definedExternally
     open var baseTexture: PIXI.BaseTexture = definedExternally
     //open var renderer: PixiRenderer = definedExternally
-    open var resolution: Number = definedExternally
+    open var resolution: Double = definedExternally
 
     //override var valid: Boolean = definedExternally
     open fun clear(): Unit = definedExternally
@@ -4259,19 +4259,19 @@ external open class RequestAnimationFrame(game: Phaser.Game, forceSetTimeOut: Bo
 external open class RetroFont(game: Phaser.Game, key: String, characterWidth: Number, characterHeight: Number, chars: String, charsPerRow: Number? = definedExternally, xSpacing: Number? = definedExternally, ySpacing: Number? = definedExternally, xOffset: Number? = definedExternally, yOffset: Number? = definedExternally) : Phaser.RenderTexture {
     open var align: String
     open var autoUpperCase: Boolean
-    open var characterHeight: Number
-    open var characterPerRow: Number
-    open var characterSpacingX: Number
-    open var characterSpacingY: Number
-    open var characterWidth: Number
-    open var customSpacingX: Number
-    open var customSpacingY: Number
-    open var fixedWidth: Number
+    open var characterHeight: Double
+    open var characterPerRow: Double
+    open var characterSpacingX: Double
+    open var characterSpacingY: Double
+    open var characterWidth: Double
+    open var customSpacingX: Double
+    open var customSpacingY: Double
+    open var fixedWidth: Double
     open var fontSet: Image
     open var frameData: Phaser.FrameData
     open var multiLine: Boolean
-    open var offsetX: Number
-    open var offsetY: Number
+    open var offsetX: Double
+    open var offsetY: Double
     open var smoothed: Boolean
     open var stamp: Phaser.Image
     open var text: String
@@ -4314,21 +4314,21 @@ external open class Rope() : PIXI.Rope {
     constructor(game: Phaser.Game, x: Number, y: Number, key: Phaser.Video, frame: String? = definedExternally, points: Array<Phaser.Point>? = definedExternally) 
     constructor(game: Phaser.Game, x: Number, y: Number, key: Phaser.Video, frame: Number? = definedExternally, points: Array<Phaser.Point>? = definedExternally) 
 
-    open var angle: Number
+    open var angle: Double
     open var animations: Phaser.AnimationManager
     open var alive: Boolean
     open var autoCull: Boolean
     open var body: dynamic /* Phaser.Physics.Arcade.Body | Phaser.Physics.P2.Body | Phaser.Physics.Ninja.Body | Any */
-    open var bottom: Number
+    open var bottom: Double
     open var cameraOffset: Phaser.Point
     open var checkWorldBounds: Boolean
     open var cropRect: Phaser.Rectangle
     open var components: Any
     open var customRender: Boolean
     open var debug: Boolean
-    open var deltaX: Number
-    open var deltaY: Number
-    open var deltaZ: Number
+    open var deltaX: Double
+    open var deltaY: Double
+    open var deltaZ: Double
     open var destroyPhase: Boolean
     open var exists: Boolean
     open var events: Phaser.Events
@@ -4341,12 +4341,12 @@ external open class Rope() : PIXI.Rope {
     open var input: Phaser.InputHandler
     open var inputEnabled: Boolean
     open var inWorld: Boolean
-    open var left: Number
-    open var lifespan: Number
+    open var left: Double
+    open var lifespan: Double
     open var key: dynamic /* String | Phaser.RenderTexture | Phaser.BitmapData | PIXI.Texture | Phaser.Video */
     open var name: String
-    open var offsetX: Number
-    open var offsetY: Number
+    open var offsetX: Double
+    open var offsetY: Double
     open var outOfBoundsKill: Boolean
     open fun overlap(displayObject: Phaser.Sprite): Boolean
     open fun overlap(displayObject: Phaser.Image): Boolean
@@ -4358,13 +4358,13 @@ external open class Rope() : PIXI.Rope {
     override var position: Phaser.Point
     override var scale: Phaser.Point
     open var previousPosition: Phaser.Point
-    open var previousRotation: Number
-    open var right: Number
-    open var renderOrderID: Number
+    open var previousRotation: Double
+    open var right: Double
+    open var renderOrderID: Double
     open var segments: Array<Phaser.Rectangle>
     open var smoothed: Boolean
-    open var top: Number
-    open var type: Number
+    open var top: Double
+    open var type: Double
     open var transformCallback: Function<Any>
     open var transformCallbackContext: Any
     open var scaleMin: Phaser.Point
@@ -4373,7 +4373,7 @@ external open class Rope() : PIXI.Rope {
     open var world: Phaser.Point
     override var x: Double
     override var y: Double
-    //open var z: Number
+    //open var z: Double
     open fun bringToTop(): Phaser.Rope
 
     //open fun checkTransform(wt: PIXI.Matrix): Unit
@@ -4414,7 +4414,7 @@ external open class RoundedRectangle : PIXI.RoundedRectangle {
     override var width: Number
     override var height: Number
     override var radius: Number
-    open var type: Number
+    open var type: Double
     override fun clone(): RoundedRectangle
     override fun contains(x: Number, y: Number): Boolean
 }
@@ -4482,7 +4482,7 @@ external open class SignalAnimationFrame : SignalBase {
 
 external open class SignalBinding(signal: Phaser.Signal, listener: Function<Any>, isOnce: Boolean, listenerContext: Any? = definedExternally, priority: Number? = definedExternally, vararg args: Any) {
     open var active: Boolean
-    open var callCount: Number
+    open var callCount: Double
     open var context: Any
     open var params: Array<Any>
     open fun execute(paramsArr: Array<Any>? = definedExternally): Unit
@@ -4498,9 +4498,9 @@ external open class SignalBinding(signal: Phaser.Signal, listener: Function<Any>
 external open class SinglePad(game: Phaser.Game, padParent: Any) {
     open var callbackContext: Any
     open var connected: Boolean
-    open var deadZone: Number
+    open var deadZone: Double
     open var game: Phaser.Game
-    open var index: Number
+    open var index: Int
     open var onAxisCallback: Function<Any>
     open var onConnectCallback: Function<Any>
     open var onDisconnectCallback: Function<Any>
@@ -4532,10 +4532,10 @@ external open class Sound(game: Phaser.Game, key: String, volume: Number? = defi
     open var allowMultiple: Boolean
     open var context: Any
     open var currentMarker: String
-    open var currentTime: Number
+    open var currentTime: Double
     open fun destroy(remove: Boolean? = definedExternally): Unit
-    open var duration: Number
-    open var durationMS: Number
+    open var duration: Double
+    open var durationMS: Double
     open var externalNode: Any
     open var fadeTween: Phaser.Tween
     open var game: Phaser.Game
@@ -4561,13 +4561,13 @@ external open class Sound(game: Phaser.Game, key: String, volume: Number? = defi
     open var onStop: Phaser.Signal1<Sound>
     open var override: Boolean
     open var paused: Boolean
-    open var pausedPosition: Number
-    open var pausedTime: Number
+    open var pausedPosition: Double
+    open var pausedTime: Double
     open var pendingPlayback: Boolean
     open var position: Double
-    open var startTime: Number
-    open var stopTime: Number
-    open var totalDuration: Number
+    open var startTime: Double
+    open var stopTime: Double
+    open var totalDuration: Double
     open var usingAudioTag: Boolean
     open var usingWebAudio: Boolean
     open var volume: Double
@@ -4590,7 +4590,7 @@ external open class Sound(game: Phaser.Game, key: String, volume: Number? = defi
 
 
 external open class SoundManager(game: Phaser.Game) {
-    open var channels: Number
+    open var channels: Double
     open var connectToMaster: Boolean
     open var context: Any
     open var game: Phaser.Game
@@ -4604,7 +4604,7 @@ external open class SoundManager(game: Phaser.Game) {
     open var touchLocked: Boolean
     open var usingAudioTag: Boolean
     open var usingWebAudio: Boolean
-    open var volume: Number
+    open var volume: Double
     open fun add(key: String, volume: Number? = definedExternally, loop: Boolean? = definedExternally, connect: Boolean? = definedExternally): Phaser.Sound
     open fun addSprite(key: String): Phaser.AudioSprite
     open fun boot(): Unit
@@ -4640,19 +4640,19 @@ external open class Sprite(game: Phaser.Game, x: Number, y: Number, key: Any? = 
     open var autoCull: Boolean
     //open var body:Phaser.Physics.Arcade.Body /*Phaser.Physics.Arcade.Body | Phaser.Physics.P2.Body | Phaser.Physics.Ninja.Body | Any*/
     open var body: dynamic /*Phaser.Physics.Arcade.Body | Phaser.Physics.P2.Body | Phaser.Physics.Ninja.Body | Any*/
-    open var bottom: Number
+    open var bottom: Double
     open var cameraOffset: Phaser.Point
-    open var centerX: Number
-    open var centerY: Number
+    open var centerX: Double
+    open var centerY: Double
     open var checkWorldBounds: Boolean
     open var components: Any
     open var cropRect: Phaser.Rectangle
     open var customRender: Boolean
     open var data: dynamic
     open var debug: Boolean
-    open var deltaX: Number
-    open var deltaY: Number
-    open var deltaZ: Number
+    open var deltaX: Double
+    open var deltaY: Double
+    open var deltaZ: Double
     open var destroyPhase: Boolean
     open var events: Phaser.Events
     override var exists: Boolean
@@ -4662,40 +4662,40 @@ external open class Sprite(game: Phaser.Game, x: Number, y: Number, key: Any? = 
     open var frameName: String
     open var fresh: Boolean
     open var game: Phaser.Game
-    open var health: Number
+    open var health: Double
     open var inCamera: Boolean
     open var input: Phaser.InputHandler
     open var inputEnabled: Boolean
     open var inWorld: Boolean
     open var key: dynamic /* String | Phaser.RenderTexture | Phaser.BitmapData | Phaser.Video | PIXI.Texture */
-    open var left: Number
-    open var lifespan: Number
-    open var maxHealth: Number
+    open var left: Double
+    open var lifespan: Double
+    open var maxHealth: Double
     open var name: String
-    open var offsetX: Number
-    open var offsetY: Number
+    open var offsetX: Double
+    open var offsetY: Double
     open var outOfBoundsKill: Boolean
     open var pendingDestroy: Boolean
     open var previousPosition: Phaser.Point
-    open var previousRotation: Number
+    open var previousRotation: Double
     override var position: Phaser.Point
     open var physicsEnabled: Boolean
-    open var physicsType: Number
-    open var renderOrderID: Number
-    open var right: Number
+    open var physicsType: Double
+    open var renderOrderID: Double
+    open var right: Double
     override var scale: Phaser.Point
     open var scaleMin: Phaser.Point
     open var scaleMax: Phaser.Point
     open var smoothed: Boolean
-    open var top: Number
-    open var type: Number
+    open var top: Double
+    open var type: Double
     open var tintedTexture: HTMLCanvasElement
     open var transformCallback: Function<Any>
     open var transformCallbackContext: Any
     open var world: Phaser.Point
     override var x: Double
     override var y: Double
-    //open var z: Number
+    //open var z: Double
     //open fun alignIn(container: Phaser.Rectangle): Any
     //open fun alignIn(container: Phaser.Rectangle, position: Number): Any
     //open fun alignIn(container: Phaser.Rectangle, position: Number?, offsetX: Number?, offsetY: Number?): Any
@@ -4800,7 +4800,7 @@ external open class Sprite(game: Phaser.Game, x: Number, y: Number, key: Any? = 
 
 
 external open class SpriteBatch(game: Phaser.Game, parent: PIXI.DisplayObjectContainer, name: String? = definedExternally, addedToStage: Boolean? = definedExternally) : Phaser.Group {
-    override var type: Number
+    override var type: Double
 }
 
 
@@ -4809,7 +4809,7 @@ external open class Stage(game: Phaser.Game) : PIXI.DisplayObjectContainer {
     open var name: String
     open var disableVisibilityChange: Boolean
     open var exists: Boolean
-    open var currentRenderOrderID: Number
+    open var currentRenderOrderID: Double
     open var backgroundColor: Any
     open var smoothed: Boolean
     open fun parseConfig(config: Any): Unit
@@ -4840,12 +4840,12 @@ external interface `T$10` {
 }
 
 external interface `T$11` {
-    var left: Number
-    var top: Number
-    var right: Number
-    var bottom: Number
-    var x: Number
-    var y: Number
+    var left: Double
+    var top: Double
+    var right: Double
+    var bottom: Double
+    var x: Double
+    var y: Double
 }
 
 external interface `T$12` {
@@ -4860,22 +4860,22 @@ external open class ScaleManager {
     constructor(game: Phaser.Game, width: String, height: Number)
     constructor(game: Phaser.Game, width: String, height: String)
 
-    open var aspectRatio: Number
+    open var aspectRatio: Double
     open var bounds: Rectangle
     open var boundingParent: HTMLElement
     open var compatibility: `T$10`
-    open var currentScaleMode: Number
+    open var currentScaleMode: Double
     open var dom: Phaser.DOM
     open var enterIncorrectOrientation: Signal
     open var event: Any
     open var forceLandscape: Boolean
     open var forcePortrait: Boolean
-    open var fullScreenScaleMode: Number
+    open var fullScreenScaleMode: Double
     open var fullScreenTarget: HTMLElement
     open var game: Phaser.Game
     open var grid: Phaser.FlexGrid
     open var hasPhaserSetFullScreen: Boolean
-    open var height: Number
+    open var height: Double
     open var incorrectOrientation: Boolean
     open var isFullScreen: Boolean
     open var isGameLandscape: Boolean
@@ -4884,10 +4884,10 @@ external open class ScaleManager {
     open var isLandscape: Boolean
     open var leaveIncorrectOrientation: Signal
     open var margin: `T$11`
-    open var maxHeight: Number
-    open var maxWidth: Number
-    open var minHeight: Number
-    open var minWidth: Number
+    open var maxHeight: Double
+    open var maxWidth: Double
+    open var minHeight: Double
+    open var minWidth: Double
     open var offset: Point
     open var onFullScreenInit: Phaser.Signal
     open var onFullScreenChange: Phaser.Signal1<ScaleManager>
@@ -4901,11 +4901,11 @@ external open class ScaleManager {
     open var parentScaleFactor: Point
     open var scaleFactor: Point
     open var scaleFactorInversed: Point
-    open var scaleMode: Number
+    open var scaleMode: Double
     open var screenOrientation: String
-    open var sourceAspectRatio: Number
-    open var trackParentInterval: Number
-    open var width: Number
+    open var sourceAspectRatio: Double
+    open var trackParentInterval: Double
+    open var width: Double
     open var windowConstraints: `T$12`
     open fun boot(): Unit
     open fun createFullScreenTarget(): HTMLDivElement
@@ -4928,11 +4928,11 @@ external open class ScaleManager {
     open fun stopFullScreen(): Boolean
 
     companion object {
-        var EXACT_FIT: Number
-        var NO_SCALE: Number
-        var SHOW_ALL: Number
-        var RESIZE: Number
-        var USER_SCALE: Number
+        var EXACT_FIT: Double
+        var NO_SCALE: Double
+        var SHOW_ALL: Double
+        var RESIZE: Double
+        var USER_SCALE: Double
     }
 }
 
@@ -5039,18 +5039,18 @@ external interface PhaserTextStyle {
     var fill: Any?
     var align: String?
     var stroke: String?
-    var strokeThickness: Number?
+    var strokeThickness: Double?
     var wordWrap: Boolean?
-    var wordWrapWidth: Number?
-    var maxLines: Number?
-    var shadowOffsetX: Number?
-    var shadowOffsetY: Number?
+    var wordWrapWidth: Double?
+    var maxLines: Double?
+    var shadowOffsetX: Double?
+    var shadowOffsetY: Double?
     var shadowColor: String?
-    var shadowBlur: Number?
+    var shadowBlur: Double?
     var valign: String?
-    var tab: Number?
-    var tabs: Number?
-    var fontSize: Number?
+    var tab: Double?
+    var tabs: Double?
+    var fontSize: Double?
     var fontStyle: String?
     var fontVariant: String?
     var fontWeight: dynamic /* String | Number */
@@ -5086,38 +5086,38 @@ external open class Text(game: Phaser.Game, x: Number, y: Number, text: String, 
     override var game: Phaser.Game
     override var input: Phaser.InputHandler
     override var inputEnabled: Boolean
-    open var lineSpacing: Number
+    open var lineSpacing: Double
     override var name: String
     open var padding: Phaser.Point
     override var pendingDestroy: Boolean
-    override var physicsType: Number
+    override var physicsType: Double
     override var position: Phaser.Point
     override var previousPosition: Phaser.Point
-    override var previousRotation: Number
-    override var renderOrderID: Number
-    open var resolution: Number
-    open var shadowBlur: Number
+    override var previousRotation: Double
+    override var renderOrderID: Double
+    open var resolution: Double
+    open var shadowBlur: Double
     open var shadowColor: String
     open var shadowFill: Boolean
-    open var shadowOffsetX: Number
-    open var shadowOffsetY: Number
+    open var shadowOffsetX: Double
+    open var shadowOffsetY: Double
     open var shadowStroke: Boolean
     open var splitRegExp: Any
     open var stroke: String
     open var strokeColors: Array<String>
-    open var strokeThickness: Number
+    open var strokeThickness: Double
     override var scale: Phaser.Point
-    open var tab: Number
+    open var tab: Double
     open var tabs: dynamic /* Number | Array<Number> */
     open var style: TextStyle /* Number | Array<Number> */
     open var text: String
     open var textBounds: Phaser.Rectangle
-    override var type: Number
+    override var type: Double
     open var useAdvancedWrap: Boolean
     override var world: Phaser.Point
     open var wordWrap: Boolean
-    open var wordWrapWidth: Number
-    //override var z: Number
+    open var wordWrapWidth: Double
+    //override var z: Double
     open fun addColor(color: String, position: Number): Phaser.Text
 
     open fun addFontStyle(style: String, position: Number): Phaser.Text
@@ -5220,13 +5220,13 @@ external open class Tile(layer: Any, index: Number, x: Number, y: Number, width:
 external open class Tilemap(game: Phaser.Game, key: String? = definedExternally, tileWidth: Number? = definedExternally, tileHeight: Number? = definedExternally, width: Number? = definedExternally, height: Number? = definedExternally) {
     open var collision: Array<Any>
     open var collideIndexes: Array<Any>
-    open var currentLayer: Number
+    open var currentLayer: Double
     open var debugMap: Array<Any>
     open var enableDebug: Boolean
-    open var format: Number
+    open var format: Double
     open var game: Phaser.Game
-    open var height: Number
-    open var heightInPixels: Number
+    open var height: Double
+    open var heightInPixels: Double
     open var images: Array<Any>
     open var imagecollections: Array<ImageCollection>
     open var key: String
@@ -5235,14 +5235,14 @@ external open class Tilemap(game: Phaser.Game, key: String? = definedExternally,
     open var objects: Array<Any>
     open var orientation: String
     open var properties: Any
-    open var rayStepRate: Number
-    open var tileHeight: Number
+    open var rayStepRate: Double
+    open var tileHeight: Double
     open var tiles: Array<Phaser.Tile>
     open var tilesets: Array<Phaser.Tileset>
-    open var tileWidth: Number
-    open var version: Number
-    open var width: Number
-    open var widthInPixels: Number
+    open var tileWidth: Double
+    open var version: Double
+    open var width: Double
+    open var widthInPixels: Double
     open fun addTilesetImage(tileset: String): Phaser.Tileset
     open fun addTilesetImage(tileset: String, key: String?, tileWidth: Number? = definedExternally, tileHeight: Number? = definedExternally, tileMargin: Number? = definedExternally, tileSpacing: Number? = definedExternally, gid: Number? = definedExternally): Phaser.Tileset
     open fun addTilesetImage(tileset: String, key: Phaser.BitmapData?, tileWidth: Number? = definedExternally, tileHeight: Number? = definedExternally, tileMargin: Number? = definedExternally, tileSpacing: Number? = definedExternally, gid: Number? = definedExternally): Phaser.Tileset
@@ -5297,12 +5297,12 @@ external open class Tilemap(game: Phaser.Game, key: String? = definedExternally,
     open fun swap(tileA: Number, tileB: Number, x: Number, y: Number, width: Number, height: Number, layer: Any? = definedExternally): Unit
 
     companion object {
-        var CSV: Number
-        var TILED_JSON: Number
-        var NORTH: Number
-        var EAST: Number
-        var SOUTH: Number
-        var WEST: Number
+        var CSV: Double
+        var TILED_JSON: Double
+        var NORTH: Double
+        var EAST: Double
+        var SOUTH: Double
+        var WEST: Double
     }
 }
 
@@ -5310,14 +5310,14 @@ external interface `T$13` {
     var missingImageFill: String
     var debuggedTileOverfill: String
     var forceFullRedraw: Boolean
-    var debugAlpha: Number
+    var debugAlpha: Double
     var facingEdgeStroke: String
     var collidingTileOverfill: String
 }
 
 external interface `T$14` {
     var enableScrollDelta: Boolean
-    var overdrawRatio: Number
+    var overdrawRatio: Double
     var copyCanvas: Any
 }
 
@@ -5325,12 +5325,12 @@ external interface `T$14` {
 external open class TilemapLayer(game: Phaser.Game, tilemap: Phaser.Tilemap, index: Number, width: Number? = definedExternally, height: Number? = definedExternally) : Phaser.Sprite {
     override var cameraOffset: Phaser.Point
     open var canvas: HTMLCanvasElement
-    open var collisionHeight: Number
-    open var collisionWidth: Number
+    open var collisionHeight: Double
+    open var collisionWidth: Double
     open var context: CanvasRenderingContext2D
     override var data: Any
     override var debug: Boolean
-    open var debugAlpha: Number
+    open var debugAlpha: Double
     open var debugCallbackColor: String
     open var debugColor: String
     open var debugSettings: `T$13`
@@ -5338,17 +5338,17 @@ external open class TilemapLayer(game: Phaser.Game, tilemap: Phaser.Tilemap, ind
     override var exists: Boolean
     override var fixedToCamera: Boolean
     override var game: Phaser.Game
-    open var index: Number
+    open var index: Int
     open var layer: Phaser.TilemapLayer
     open var map: Phaser.Tilemap
     override var name: String
-    override var physicsType: Number
+    override var physicsType: Double
     open var renderSettings: `T$14`
-    open var scrollFactorX: Number
-    open var scrollFactorY: Number
-    open var scrollX: Number
-    open var scrollY: Number
-    override var type: Number
+    open var scrollFactorX: Double
+    open var scrollFactorY: Double
+    open var scrollX: Double
+    open var scrollY: Double
+    override var type: Double
     open var wrap: Boolean
     //override open fun destroy()
     open fun getRayCastTiles(line: Phaser.Line, stepRate: Number? = definedExternally, collides: Boolean? = definedExternally, interestingFace: Boolean?): Array<Phaser.Tile>
@@ -5376,28 +5376,28 @@ external open class TilemapLayer(game: Phaser.Game, tilemap: Phaser.Tilemap, ind
 
 
 external open class TilemapLayerGL(game: Phaser.Game, tilemap: Phaser.Tilemap, index: Number, width: Number? = definedExternally, height: Number? = definedExternally, tileset: Phaser.Tileset? = definedExternally) {
-    open var collisionHeight: Number
-    open var collisionWidth: Number
+    open var collisionHeight: Double
+    open var collisionWidth: Double
     open var data: Any
     open var dirty: Boolean
     open var exists: Boolean
     open var fixedToCamera: Boolean
     open var game: Phaser.Game
-    open var index: Number
+    open var index: Int
     open var layer: Phaser.TilemapLayer
     open var map: Phaser.Tilemap
     open var name: String
-    open var physicsType: Number
-    open var scrollFactorX: Number
-    open var scrollFactorY: Number
-    open var scrollX: Number
-    open var scrollY: Number
-    open var type: Number
+    open var physicsType: Double
+    open var scrollFactorX: Double
+    open var scrollFactorY: Double
+    open var scrollX: Double
+    open var scrollY: Double
+    open var type: Double
     open var wrap: Boolean
-    open var x: Number
-    open var y: Number
-    open var width: Number
-    open var height: Number
+    open var x: Double
+    open var y: Double
+    open var width: Double
+    open var height: Double
     open fun destroy(): Unit
     open fun postUpdate(): Unit
     open fun render(): Unit
@@ -5421,18 +5421,18 @@ external open class TilemapParser {
 
 
 external open class Tileset(name: String, firstgid: Number, width: Number? = definedExternally, height: Number? = definedExternally, margin: Number? = definedExternally, spacing: Number? = definedExternally, properties: Any? = definedExternally) {
-    open var columns: Number
-    open var firstgid: Number
+    open var columns: Double
+    open var firstgid: Double
     open var image: Any
-    open var lastgid: Number
+    open var lastgid: Double
     open var name: String
     open var properties: Any
-    open var rows: Number
-    open var tileHeight: Number
-    open var tileMargin: Number
-    open var tileSpacing: Number
-    open var tileWidth: Number
-    open var total: Number
+    open var rows: Double
+    open var tileHeight: Double
+    open var tileMargin: Double
+    open var tileSpacing: Double
+    open var tileWidth: Double
+    open var total: Double
     open fun containsTileIndex(tileIndex: Number): Boolean
     open fun draw(context: CanvasRenderingContext2D, x: Number, y: Number, index: Number): Unit
     open fun drawGl(glBatch: Array<Any>, x: Number, y: Number, index: Number, alpha: Number, flippedVal: Number): Unit
@@ -5452,11 +5452,11 @@ external open class TileSprite() : PIXI.TilingSprite {
     constructor(game: Phaser.Game, x: Number, y: Number, width: Number, height: Number, key: PIXI.Texture? = definedExternally, frame: Number? = definedExternally) 
 
     open var alive: Boolean
-    open var angle: Number
+    open var angle: Double
     open var animations: Phaser.AnimationManager
     open var autoCull: Boolean
     open var body: dynamic  /*Phaser.Physics.Arcade.Body  | Phaser.Physics.P2.Body | Phaser.Physics.Ninja.Body | Any */
-    open var bottom: Number
+    open var bottom: Double
     open var cameraOffset: Phaser.Point
     open var checkWorldBounds: Boolean
     open var components: Any
@@ -5476,23 +5476,23 @@ external open class TileSprite() : PIXI.TilingSprite {
     open var inputEnabled: Boolean
     open var inWorld: Boolean
     open var key: dynamic /* String | Phaser.RenderTexture | Phaser.BitmapData | Phaser.Video | PIXI.Texture */
-    open var left: Number
+    open var left: Double
     open var name: String
-    open var offsetX: Number
-    open var offsetY: Number
+    open var offsetX: Double
+    open var offsetY: Double
     open var outOfBoundsKill: Boolean
     open var pendingDestroy: Boolean
-    open var physicsType: Number
+    open var physicsType: Double
     override var position: Phaser.Point
     open var smoothed: Boolean
     open var previousPosition: Phaser.Point
-    open var previousRoation: Number
-    open var right: Number
-    open var top: Number
-    open var renderOrderID: Number
-    open var type: Number
+    open var previousRoation: Double
+    open var right: Double
+    open var top: Double
+    open var renderOrderID: Double
+    open var type: Double
     open var world: Phaser.Point
-    //open var z: Number
+    //open var z: Double
     open fun alignIn(container: Phaser.Rectangle, position: Number? = definedExternally, offsetX: Number? = definedExternally, offsetY: Number? = definedExternally): Any
 
     open fun alignIn(container: Phaser.Sprite, position: Number? = definedExternally, offsetX: Number? = definedExternally, offsetY: Number? = definedExternally): Any
@@ -5543,9 +5543,9 @@ external open class Time(game: Phaser.Game) {
     open var advancedTiming: Boolean
     open var desiredFps: Double
     open var desiredFpsMult: Double
-    open var elapsed: Number
+    open var elapsed: Double
     open var events: Phaser.Timer
-    open var elapsedMS: Number
+    open var elapsedMS: Double
     open var fps: Double
     open var fpsMax: Double
     open var fpsMin: Double
@@ -5579,18 +5579,18 @@ external open class Time(game: Phaser.Game) {
 
 external open class Timer(game: Phaser.Game, autoDestroy: Boolean? = definedExternally) {
     open var autoDestroy: Boolean
-    open var duration: Number
+    open var duration: Double
     open var events: Array<Phaser.TimerEvent>
     open var expired: Boolean
     open var game: Phaser.Game
-    open var length: Number
-    open var ms: Number
-    open var next: Number
-    open var nextTick: Number
+    open var length: Double
+    open var ms: Double
+    open var next: Double
+    open var nextTick: Double
     open var onComplete: Phaser.Signal
     open var running: Boolean
     open var paused: Boolean
-    open var seconds: Number
+    open var seconds: Double
     open fun add(delay: Number, callback: Function<Any>, callbackContext: Any? = definedExternally, vararg args: Any): Phaser.TimerEvent
     open fun clearPendingEvents(): Unit
     open fun destroy(): Unit
@@ -5619,11 +5619,11 @@ external open class TimerEvent(timer: Phaser.Timer, delay: Number, tick: Number,
     open var args: Array<Any>
     open var callback: Function<Any>
     open var callbackContext: Any
-    open var delay: Number
+    open var delay: Double
     open var loop: Boolean
     open var pendingDelete: Boolean
-    open var repeatCount: Number
-    open var tick: Number
+    open var repeatCount: Double
+    open var tick: Double
     open var timer: Phaser.Timer
 }
 
@@ -5657,7 +5657,7 @@ external open class Touch(game: Phaser.Game) {
 
 external open class Tween(target: Any, game: Phaser.Game, manager: Phaser.TweenManager) {
     open var chainedTween: Phaser.Tween
-    open var current: Number
+    open var current: Double
     open var frameBased: Boolean
     open var game: Phaser.Game
     open var isRunning: Boolean
@@ -5670,12 +5670,12 @@ external open class Tween(target: Any, game: Phaser.Game, manager: Phaser.TweenM
     open var onStart: Phaser.Signal
     open var pendingDelete: Boolean
     open var properties: Any
-    open var repeatCounter: Number
+    open var repeatCounter: Double
     open var reverse: Boolean
     open var target: Any
     open var timeline: Array<Phaser.TweenData>
-    open var timeScale: Number
-    open var totalDuration: Number
+    open var timeScale: Double
+    open var totalDuration: Double
     open fun chain(vararg args: Any): Phaser.Tween
     open fun delay(duration: Number, index: Number? = definedExternally): Phaser.Tween
     open fun easing(ease: Function<Any>, index: Number? = definedExternally): Phaser.Tween
@@ -5704,9 +5704,9 @@ external open class Tween(target: Any, game: Phaser.Game, manager: Phaser.TweenM
 
 
 external open class TweenData(parent: Phaser.Tween) {
-    open var delay: Number
-    open var dt: Number
-    open var duration: Number
+    open var delay: Double
+    open var dt: Double
+    open var duration: Double
     open var easingFunction: Function<Any>
     open var game: Phaser.Game
     open var inReverse: Boolean
@@ -5717,12 +5717,12 @@ external open class TweenData(parent: Phaser.Tween) {
     open var isRunning: Boolean
     open var isFrom: Boolean
     open var parent: Phaser.Tween
-    open var percent: Number
-    open var repeatCounter: Number
-    open var startTime: Number
-    open var value: Number
+    open var percent: Double
+    open var repeatCounter: Double
+    open var startTime: Double
+    open var value: Double
     open var yoyo: Boolean
-    open var yoyoDelay: Number
+    open var yoyoDelay: Double
     open fun from(properties: Any, duration: Number? = definedExternally, ease: Function<Any>? = definedExternally, delay: Number? = definedExternally, repeat: Number? = definedExternally, yoyo: Boolean? = definedExternally): Phaser.TweenData
     open fun generateData(frameRate: Number? = definedExternally): Array<Any>
     open fun repeat(): Number
@@ -5731,10 +5731,10 @@ external open class TweenData(parent: Phaser.Tween) {
     open fun update(time: Number): Number
 
     companion object {
-        var COMPLETE: Number
-        var LOOPED: Number
-        var PENDING: Number
-        var RUNNING: Number
+        var COMPLETE: Double
+        var LOOPED: Double
+        var PENDING: Double
+        var RUNNING: Double
     }
 }
 
@@ -5774,15 +5774,15 @@ external open class Utils {
     open class Debug(game: Phaser.Game) {
         open var bmd: Phaser.BitmapData
         open var canvas: HTMLCanvasElement
-        open var columnWidth: Number
+        open var columnWidth: Double
         open var context: CanvasRenderingContext2D
-        open var currentAlpha: Number
-        open var currentX: Number
-        open var currentY: Number
+        open var currentAlpha: Double
+        open var currentX: Double
+        open var currentY: Double
         open var dirty: Boolean
         open var font: String
         open var game: Phaser.Game
-        open var lineHeight: Number
+        open var lineHeight: Double
         open var renderShadow: Boolean
         open var sprite: Phaser.Image
         open var style: String
@@ -5826,8 +5826,8 @@ external open class Weapon(game: Phaser.Game, parent: Phaser.PluginManager) : Ph
     open var autoExpandBulletsGroup: Boolean
     open var autofire: Boolean
     open var bounds: Phaser.Rectangle
-    open var bulletAngleOffset: Number
-    open var bulletAngleVariance: Number
+    open var bulletAngleOffset: Double
+    open var bulletAngleVariance: Double
     open var bulletAnimation: String
     open var bulletClass: Any
     open var bulletCollideWorldBounds: Boolean
@@ -5838,31 +5838,31 @@ external open class Weapon(game: Phaser.Game, parent: Phaser.PluginManager) : Ph
     open var bulletGravity: Phaser.Point
     open var bulletInheritSpriteSpeed: Boolean
     open var bulletKey: String
-    open var bulletKillDistance: Number
-    open var bulletKillType: Number
-    open var bulletLifespan: Number
+    open var bulletKillDistance: Double
+    open var bulletKillType: Double
+    open var bulletLifespan: Double
     open var bulletRotateToVelocity: Boolean
     open var bullets: Phaser.Group
-    open var bulletSpeed: Number
-    open var bulletSpeedVariance: Number
+    open var bulletSpeed: Double
+    open var bulletSpeedVariance: Double
     open var bulletWorldWrap: Boolean
-    open var bulletWorldWrapPadding: Number
-    open var fireAngle: Number
+    open var bulletWorldWrapPadding: Double
+    open var fireAngle: Double
     open var fireFrom: Phaser.Rectangle
-    open var fireLimit: Number
-    open var fireRate: Number
-    open var fireRateVariance: Number
+    open var fireLimit: Double
+    open var fireRate: Double
+    open var fireRateVariance: Double
     open var multiFire: Boolean
     open var onFire: Phaser.Signal
     open var onFireLimit: Phaser.Signal
     open var onKill: Phaser.Signal
-    open var shots: Number
+    open var shots: Double
     open var trackedPointer: Phaser.Pointer
     open var trackedSprite: Any
     open var trackOffset: Phaser.Point
     open var trackRotation: Boolean
-    open var x: Number
-    open var y: Number
+    open var x: Double
+    open var y: Double
     open fun addBulletAnimation(name: String, frames: Array<Number>? = definedExternally, frameRate: Number? = definedExternally, loop: Boolean? = definedExternally, useNumericIndex: Boolean? = definedExternally): Phaser.Weapon
     open fun addBulletAnimation(name: String, frames: Array<String>? = definedExternally, frameRate: Number? = definedExternally, loop: Boolean? = definedExternally, useNumericIndex: Boolean? = definedExternally): Phaser.Weapon
     open fun createBullets(quantity: Number? = definedExternally, key: Any? = definedExternally, frame: Any? = definedExternally, group: Phaser.Group? = definedExternally): Phaser.Weapon
@@ -5885,20 +5885,20 @@ external open class Weapon(game: Phaser.Game, parent: Phaser.PluginManager) : Ph
     open fun trackSprite(sprite: Phaser.Sprite, offsetX: Number? = definedExternally, offsetY: Number? = definedExternally, trackRotation: Boolean? = definedExternally): Phaser.Weapon
 
     companion object {
-        var KILL_NEVER: Number
-        var KILL_LIFESPAN: Number
-        var KILL_DISTANCE: Number
-        var KILL_WEAPON_BOUNDS: Number
-        var KILL_CAMERA_BOUNDS: Number
-        var KILL_WORLD_BOUNDS: Number
-        var KILL_STATIC_BOUNDS: Number
+        var KILL_NEVER: Double
+        var KILL_LIFESPAN: Double
+        var KILL_DISTANCE: Double
+        var KILL_WEAPON_BOUNDS: Double
+        var KILL_CAMERA_BOUNDS: Double
+        var KILL_WORLD_BOUNDS: Double
+        var KILL_STATIC_BOUNDS: Double
     }
 }
 
 external interface `T$15` {
-    var skipped: Number
-    var ignored: Number
-    var checked: Number
+    var skipped: Double
+    var ignored: Double
+    var checked: Double
 }
 
 
