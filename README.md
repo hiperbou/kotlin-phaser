@@ -11,6 +11,4 @@ Uses Phaser 2.6.2
 
 ![](https://github.com/hiperbou/kotlin-phaser/blob/master/screenshot/kotlinphaser.jpg)
 
-To test examples. Download the example assets from https://github.com/photonstorm/phaser/archive/master.zip and Copy the contents of the folder "phaser-examples/examples/assets" into "examples/assets/assets"
-
-
+Download the example assets from https://github.com/hiperbou/kotlin-phaser-examples/archive/refs/heads/master.zip and Copy the the "assets" folder into "examples/src/main/resources"
